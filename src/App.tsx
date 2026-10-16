@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { MealProgramProvider } from './context/MealProgramContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -27,7 +27,6 @@ function AppContent() {
   const [supportModalOpen, setSupportModalOpen] = useState(false);
   const [supportModalTab, setSupportModalTab] = useState<SupportTab>('donate');
   const [preselectedProject, setPreselectedProject] = useState<string>('all');
-  const { pathname } = useLocation();
 
   const handleOpenSupport = (
     tab: SupportTab = 'donate',

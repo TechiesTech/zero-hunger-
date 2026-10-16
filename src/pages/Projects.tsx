@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle2,
-  ArrowRight,
   ArrowUpRight,
   Camera,
   BarChart3,
   MapPin,
-  Clock,
-  ShieldCheck,
 } from 'lucide-react';
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
 import { ProjectGrid } from '../components/ProjectGrid';

@@ -209,5 +209,3 @@ export const PlateToHandsSteps: React.FC = () => {
     </div>
   );
 };
-
-export default PlateToHandsSteps;

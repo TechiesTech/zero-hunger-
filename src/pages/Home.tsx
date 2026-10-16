@@ -1,4 +1,4 @@
-import { ArrowUpRight, Download, Sliders, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Download, Sliders } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Hero } from '../components/Hero';
 import { ImpactStats } from '../components/ImpactStats';

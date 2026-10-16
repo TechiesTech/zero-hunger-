@@ -16,7 +16,6 @@ import {
   PartyPopper,
   UtensilsCrossed,
   Music,
-  MessageCircle,
 } from 'lucide-react';
 import { ThreeDCharacterCanvas, CharacterAction } from './ThreeDCharacterCanvas';
 

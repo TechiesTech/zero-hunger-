@@ -3,21 +3,12 @@ import { Link, useSearchParams } from 'react-router-dom';
 import {
   Sparkles,
   Cake,
-  Heart,
   Shirt,
   Truck,
   PhoneCall,
-  Clock,
   MapPin,
   CheckCircle2,
-  Calendar,
-  Share2,
-  Download,
-  AlertTriangle,
-  ArrowRight,
   ShieldCheck,
-  Building,
-  User,
   Package,
 } from 'lucide-react';
 import { ScrollReveal } from '../components/ScrollReveal';

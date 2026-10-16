@@ -6,13 +6,9 @@ import {
   Maximize2,
   Minimize2,
   RefreshCw,
-  Share2,
   Sliders,
-  Sparkles,
   ArrowLeft,
   FileCode,
-  Eye,
-  Layers,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {
@@ -27,7 +23,6 @@ import {
   copyPosterImageToClipboard,
   AspectRatio,
 } from '../utils/posterExport';
-import { Button } from '../components/Button';
 
 export const PosterStudio: React.FC = () => {
   // Poster State (Default strictly matches user request: "no one should sleep only")
@@ -41,7 +36,6 @@ export const PosterStudio: React.FC = () => {
   const [copied, setCopied] = useState(false);
   const [downloading, setDownloading] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [showInspector, setShowInspector] = useState(false);
   const posterContainerRef = useRef<HTMLDivElement>(null);
 
   const handleCopy = async () => {

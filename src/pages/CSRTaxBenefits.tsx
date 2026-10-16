@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import {
-  FileText,
   ShieldCheck,
   Download,
   Building2,
   CheckCircle2,
   Calculator,
-  ArrowRight,
   Eye,
   X,
   FileCheck,
   Send,
-  HelpCircle,
-  ExternalLink,
   Award,
-  Sparkles,
 } from 'lucide-react';
 import { ScrollReveal } from '../components/ScrollReveal';
 import {

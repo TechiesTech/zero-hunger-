@@ -17,7 +17,7 @@ export interface PosterExportOptions {
   resolution?: number; // Base width in pixels (e.g., 2048)
 }
 
-export function getDimensions(aspectRatio: AspectRatio, baseWidth: number = 2048) {
+function getDimensions(aspectRatio: AspectRatio, baseWidth: number = 2048) {
   switch (aspectRatio) {
     case '1:1':
       return { width: baseWidth, height: baseWidth };
@@ -32,7 +32,7 @@ export function getDimensions(aspectRatio: AspectRatio, baseWidth: number = 2048
   }
 }
 
-export async function renderPosterToCanvas(options: PosterExportOptions): Promise<HTMLCanvasElement> {
+async function renderPosterToCanvas(options: PosterExportOptions): Promise<HTMLCanvasElement> {
   const {
     eyebrow = 'ZERO HUNGER INITIATIVE · HYDERABAD',
     lines = ['NO ONE', 'SHOULD', 'SLEEP'],
@@ -163,7 +163,7 @@ export async function downloadPosterPNG(options: PosterExportOptions, filename?:
   document.body.removeChild(link);
 }
 
-export function generatePosterSVG(options: PosterExportOptions): string {
+function generatePosterSVG(options: PosterExportOptions): string {
   const {
     eyebrow = 'ZERO HUNGER INITIATIVE · HYDERABAD',
     lines = ['NO ONE', 'SHOULD', 'SLEEP'],

@@ -10,13 +10,6 @@ export interface TeamMember {
   image: string;
 }
 
-export interface CoreValue {
-  index: string;
-  title: string;
-  subtitle: string;
-  description: string;
-}
-
 export interface WorkflowStep {
   step: string;
   title: string;
@@ -24,44 +17,6 @@ export interface WorkflowStep {
   description: string;
   metric: string;
 }
-
-export const CORE_VALUES: CoreValue[] = [
-  {
-    index: '01',
-    title: 'Dignity',
-    subtitle: 'Guests at a shared table, never recipients of charity.',
-    description:
-      'How a meal is served matters as much as what is on the plate. We serve hot, freshly prepared meals on stainless steel plates in shaded seating areas—never through hurried queues or disposable plastic packets.'
-  },
-  {
-    index: '02',
-    title: 'Compassion',
-    subtitle: 'Rooted in proximity and lived empathy.',
-    description:
-      'Our kitchens are staffed and led by women from the very neighborhoods we serve. We listen to families without bureaucracy, ensuring no elder, child, or hospital caregiver is ever turned away.'
-  },
-  {
-    index: '03',
-    title: 'Transparency',
-    subtitle: 'Every grain accounted for, every rupee traceable.',
-    description:
-      '88% of all contributions go directly into food procurement and kitchen operations. We publish quarterly community ledgers detailing meal counts, farmer payouts, and district-level outcomes.'
-  },
-  {
-    index: '04',
-    title: 'Community',
-    subtitle: 'Built with neighborhoods, not parachuted into them.',
-    description:
-      'From village panchayat grain banks to parent-led school lunch committees, local residents co-design menus, manage rosters, and hold ultimate stewardship over every project.'
-  },
-  {
-    index: '05',
-    title: 'Sustainability',
-    subtitle: 'From immediate relief to circular food sovereignty.',
-    description:
-      'We pair emergency hunger relief with women-led kitchen gardens and direct smallholder farmer procurement—building local food systems that eventually outgrow the need for aid.'
-  }
-];
 
 export const HOW_WE_WORK: WorkflowStep[] = [
   {

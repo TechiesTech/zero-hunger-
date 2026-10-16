@@ -143,7 +143,7 @@ export const RECENT_OCCASIONS: OccasionSample[] = [
     date: '28 Sep 2026',
     mealsServed: 250,
     centerName: 'Osmania Hospital Caregivers Courtyard',
-    image: '/src/assets/images/meal_community_kitchen_1790675929837.jpg',
+    image: '/src/assets/images/project_community_kitchen_1790673027388.jpg',
   },
   {
     id: 'occ-03',

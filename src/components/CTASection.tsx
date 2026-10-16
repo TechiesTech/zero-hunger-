@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight, HeartHandshake } from 'lucide-react';
-import { Button } from './Button';
 import { ScrollReveal } from './ScrollReveal';
 import { SupportTab } from './SupportModal';
 

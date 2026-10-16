@@ -6,10 +6,6 @@ import {
   Truck,
   Building2,
   ArrowRight,
-  PhoneCall,
-  Sparkles,
-  ShieldCheck,
-  FileText,
 } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 

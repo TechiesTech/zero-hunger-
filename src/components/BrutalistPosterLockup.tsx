@@ -12,7 +12,6 @@ export interface BrutalistPosterLockupProps {
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'hero' | 'poster';
   showEyebrow?: boolean;
   className?: string;
-  onOpenStudio?: () => void;
   animated?: boolean;
 }
 
@@ -83,7 +82,6 @@ export const BrutalistPosterLockup: React.FC<BrutalistPosterLockupProps> = ({
   size = 'hero',
   showEyebrow = true,
   className = '',
-  onOpenStudio,
   animated = true,
 }) => {
   const currentPalette = PALETTE_CONFIGS[palette] || PALETTE_CONFIGS.signature;

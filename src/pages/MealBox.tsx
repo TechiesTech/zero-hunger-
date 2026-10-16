@@ -14,7 +14,6 @@ import {
   Sparkles,
   Ticket,
   Trash2,
-  Utensils,
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import {
