@@ -120,3 +120,20 @@ dist
 
 # Vite cache
 .vite/
+
+# Build and generated files
+dist/
+build/
+coverage/
+
+# Dependencies
+node_modules/
+
+# Local environment
+.env
+.env.*
+
+# Editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db
