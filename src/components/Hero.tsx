@@ -106,16 +106,23 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSupport }) => {
               transition={{ duration: 0.65, delay: 0.42, ease: [0.16, 1, 0.3, 1] }}
               className="mt-5 sm:mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full sm:w-auto"
             >
-              <Button to="/meal-box" variant="primary" size="md" fullWidthMobile>
+              <Button
+                to="/meal-box"
+                variant="primary"
+                size="lg"
+                fullWidthMobile
+                className="text-base sm:text-lg font-black"
+              >
                 <span>Buy 1 · Give 1 Meal Box</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
+                <ArrowUpRight className="w-4 h-4" />
               </Button>
               <Button
                 type="button"
                 variant="outline-light"
-                size="md"
+                size="lg"
                 fullWidthMobile
                 onClick={() => onOpenSupport('donate')}
+                className="text-base sm:text-lg font-black"
               >
                 <span>Support the Mission</span>
               </Button>
