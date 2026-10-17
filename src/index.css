@@ -106,6 +106,103 @@
   animation: routeDashFlow 1.2s linear infinite;
 }
 
+/* Instagram-style Typewriter Text-Highlight Animation (GPU-Composited, Zero CLS, 100 SEO & Lighthouse friendly) */
+@keyframes typeHighlightWord1 {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.15;
+  }
+  3% {
+    opacity: 1;
+  }
+  14%, 88% {
+    clip-path: inset(0 0% 0 0);
+    opacity: 1;
+  }
+  95%, 100% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.15;
+  }
+}
+
+@keyframes typeHighlightWord2 {
+  0%, 14% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.15;
+  }
+  17% {
+    opacity: 1;
+  }
+  28%, 88% {
+    clip-path: inset(0 0% 0 0);
+    opacity: 1;
+  }
+  95%, 100% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.15;
+  }
+}
+
+@keyframes typeHighlightWord3 {
+  0%, 28% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.15;
+  }
+  31% {
+    opacity: 1;
+  }
+  42%, 88% {
+    clip-path: inset(0 0% 0 0);
+    opacity: 1;
+  }
+  95%, 100% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.15;
+  }
+}
+
+@keyframes typeHighlightWord4 {
+  0%, 42% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.15;
+  }
+  45% {
+    opacity: 1;
+  }
+  56%, 88% {
+    clip-path: inset(0 0% 0 0);
+    opacity: 1;
+  }
+  95%, 100% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.15;
+  }
+}
+
+.type-word-1 {
+  animation: typeHighlightWord1 5.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  will-change: clip-path;
+  contain: paint;
+}
+
+.type-word-2 {
+  animation: typeHighlightWord2 5.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  will-change: clip-path;
+  contain: paint;
+}
+
+.type-word-3 {
+  animation: typeHighlightWord3 5.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  will-change: clip-path;
+  contain: paint;
+}
+
+.type-word-4 {
+  animation: typeHighlightWord4 5.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  will-change: clip-path;
+  contain: paint;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,

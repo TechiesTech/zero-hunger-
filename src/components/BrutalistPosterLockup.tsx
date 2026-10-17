@@ -30,10 +30,10 @@ export const PALETTE_CONFIGS: Record<
   signature: {
     name: 'Original Activist',
     bg: '#000000',
-    eyebrowColor: '#39FF14', // Vibrant neon green
-    blockBg: '#E21B23', // Punchy crimson red
+    eyebrowColor: '#49E619', // Vibrant neon green
+    blockBg: '#D7262F', // Punchy activist crimson red from artwork
     textColor: '#FFFFFF',
-    accentColor: '#39FF14',
+    accentColor: '#49E619',
     badgeLabel: 'Red · Neon Green',
   },
   acid: {
@@ -48,10 +48,10 @@ export const PALETTE_CONFIGS: Record<
   monochrome: {
     name: 'Pure Brutalist',
     bg: '#000000',
-    eyebrowColor: '#E21B23',
+    eyebrowColor: '#D7262F',
     blockBg: '#FFFFFF',
     textColor: '#000000',
-    accentColor: '#E21B23',
+    accentColor: '#D7262F',
     badgeLabel: 'Stark White · Red',
   },
   cyber: {
