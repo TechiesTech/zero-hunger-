@@ -48,7 +48,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSupport }) => {
   };
 
   return (
-    <section className="relative bg-[#080808] text-white pt-24 sm:pt-24 md:pt-20 lg:pt-20 pb-6 sm:pb-8 overflow-hidden border-b border-white/10">
+    <section className="relative bg-[#080808] text-white pt-24 sm:pt-24 md:pt-20 lg:pt-20 pb-3 sm:pb-4 overflow-hidden border-b border-white/10">
       <div className="max-w-[1360px] mx-auto px-4 xs:px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6 lg:gap-10 items-start">
           {/* LEFT COLUMN: Condensed Display Headline & CTAs */}
@@ -211,7 +211,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSupport }) => {
           initial={prefersReducedMotion ? false : { opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.85 }}
-          className="mt-4 sm:mt-6 flex justify-center md:justify-start"
+          className="mt-2 sm:mt-2.5 flex justify-center md:justify-start"
         >
           <button
             type="button"
