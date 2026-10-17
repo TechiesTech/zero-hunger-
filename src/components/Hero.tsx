@@ -109,20 +109,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSupport }) => {
               <Button
                 to="/meal-box"
                 variant="primary"
-                size="lg"
+                size="md"
                 fullWidthMobile
-                className="text-base sm:text-lg font-black"
+                className="text-sm sm:text-[15px] font-extrabold"
               >
                 <span>Buy 1 · Give 1 Meal Box</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </Button>
               <Button
                 type="button"
                 variant="outline-light"
-                size="lg"
+                size="md"
                 fullWidthMobile
                 onClick={() => onOpenSupport('donate')}
-                className="text-base sm:text-lg font-black"
+                className="text-sm sm:text-[15px] font-extrabold"
               >
                 <span>Support the Mission</span>
               </Button>
@@ -144,13 +144,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSupport }) => {
           </div>
 
           {/* RIGHT COLUMN: Large Humanitarian Photograph + Vibrant Floating Ledger Cards */}
-          <div className="col-span-1 md:col-span-6 lg:col-span-6 xl:col-span-6 relative md:pl-4 lg:pl-6 pt-3 md:pt-4 lg:pt-8 xl:pt-10 w-full">
+          <div className="col-span-1 md:col-span-6 lg:col-span-6 xl:col-span-6 relative md:pl-4 lg:pl-6 pt-5 md:pt-8 lg:pt-12 xl:pt-14 w-full">
             <motion.div
               style={{ y: imageY }}
               initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.85, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative mx-auto max-w-sm xs:max-w-md md:max-w-none lg:max-w-[430px] xl:max-w-[460px]"
+              className="relative mx-auto max-w-md xs:max-w-lg md:max-w-none lg:max-w-[490px] xl:max-w-[530px]"
             >
               {/* Main Image Frame */}
               <div className="relative rounded-[14px] sm:rounded-[16px] overflow-hidden border border-white/15 shadow-2xl aspect-[4/3] w-full">
