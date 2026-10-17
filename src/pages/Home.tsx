@@ -205,7 +205,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
               <h2 className="font-display-sans uppercase text-3xl sm:text-5xl font-black tracking-[-0.04em] leading-[0.95] text-white">
                 A VISUAL MANIFESTO:
                 <br />
-                <span className="text-[#E21B23]">NO ONE SHOULD SLEEP.</span>
+                <span className="text-[#D7262F]">NO ONE SHOULD SLEEP.</span>
               </h2>
               <p className="mt-5 text-sm sm:text-base text-white/80 leading-relaxed max-w-xl">
                 Designed with brutalist clarity, high-contrast red badge blocks, and an uncompromising message. Spread the word across community centers, university campuses, food banks, and social media.
