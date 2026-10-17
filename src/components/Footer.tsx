@@ -13,7 +13,6 @@ import {
 
 const EXPLORE_LINKS = [
   { label: 'Home', path: '/' },
-  { label: 'Poster Studio & Graphics', path: '/poster-studio' },
   { label: 'Buy 1 Give 1 Meal Box', path: '/meal-box' },
   { label: 'Celebrate Birthdays & Anniversaries', path: '/celebrate-and-give' },
   { label: 'Donate Clothes & Rescue Food', path: '/celebrate-and-give?tab=CLOTH_DONATION' },

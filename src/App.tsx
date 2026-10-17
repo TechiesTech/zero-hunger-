@@ -21,7 +21,6 @@ import { MealBox } from './pages/MealBox';
 import { TrackMeal } from './pages/TrackMeal';
 import { CelebrateAndGive } from './pages/CelebrateAndGive';
 import { CSRTaxBenefits } from './pages/CSRTaxBenefits';
-import { PosterStudio } from './pages/PosterStudio';
 
 function AppContent() {
   const [supportModalOpen, setSupportModalOpen] = useState(false);
@@ -48,8 +47,6 @@ function AppContent() {
               path="/"
               element={<Home onOpenSupport={handleOpenSupport} />}
             />
-            <Route path="/poster-studio" element={<PosterStudio />} />
-            <Route path="/poster" element={<PosterStudio />} />
             <Route path="/meal-box" element={<MealBox />} />
             <Route path="/track-meal" element={<TrackMeal />} />
             <Route path="/celebrate-and-give" element={<CelebrateAndGive />} />

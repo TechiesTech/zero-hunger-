@@ -9,9 +9,15 @@ interface NavbarProps {
   onOpenSupport: (tab?: SupportTab) => void;
 }
 
-const NAV_ITEMS = [
+interface NavItem {
+  label: string;
+  path: string;
+  hideOnCompact: boolean;
+  highlight?: boolean;
+}
+
+const NAV_ITEMS: NavItem[] = [
   { label: 'Home', path: '/', hideOnCompact: false },
-  { label: 'Poster Studio', path: '/poster-studio', hideOnCompact: false, highlight: true },
   { label: 'Meal Box', path: '/meal-box', hideOnCompact: false },
   { label: 'Celebrate & Give', path: '/celebrate-and-give', hideOnCompact: false },
   { label: 'Track Meal', path: '/track-meal', hideOnCompact: false },
