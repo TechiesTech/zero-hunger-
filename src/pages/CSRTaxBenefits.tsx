@@ -20,49 +20,49 @@ import {
 } from '../data/csrCompliance';
 
 const DOCUMENT_CARD_THEMES = [
-  // Card 1 — Section 80G: Electric Green (#49E619)
+  // Card 1 — Section 80G: Electric Green
   {
     bgClass: 'bg-brand-green',
-    borderClass: 'border-2 border-[#122023]/20 hover:border-[#122023] hover:shadow-2xl',
+    borderClass: 'border-2 border-brand-slate/20 hover:border-brand-slate hover:shadow-2xl',
     titleClass: 'text-brand-black',
     descClass: 'text-brand-black/85',
     numeralClass: 'text-brand-black',
     badgeBg: 'bg-brand-black text-white',
-    metaClass: 'text-brand-black/75 border-[#080808]/15',
+    metaClass: 'text-brand-black/75 border-brand-black/15',
     refClass: 'text-brand-black',
     btnViewClass: 'bg-brand-black hover:bg-brand-slate text-white',
-    btnDownloadClass: 'bg-white hover:bg-[#F2F4F3] text-brand-black',
+    btnDownloadClass: 'bg-white hover:bg-brand-alabaster text-brand-black',
   },
-  // Card 2 — Section 12A: Vibrant Cyan (#4EDBE2)
+  // Card 2 — Section 12A: Vibrant Cyan
   {
-    bgClass: 'bg-[#4EDBE2]',
-    borderClass: 'border-2 border-[#122023]/20 hover:border-[#122023] hover:shadow-2xl',
+    bgClass: 'bg-brand-cyan',
+    borderClass: 'border-2 border-brand-slate/20 hover:border-brand-slate hover:shadow-2xl',
     titleClass: 'text-brand-black',
     descClass: 'text-brand-black/85',
     numeralClass: 'text-brand-black',
     badgeBg: 'bg-brand-black text-white',
-    metaClass: 'text-brand-black/75 border-[#080808]/15',
+    metaClass: 'text-brand-black/75 border-brand-black/15',
     refClass: 'text-brand-black',
     btnViewClass: 'bg-brand-black hover:bg-brand-slate text-white',
-    btnDownloadClass: 'bg-white hover:bg-[#F2F4F3] text-brand-black',
+    btnDownloadClass: 'bg-white hover:bg-brand-alabaster text-brand-black',
   },
-  // Card 3 — MCA CSR-1: Vibrant Chartreuse Lime (#B9FF2C)
+  // Card 3 — MCA CSR-1: Vibrant Chartreuse Lime
   {
     bgClass: 'bg-brand-lime',
-    borderClass: 'border-2 border-[#122023]/20 hover:border-[#122023] hover:shadow-2xl',
+    borderClass: 'border-2 border-brand-slate/20 hover:border-brand-slate hover:shadow-2xl',
     titleClass: 'text-brand-black',
     descClass: 'text-brand-black/85',
     numeralClass: 'text-brand-black',
     badgeBg: 'bg-brand-black text-white',
-    metaClass: 'text-brand-black/75 border-[#080808]/15',
+    metaClass: 'text-brand-black/75 border-brand-black/15',
     refClass: 'text-brand-black',
     btnViewClass: 'bg-brand-black hover:bg-brand-slate text-white',
-    btnDownloadClass: 'bg-white hover:bg-[#F2F4F3] text-brand-black',
+    btnDownloadClass: 'bg-white hover:bg-brand-alabaster text-brand-black',
   },
-  // Card 4 — Form 10BE: Deep Slate (#122023)
+  // Card 4 — Form 10BE: Deep Slate
   {
     bgClass: 'bg-brand-slate',
-    borderClass: 'border-2 border-white/10 hover:border-[#49E619] hover:shadow-2xl',
+    borderClass: 'border-2 border-white/10 hover:border-brand-green hover:shadow-2xl',
     titleClass: 'text-white',
     descClass: 'text-white/80',
     numeralClass: 'text-brand-green',
@@ -72,10 +72,10 @@ const DOCUMENT_CARD_THEMES = [
     btnViewClass: 'bg-white/15 hover:bg-white text-white hover:text-brand-black border border-white/20',
     btnDownloadClass: 'bg-brand-green hover:bg-brand-lime text-brand-black',
   },
-  // Card 5 — Audited Financial Statements: Forest Emerald (#188D44)
+  // Card 5 — Audited Financial Statements: Forest Emerald
   {
-    bgClass: 'bg-[#188D44]',
-    borderClass: 'border-2 border-[#188D44] hover:border-[#080808] hover:shadow-2xl',
+    bgClass: 'bg-brand-emerald',
+    borderClass: 'border-2 border-brand-emerald hover:border-brand-black hover:shadow-2xl',
     titleClass: 'text-white',
     descClass: 'text-white/90',
     numeralClass: 'text-brand-lime',
@@ -85,46 +85,48 @@ const DOCUMENT_CARD_THEMES = [
     btnViewClass: 'bg-brand-black hover:bg-brand-slate text-white',
     btnDownloadClass: 'bg-white hover:bg-brand-lime text-brand-black',
   },
-  // Card 6 — Standard Corporate MoU: Deep Black (#080808)
+  // Card 6 — Standard Corporate MoU: Deep Black
   {
     bgClass: 'bg-brand-black',
-    borderClass: 'border-2 border-white/20 hover:border-[#4EDBE2] hover:shadow-2xl',
+    borderClass: 'border-2 border-white/20 hover:border-brand-cyan hover:shadow-2xl',
     titleClass: 'text-white',
     descClass: 'text-white/80',
     numeralClass: 'text-brand-cyan',
-    badgeBg: 'bg-[#4EDBE2] text-brand-black',
+    badgeBg: 'bg-brand-cyan text-brand-black',
     metaClass: 'text-white/70 border-white/15',
     refClass: 'text-brand-cyan',
     btnViewClass: 'bg-white/15 hover:bg-white text-white hover:text-brand-black border border-white/20',
-    btnDownloadClass: 'bg-[#4EDBE2] hover:bg-white text-brand-black',
+    btnDownloadClass: 'bg-brand-cyan hover:bg-white text-brand-black',
   },
-  // Card 7 — Geotagged Utilization Certificate: Vibrant Chartreuse Lime (#B9FF2C)
+  // Card 7 — Geotagged Utilization Certificate: Vibrant Chartreuse Lime
   {
     bgClass: 'bg-brand-lime',
-    borderClass: 'border-2 border-[#122023]/20 hover:border-[#122023] hover:shadow-2xl',
+    borderClass: 'border-2 border-brand-slate/20 hover:border-brand-slate hover:shadow-2xl',
     titleClass: 'text-brand-black',
     descClass: 'text-brand-black/85',
     numeralClass: 'text-brand-black',
     badgeBg: 'bg-brand-black text-white',
-    metaClass: 'text-brand-black/75 border-[#080808]/15',
+    metaClass: 'text-brand-black/75 border-brand-black/15',
     refClass: 'text-brand-black',
     btnViewClass: 'bg-brand-black hover:bg-brand-slate text-white',
-    btnDownloadClass: 'bg-white hover:bg-[#F2F4F3] text-brand-black',
+    btnDownloadClass: 'bg-white hover:bg-brand-alabaster text-brand-black',
   },
-  // Card 8 — Trust PAN, TAN & Darpan: Vibrant Cyan (#4EDBE2)
+  // Card 8 — Trust PAN, TAN & Darpan: Vibrant Cyan
   {
-    bgClass: 'bg-[#4EDBE2]',
-    borderClass: 'border-2 border-[#122023]/20 hover:border-[#122023] hover:shadow-2xl',
+    bgClass: 'bg-brand-cyan',
+    borderClass: 'border-2 border-brand-slate/20 hover:border-brand-slate hover:shadow-2xl',
     titleClass: 'text-brand-black',
     descClass: 'text-brand-black/85',
     numeralClass: 'text-brand-black',
     badgeBg: 'bg-brand-black text-white',
-    metaClass: 'text-brand-black/75 border-[#080808]/15',
+    metaClass: 'text-brand-black/75 border-brand-black/15',
     refClass: 'text-brand-black',
     btnViewClass: 'bg-brand-black hover:bg-brand-slate text-white',
-    btnDownloadClass: 'bg-white hover:bg-[#F2F4F3] text-brand-black',
+    btnDownloadClass: 'bg-white hover:bg-brand-alabaster text-brand-black',
   },
 ];
+
+const DARK_CARD_BACKGROUNDS = ['bg-brand-slate', 'bg-brand-black', 'bg-brand-emerald'];
 
 export const CSRTaxBenefits: React.FC = () => {
   const [budgetInput, setBudgetInput] = useState<number>(250000);
@@ -178,15 +180,15 @@ export const CSRTaxBenefits: React.FC = () => {
 
             {/* 4 Statutory Pills */}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <span className="px-4 py-2 rounded-full bg-brand-slate border border-[#49E619]/40 font-mono-tabular text-xs font-bold text-white">
+              <span className="px-4 py-2 rounded-full bg-brand-slate border border-brand-green/40 font-mono-tabular text-xs font-bold text-white">
                 <ShieldCheck className="w-3.5 h-3.5 text-brand-green inline-block mr-1.5 -mt-0.5" />
                 80G Reg: {CSR_STATUTORY_CREDENTIALS.section80G.regNumber}
               </span>
-              <span className="px-4 py-2 rounded-full bg-brand-slate border border-[#4EDBE2]/40 font-mono-tabular text-xs font-bold text-white">
+              <span className="px-4 py-2 rounded-full bg-brand-slate border border-brand-cyan/40 font-mono-tabular text-xs font-bold text-white">
                 <ShieldCheck className="w-3.5 h-3.5 text-brand-cyan inline-block mr-1.5 -mt-0.5" />
                 12A Exemption: {CSR_STATUTORY_CREDENTIALS.section12A.regNumber}
               </span>
-              <span className="px-4 py-2 rounded-full bg-brand-slate border border-[#B9FF2C]/40 font-mono-tabular text-xs font-bold text-white">
+              <span className="px-4 py-2 rounded-full bg-brand-slate border border-brand-lime/40 font-mono-tabular text-xs font-bold text-white">
                 <Building2 className="w-3.5 h-3.5 text-brand-lime inline-block mr-1.5 -mt-0.5" />
                 MCA CSR-1: {CSR_STATUTORY_CREDENTIALS.mcaCSR1.regNumber}
               </span>
@@ -232,7 +234,7 @@ export const CSRTaxBenefits: React.FC = () => {
                         key={val}
                         type="button"
                         onClick={() => setBudgetInput(val)}
-                        className={`px-3.5 py-1.5 rounded-[8px] font-mono-tabular text-xs font-bold transition-all cursor-pointer ${
+                        className={`px-3.5 py-1.5 rounded-lg font-mono-tabular text-xs font-bold transition-all cursor-pointer ${
                           budgetInput === val
                             ? 'bg-brand-green text-brand-black'
                             : 'bg-brand-black text-white/80 border border-white/15 hover:border-white/40'
@@ -245,7 +247,7 @@ export const CSRTaxBenefits: React.FC = () => {
                 </div>
 
                 {/* Custom Number Input */}
-                <div className="mt-6 p-4 rounded-[12px] bg-brand-black border border-white/15">
+                <div className="mt-6 p-4 rounded-xl bg-brand-black border border-white/15">
                   <label className="block text-xs font-mono-tabular font-bold uppercase text-white/60 mb-1">
                     Or Enter Exact CSR Amount (INR ₹):
                   </label>
@@ -272,7 +274,7 @@ export const CSRTaxBenefits: React.FC = () => {
                     <span className="font-mono-tabular text-xs font-bold uppercase tracking-widest text-brand-lime">
                       PROJECTED IMPACT & AUDIT METRICS
                     </span>
-                    <span className="px-3 py-1 rounded-[6px] bg-brand-green text-brand-black font-mono-tabular text-[11px] font-bold uppercase">
+                    <span className="px-3 py-1 rounded-md bg-brand-green text-brand-black font-mono-tabular text-[11px] font-bold uppercase">
                       {calculated.label}
                     </span>
                   </div>
@@ -291,7 +293,7 @@ export const CSRTaxBenefits: React.FC = () => {
                       </span>
                     </div>
 
-                    <div className="p-5 rounded-[14px] bg-[#4EDBE2] text-brand-slate">
+                    <div className="p-5 rounded-[14px] bg-brand-cyan text-brand-slate">
                       <span className="font-mono-tabular text-xs font-bold uppercase opacity-85 block">
                         ESTIMATED 80G TAX BENEFIT
                       </span>
@@ -349,7 +351,7 @@ export const CSRTaxBenefits: React.FC = () => {
           SECTION 2 — THE STATUTORY DOCUMENT VAULT
           "we provide whatever document want from our end"
       ====================================================================== */}
-      <section className="bg-white text-brand-black py-20 sm:py-28 border-y border-[#122023]/10">
+      <section className="bg-white text-brand-black py-20 sm:py-28 border-y border-brand-slate/10">
         <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-emerald block mb-2">
@@ -363,7 +365,7 @@ export const CSRTaxBenefits: React.FC = () => {
             </p>
 
             {downloadSuccessMessage && (
-              <div className="mt-4 p-3.5 rounded-[10px] bg-[#188D44] text-white font-mono-tabular text-xs font-bold uppercase shadow-sm">
+              <div className="mt-4 p-3.5 rounded-[10px] bg-brand-emerald text-white font-mono-tabular text-xs font-bold uppercase shadow-sm">
                 {downloadSuccessMessage}
               </div>
             )}
@@ -372,11 +374,8 @@ export const CSRTaxBenefits: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {COMPLIANCE_DOCUMENTS.map((doc, idx) => {
               const theme = DOCUMENT_CARD_THEMES[idx % DOCUMENT_CARD_THEMES.length];
-              const isDarkCard =
-                theme.bgClass.includes('#122023') ||
-                theme.bgClass.includes('#080808') ||
-                theme.bgClass.includes('#188D44');
-              const dividerClass = isDarkCard ? 'border-white/15' : 'border-[#080808]/15';
+              const isDarkCard = DARK_CARD_BACKGROUNDS.includes(theme.bgClass);
+              const dividerClass = isDarkCard ? 'border-white/15' : 'border-brand-black/15';
 
               return (
                 <div
@@ -385,7 +384,7 @@ export const CSRTaxBenefits: React.FC = () => {
                 >
                   <div>
                     <div className={`flex items-center justify-between pb-3 border-b ${dividerClass}`}>
-                      <span className={`px-2.5 py-0.5 rounded-[4px] font-mono-tabular text-[10px] font-bold ${theme.badgeBg}`}>
+                      <span className={`px-2.5 py-0.5 rounded-sm font-mono-tabular text-[10px] font-bold ${theme.badgeBg}`}>
                         {doc.badgeText}
                       </span>
                       <span className={`font-mono-tabular text-[10px] font-bold ${isDarkCard ? 'text-white/70' : 'text-brand-black/70'}`}>
@@ -411,7 +410,7 @@ export const CSRTaxBenefits: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setSelectedDoc(doc)}
-                      className={`flex-1 py-2.5 px-3 rounded-[8px] font-mono-tabular text-[11px] font-bold uppercase tracking-wider inline-flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-xs ${theme.btnViewClass}`}
+                      className={`flex-1 py-2.5 px-3 rounded-lg font-mono-tabular text-[11px] font-bold uppercase tracking-wider inline-flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-xs ${theme.btnViewClass}`}
                     >
                       <Eye className="w-3.5 h-3.5" />
                       <span>View Doc</span>
@@ -420,7 +419,7 @@ export const CSRTaxBenefits: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => handleDownloadDoc(doc)}
-                      className={`py-2.5 px-3 rounded-[8px] font-mono-tabular text-[11px] font-bold uppercase tracking-wider inline-flex items-center justify-center transition-all cursor-pointer shadow-xs ${theme.btnDownloadClass}`}
+                      className={`py-2.5 px-3 rounded-lg font-mono-tabular text-[11px] font-bold uppercase tracking-wider inline-flex items-center justify-center transition-all cursor-pointer shadow-xs ${theme.btnDownloadClass}`}
                       title={`Download ${doc.title}`}
                     >
                       <Download className="w-3.5 h-3.5" />
@@ -452,7 +451,7 @@ export const CSRTaxBenefits: React.FC = () => {
                 </p>
 
                 <div className="mt-8 space-y-4 font-mono-tabular text-xs text-white/85">
-                  <div className="flex items-start gap-3 p-3.5 rounded-[12px] bg-brand-black border border-white/10">
+                  <div className="flex items-start gap-3 p-3.5 rounded-xl bg-brand-black border border-white/10">
                     <FileCheck className="w-4 h-4 text-brand-green shrink-0 mt-0.5" />
                     <div>
                       <strong className="text-white block">Board-Ready CSR Proposal Deck</strong>
@@ -460,7 +459,7 @@ export const CSRTaxBenefits: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 p-3.5 rounded-[12px] bg-brand-black border border-white/10">
+                  <div className="flex items-start gap-3 p-3.5 rounded-xl bg-brand-black border border-white/10">
                     <ShieldCheck className="w-4 h-4 text-brand-cyan shrink-0 mt-0.5" />
                     <div>
                       <strong className="text-white block">Form 10BE & AIS Tax Compliance Guarantee</strong>
@@ -468,7 +467,7 @@ export const CSRTaxBenefits: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 p-3.5 rounded-[12px] bg-brand-black border border-white/10">
+                  <div className="flex items-start gap-3 p-3.5 rounded-xl bg-brand-black border border-white/10">
                     <Award className="w-4 h-4 text-brand-lime shrink-0 mt-0.5" />
                     <div>
                       <strong className="text-white block">Third-Party CA Utilization Audits</strong>
@@ -526,7 +525,7 @@ export const CSRTaxBenefits: React.FC = () => {
                             required
                             value={companyName}
                             onChange={(e) => setCompanyName(e.target.value)}
-                            className="w-full rounded-[8px] bg-brand-slate border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#49E619]"
+                            className="w-full rounded-lg bg-brand-slate border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                           />
                         </div>
                         <div>
@@ -538,7 +537,7 @@ export const CSRTaxBenefits: React.FC = () => {
                             required
                             value={csrHeadName}
                             onChange={(e) => setCsrHeadName(e.target.value)}
-                            className="w-full rounded-[8px] bg-brand-slate border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#49E619]"
+                            className="w-full rounded-lg bg-brand-slate border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                           />
                         </div>
                       </div>
@@ -553,7 +552,7 @@ export const CSRTaxBenefits: React.FC = () => {
                             required
                             value={csrEmail}
                             onChange={(e) => setCsrEmail(e.target.value)}
-                            className="w-full rounded-[8px] bg-brand-slate border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#49E619]"
+                            className="w-full rounded-lg bg-brand-slate border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                           />
                         </div>
                         <div>
@@ -565,7 +564,7 @@ export const CSRTaxBenefits: React.FC = () => {
                             required
                             value={csrPhone}
                             onChange={(e) => setCsrPhone(e.target.value)}
-                            className="w-full rounded-[8px] bg-brand-slate border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#49E619]"
+                            className="w-full rounded-lg bg-brand-slate border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                           />
                         </div>
                       </div>
@@ -578,7 +577,7 @@ export const CSRTaxBenefits: React.FC = () => {
                           <select
                             value={csrEstimatedBudget}
                             onChange={(e) => setCsrEstimatedBudget(e.target.value)}
-                            className="w-full rounded-[8px] bg-brand-slate border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#49E619]"
+                            className="w-full rounded-lg bg-brand-slate border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                           >
                             <option value="₹1,00,000 – ₹5,00,000">₹1,00,000 – ₹5,00,000</option>
                             <option value="₹5,00,000 – ₹15,00,000">₹5,00,000 – ₹15,00,000</option>
@@ -594,7 +593,7 @@ export const CSRTaxBenefits: React.FC = () => {
                           <select
                             value={csrFocusArea}
                             onChange={(e) => setCsrFocusArea(e.target.value)}
-                            className="w-full rounded-[8px] bg-brand-slate border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#49E619]"
+                            className="w-full rounded-lg bg-brand-slate border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                           >
                             <option value="School Midday Nutrition & Child Growth">School Midday Nutrition & Child Growth</option>
                             <option value="Public Hospital Caregiver Courtyard Dining">Public Hospital Caregiver Courtyard Dining</option>
@@ -606,7 +605,7 @@ export const CSRTaxBenefits: React.FC = () => {
 
                       <button
                         type="submit"
-                        className="w-full py-4 px-6 rounded-[12px] bg-brand-green hover:bg-brand-lime text-brand-black font-mono-tabular text-xs font-black uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer mt-2"
+                        className="w-full py-4 px-6 rounded-xl bg-brand-green hover:bg-brand-lime text-brand-black font-mono-tabular text-xs font-black uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer mt-2"
                       >
                         <Send className="w-4 h-4" />
                         <span>Send Proposal Deck & Compliance Kit</span>
@@ -670,7 +669,7 @@ export const CSRTaxBenefits: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setSelectedDoc(null)}
-                className="px-5 py-2.5 rounded-[8px] bg-white/10 hover:bg-white/20 text-white font-mono-tabular text-xs font-bold uppercase cursor-pointer"
+                className="px-5 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-mono-tabular text-xs font-bold uppercase cursor-pointer"
               >
                 Close
               </button>
@@ -680,7 +679,7 @@ export const CSRTaxBenefits: React.FC = () => {
                   handleDownloadDoc(selectedDoc);
                   setSelectedDoc(null);
                 }}
-                className="px-6 py-2.5 rounded-[8px] bg-brand-green hover:bg-brand-lime text-brand-black font-mono-tabular text-xs font-black uppercase inline-flex items-center gap-1.5 cursor-pointer"
+                className="px-6 py-2.5 rounded-lg bg-brand-green hover:bg-brand-lime text-brand-black font-mono-tabular text-xs font-black uppercase inline-flex items-center gap-1.5 cursor-pointer"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Download Document (PDF)</span>

@@ -12,16 +12,16 @@ interface ProjectDetailProps {
 }
 
 const STAT_CARD_COLORS = [
-  'bg-[#49E619] text-[#122023]',
-  'bg-[#4EDBE2] text-[#122023]',
-  'bg-[#B9FF2C] text-[#122023]',
-  'bg-[#F2F4F3] text-[#122023]',
+  'bg-brand-green text-brand-slate',
+  'bg-brand-cyan text-brand-slate',
+  'bg-brand-lime text-brand-slate',
+  'bg-brand-alabaster text-brand-slate',
 ];
 
 const TIER_CARD_COLORS = [
-  'bg-[#49E619] text-[#122023]',
-  'bg-[#4EDBE2] text-[#122023]',
-  'bg-[#B9FF2C] text-[#122023]',
+  'bg-brand-green text-brand-slate',
+  'bg-brand-cyan text-brand-slate',
+  'bg-brand-lime text-brand-slate',
 ];
 
 export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) => {
@@ -45,9 +45,9 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
   ];
 
   return (
-    <div className="bg-[#080808] text-white">
+    <div className="bg-brand-black text-white">
       {/* FULL-SCREEN EDITORIAL HERO WITH OVERLAY */}
-      <section className="relative min-h-[72vh] sm:min-h-[80vh] flex items-end bg-[#080808] text-white overflow-hidden">
+      <section className="relative min-h-[72vh] sm:min-h-[80vh] flex items-end bg-brand-black text-white overflow-hidden">
         <div className="absolute inset-0">
           <EditorialImage
             src={project.heroImage}
@@ -56,28 +56,28 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
             className="w-full h-full"
           />
           <div
-            className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/60 to-[#080808]/35"
+            className="absolute inset-0 bg-linear-to-t from-brand-black via-brand-black/60 to-brand-black/35"
             aria-hidden="true"
           />
         </div>
 
-        <div className="relative z-10 max-w-[1360px] w-full mx-auto px-5 sm:px-8 lg:px-12 pt-36 pb-16 sm:pb-24">
+        <div className="relative z-10 max-w-340 w-full mx-auto px-5 sm:px-8 lg:px-12 pt-36 pb-16 sm:pb-24">
           <ScrollReveal>
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2 text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-white/80 hover:text-[#49E619] transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-white/80 hover:text-brand-green transition-colors mb-8"
             >
-              <ArrowLeft className="w-3.5 h-3.5 text-[#49E619]" />
+              <ArrowLeft className="w-3.5 h-3.5 text-brand-green" />
               <span>Back to All Projects</span>
             </Link>
 
             <div className="flex flex-wrap items-center gap-2.5 text-xs font-mono-tabular uppercase tracking-[0.2em] text-white/80 mb-4">
-              <span className="text-[#49E619] font-bold">
+              <span className="text-brand-green font-bold">
                 {project.category}
               </span>
               <span aria-hidden="true">·</span>
               <span className="inline-flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-[#B9FF2C]" />
+                <MapPin className="w-3.5 h-3.5 text-brand-lime" />
                 {project.location}
               </span>
               <span aria-hidden="true">·</span>
@@ -96,14 +96,14 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
       </section>
 
       {/* PROJECT STATISTICS LEDGER BAR */}
-      <section className="bg-[#122023] border-y border-white/10 py-12 sm:py-16">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+      <section className="bg-brand-slate border-y border-white/10 py-12 sm:py-16">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {statList.map((stat, idx) => (
               <ScrollReveal
                 key={stat.label}
                 delay={idx * 0.08}
-                className={`rounded-[16px] p-6 ${STAT_CARD_COLORS[idx % STAT_CARD_COLORS.length]}`}
+                className={`rounded-2xl p-6 ${STAT_CARD_COLORS[idx % STAT_CARD_COLORS.length]}`}
               >
                 <div className="font-display-sans text-3xl sm:text-5xl font-black tracking-[-0.04em] leading-none">
                   {stat.value}
@@ -118,27 +118,27 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
       </section>
 
       {/* EDITORIAL NARRATIVE: THE CHALLENGE / THE APPROACH / THE IMPACT */}
-      <section className="bg-white text-[#080808] py-20 sm:py-28">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+      <section className="bg-white text-brand-black py-20 sm:py-28">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <div className="space-y-20 sm:space-y-24">
             {/* THE CHALLENGE */}
-            <ScrollReveal className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 pt-8 border-t border-[#122023]/12">
+            <ScrollReveal className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 pt-8 border-t border-brand-slate/12">
               <div className="lg:col-span-4">
-                <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-[#188D44] block mb-2">
+                <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-emerald block mb-2">
                   01 / CONTEXT
                 </span>
-                <h2 className="font-display-sans uppercase text-2xl sm:text-4xl font-black text-[#080808] tracking-tight">
+                <h2 className="font-display-sans uppercase text-2xl sm:text-4xl font-black text-brand-black tracking-tight">
                   THE CHALLENGE
                 </h2>
               </div>
-              <div className="lg:col-span-8 space-y-5 text-base sm:text-lg text-[#080808]/85 leading-relaxed max-w-2xl">
+              <div className="lg:col-span-8 space-y-5 text-base sm:text-lg text-brand-black/85 leading-relaxed max-w-2xl">
                 {project.challenge.map((paragraph, index) => (
                   <p
                     key={index}
                     className={
                       index === 0
-                        ? 'first-letter:text-5xl first-letter:font-display-sans first-letter:font-black first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-[#188D44]'
-                        : 'text-[#122023]/80'
+                        ? 'first-letter:text-5xl first-letter:font-display-sans first-letter:font-black first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-brand-emerald'
+                        : 'text-brand-slate/80'
                     }
                   >
                     {paragraph}
@@ -148,16 +148,16 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
             </ScrollReveal>
 
             {/* THE APPROACH */}
-            <ScrollReveal className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 pt-12 border-t border-[#122023]/12">
+            <ScrollReveal className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 pt-12 border-t border-brand-slate/12">
               <div className="lg:col-span-4">
-                <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-[#188D44] block mb-2">
+                <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-emerald block mb-2">
                   02 / METHODOLOGY
                 </span>
-                <h2 className="font-display-sans uppercase text-2xl sm:text-4xl font-black text-[#080808] tracking-tight">
+                <h2 className="font-display-sans uppercase text-2xl sm:text-4xl font-black text-brand-black tracking-tight">
                   THE APPROACH
                 </h2>
               </div>
-              <div className="lg:col-span-8 space-y-5 text-base sm:text-lg text-[#122023]/80 leading-relaxed max-w-2xl">
+              <div className="lg:col-span-8 space-y-5 text-base sm:text-lg text-brand-slate/80 leading-relaxed max-w-2xl">
                 {project.approach.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
@@ -165,12 +165,12 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
             </ScrollReveal>
 
             {/* PULL QUOTE */}
-            <ScrollReveal className="my-12 p-8 sm:p-14 rounded-[18px] bg-[#122023] text-white border-l-4 border-[#49E619]">
+            <ScrollReveal className="my-12 p-8 sm:p-14 rounded-[18px] bg-brand-slate text-white border-l-4 border-brand-green">
               <blockquote className="font-display-sans uppercase text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight max-w-4xl">
                 “{project.pullQuote.quote}”
               </blockquote>
               <div className="mt-6 flex items-center gap-2 text-xs sm:text-sm font-mono-tabular uppercase tracking-wider text-white/75">
-                <span className="font-bold text-[#49E619]">
+                <span className="font-bold text-brand-green">
                   {project.pullQuote.author}
                 </span>
                 <span aria-hidden="true">·</span>
@@ -179,16 +179,16 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
             </ScrollReveal>
 
             {/* THE IMPACT */}
-            <ScrollReveal className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 pt-12 border-t border-[#122023]/12">
+            <ScrollReveal className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 pt-12 border-t border-brand-slate/12">
               <div className="lg:col-span-4">
-                <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-[#188D44] block mb-2">
+                <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-emerald block mb-2">
                   03 / VERIFIED OUTCOMES
                 </span>
-                <h2 className="font-display-sans uppercase text-2xl sm:text-4xl font-black text-[#080808] tracking-tight">
+                <h2 className="font-display-sans uppercase text-2xl sm:text-4xl font-black text-brand-black tracking-tight">
                   THE IMPACT
                 </h2>
               </div>
-              <div className="lg:col-span-8 space-y-5 text-base sm:text-lg text-[#122023]/80 leading-relaxed max-w-2xl">
+              <div className="lg:col-span-8 space-y-5 text-base sm:text-lg text-brand-slate/80 leading-relaxed max-w-2xl">
                 {project.impactNarrative.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
@@ -199,10 +199,10 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
       </section>
 
       {/* DOCUMENTARY IMAGE GALLERY */}
-      <section className="bg-[#080808] text-white py-20 sm:py-28 border-t border-white/10">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+      <section className="bg-brand-black text-white py-20 sm:py-28 border-t border-white/10">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <ScrollReveal className="mb-12">
-            <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-[#49E619] block mb-2">
+            <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-green block mb-2">
               DOCUMENTARY PLATES
             </span>
             <h2 className="font-display-sans uppercase text-3xl sm:text-5xl font-black text-white">
@@ -219,7 +219,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
               >
                 <div
                   className={`group rounded-[18px] overflow-hidden border border-white/15 ${
-                    idx === 0 ? 'aspect-[16/9]' : 'aspect-[4/3]'
+                    idx === 0 ? 'aspect-video' : 'aspect-4/3'
                   }`}
                 >
                   <EditorialImage
@@ -239,16 +239,16 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
       </section>
 
       {/* WHAT YOUR SUPPORT MAKES POSSIBLE */}
-      <section className="bg-[#F2F4F3] text-[#122023] py-20 sm:py-28 border-t border-[#122023]/10">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+      <section className="bg-brand-alabaster text-brand-slate py-20 sm:py-28 border-t border-brand-slate/10">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <div className="max-w-2xl">
-            <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-[#188D44] block mb-3">
+            <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-emerald block mb-3">
               DIRECT STEWARDSHIP
             </span>
-            <h2 className="font-display-sans uppercase text-3xl sm:text-5xl font-black text-[#122023] tracking-[-0.04em] leading-[0.95]">
+            <h2 className="font-display-sans uppercase text-3xl sm:text-5xl font-black text-brand-slate tracking-[-0.04em] leading-[0.95]">
               WHAT YOUR SUPPORT MAKES POSSIBLE
             </h2>
-            <p className="mt-4 text-base text-[#122023]/75 leading-relaxed">
+            <p className="mt-4 text-base text-brand-slate/75 leading-relaxed">
               Every contribution to the {project.title} is ring-fenced for direct food procurement, local kitchen operations, and last-mile community distribution.
             </p>
           </div>
@@ -261,22 +261,22 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
                 className={`p-8 rounded-[18px] ${TIER_CARD_COLORS[idx % TIER_CARD_COLORS.length]} flex flex-col justify-between shadow-md`}
               >
                 <div>
-                  <span className="font-display-sans text-4xl font-black text-[#122023]">
+                  <span className="font-display-sans text-4xl font-black text-brand-slate">
                     {tier.amount}
                   </span>
-                  <h3 className="mt-4 font-display-sans uppercase text-2xl font-black text-[#122023]">
+                  <h3 className="mt-4 font-display-sans uppercase text-2xl font-black text-brand-slate">
                     {tier.title}
                   </h3>
-                  <p className="mt-3 text-sm text-[#122023]/85 font-medium leading-relaxed">
+                  <p className="mt-3 text-sm text-brand-slate/85 font-medium leading-relaxed">
                     {tier.description}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-[#122023]/15">
+                <div className="mt-8 pt-4 border-t border-brand-slate/15">
                   <button
                     type="button"
                     onClick={() => onOpenSupport('donate', project.slug)}
-                    className="inline-flex items-center gap-2 text-xs font-mono-tabular font-bold uppercase tracking-wider text-[#122023] hover:opacity-75 transition-opacity cursor-pointer"
+                    className="inline-flex items-center gap-2 text-xs font-mono-tabular font-bold uppercase tracking-wider text-brand-slate hover:opacity-75 transition-opacity cursor-pointer"
                   >
                     <span>Sponsor This Tier</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -286,12 +286,12 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
             ))}
           </div>
 
-          <ScrollReveal className="mt-14 pt-10 border-t border-[#122023]/15 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <ScrollReveal className="mt-14 pt-10 border-t border-brand-slate/15 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <h3 className="font-display-sans uppercase text-2xl font-black text-[#122023]">
+              <h3 className="font-display-sans uppercase text-2xl font-black text-brand-slate">
                 Ready to stand behind {project.title}?
               </h3>
-              <p className="text-sm text-[#122023]/75 mt-1">
+              <p className="text-sm text-brand-slate/75 mt-1">
                 100% transparent community ledger · 80G tax-exempt receipt issued immediately.
               </p>
             </div>
@@ -310,18 +310,18 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
       </section>
 
       {/* PREVIOUS / NEXT PROJECT NAVIGATION */}
-      <section className="bg-[#080808] text-white border-t border-white/10">
-        <div className="max-w-[1360px] mx-auto grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/10">
+      <section className="bg-brand-black text-white border-t border-white/10">
+        <div className="max-w-340 mx-auto grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/10">
           <Link
             to={`/projects/${prevProject.slug}`}
             className="group p-8 sm:p-12 lg:p-16 flex flex-col justify-between hover:bg-white/5 transition-colors"
           >
             <div className="inline-flex items-center gap-2 text-xs font-mono-tabular uppercase tracking-widest text-white/60 group-hover:text-white transition-colors">
-              <ArrowLeft className="w-4 h-4 text-[#49E619] transition-transform duration-200 group-hover:-translate-x-1" />
+              <ArrowLeft className="w-4 h-4 text-brand-green transition-transform duration-200 group-hover:-translate-x-1" />
               <span>Previous Project</span>
             </div>
             <div className="mt-6">
-              <h3 className="font-display-sans uppercase text-2xl sm:text-3xl font-black text-white group-hover:text-[#49E619] transition-colors">
+              <h3 className="font-display-sans uppercase text-2xl sm:text-3xl font-black text-white group-hover:text-brand-green transition-colors">
                 {prevProject.title}
               </h3>
               <p className="text-xs text-white/60 mt-1">{prevProject.location}</p>
@@ -334,10 +334,10 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ onOpenSupport }) =
           >
             <div className="inline-flex items-center gap-2 text-xs font-mono-tabular uppercase tracking-widest text-white/60 group-hover:text-white transition-colors">
               <span>Next Project</span>
-              <ArrowRight className="w-4 h-4 text-[#49E619] transition-transform duration-200 group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 text-brand-green transition-transform duration-200 group-hover:translate-x-1" />
             </div>
             <div className="mt-6">
-              <h3 className="font-display-sans uppercase text-2xl sm:text-3xl font-black text-white group-hover:text-[#49E619] transition-colors">
+              <h3 className="font-display-sans uppercase text-2xl sm:text-3xl font-black text-white group-hover:text-brand-green transition-colors">
                 {nextProject.title}
               </h3>
               <p className="text-xs text-white/60 mt-1">{nextProject.location}</p>

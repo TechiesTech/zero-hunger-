@@ -177,8 +177,7 @@ export const MealBox: React.FC = () => {
 
                   <div className="mt-6 space-y-4">
                     {/* Stream 1: Customer's Purchased Meal */}
-                    <div className="rounded-2xl bg-brand-alabaster text-brand-slate p-4 sm:p-5 border border-brand-slate/15 overflow-hidden group hover:border-[#188D44] transition-all shadow-sm">
-                      <div className="flex flex-col sm:flex-row items-center gap-4">
+<div className="rounded-2xl bg-brand-alabaster text-brand-slate p-4 sm:p-5 border border-brand-slate/15 overflow-hidden group hover:border-brand-emerald transition-all shadow-sm">                      <div className="flex flex-col sm:flex-row items-center gap-4">
                         <div className="w-24 h-24 sm:w-28 sm:h-28 shrink-0 rounded-[14px] bg-white border border-brand-slate/10 overflow-hidden p-1 shadow-xs flex items-center justify-center">
                           <img
                             src="/src/assets/images/courier_delivery_1791145501426.jpg"
@@ -498,10 +497,14 @@ export const MealBox: React.FC = () => {
                         YOUR MEAL TOKEN
                       </span>
 
-                      {confirmedTokens.map((tok) => (
+                      {confirmedTokens.map((tok, tokIdx) => (
                         <div
                           key={tok.id}
-                          className="mt-2 flex items-center justify-between gap-2 pt-2 border-t border-white/10 first:border-t-0 first:pt-0"
+                          className={`flex items-center justify-between gap-2 ${
+                            tokIdx > 0
+                              ? 'mt-2 pt-2 border-t border-white/10'
+                              : 'mt-2'
+                          }`}
                         >
                           <span className="font-mono-tabular text-xl sm:text-2xl font-bold text-brand-green tracking-wider">
                             {tok.tokenNumber}
@@ -523,7 +526,7 @@ export const MealBox: React.FC = () => {
                     {/* Clear Dual-Stream Summary: Customer Meal vs Sponsored Child Meal */}
                     <div className="mt-5 space-y-3 text-xs border-y border-brand-slate/12 py-4">
                       <div className="rounded-[10px] bg-white p-3 border border-brand-slate/10">
-                        <span className="font-mono-tabular text-[10px] uppercase tracking-wider text-[#6F6F6F] block">
+                        <span className="font-mono-tabular text-[10px] uppercase tracking-wider text-brand-gray block">
                           1. YOUR PURCHASED MEAL (FOR YOU)
                         </span>
                         <div className="font-bold text-brand-slate text-sm mt-0.5 flex items-center justify-between">
@@ -642,7 +645,7 @@ export const MealBox: React.FC = () => {
                     ) : (
                       <>
                         {/* Itemized Cart List */}
-                        <div className="divide-y divide-[#122023]/10 my-4 max-h-64 overflow-y-auto pr-1">
+                        <div className="divide-y divide-brand-slate/10 my-4 max-h-64 overflow-y-auto pr-1">
                           {cart.map((item) => (
                             <div key={item.product.id} className="py-3.5">
                               <div className="flex items-start justify-between gap-3">
@@ -795,7 +798,7 @@ export const MealBox: React.FC = () => {
                                 type="text"
                                 value={customerName}
                                 onChange={(e) => setCustomerName(e.target.value)}
-                                className="w-full rounded-lg bg-white border border-brand-slate/20 px-3 py-2 text-xs text-brand-slate focus:outline-none focus:border-brand-slate"
+                                className="w-full rounded-lg bg-white border border-brand-slate/20 px-3 py-2 text-xs text-brand-slate focus:outline-1 focus:-outline-offset-1 focus:outline-brand-slate"
                                 required
                               />
                             </div>
@@ -809,7 +812,7 @@ export const MealBox: React.FC = () => {
                                   type="email"
                                   value={customerEmail}
                                   onChange={(e) => setCustomerEmail(e.target.value)}
-                                  className="w-full rounded-lg bg-white border border-brand-slate/20 px-3 py-2 text-xs text-brand-slate focus:outline-none focus:border-brand-slate"
+                                  className="w-full rounded-lg bg-white border border-brand-slate/20 px-3 py-2 text-xs text-brand-slate focus:outline-1 focus:-outline-offset-1 focus:outline-brand-slate"
                                   required
                                 />
                               </div>
@@ -821,7 +824,7 @@ export const MealBox: React.FC = () => {
                                   type="tel"
                                   value={customerPhone}
                                   onChange={(e) => setCustomerPhone(e.target.value)}
-                                  className="w-full rounded-lg bg-white border border-brand-slate/20 px-3 py-2 text-xs text-brand-slate focus:outline-none focus:border-brand-slate"
+                                  className="w-full rounded-lg bg-white border border-brand-slate/20 px-3 py-2 text-xs text-brand-slate focus:outline-1 focus:-outline-offset-1 focus:outline-brand-slate"
                                 />
                               </div>
                             </div>
@@ -836,7 +839,7 @@ export const MealBox: React.FC = () => {
                                 onChange={(e) =>
                                   setDeliveryAddress(e.target.value)
                                 }
-                                className="w-full rounded-lg bg-white border border-brand-slate/20 px-3 py-2 text-xs text-brand-slate focus:outline-none focus:border-brand-slate"
+                                className="w-full rounded-lg bg-white border border-brand-slate/20 px-3 py-2 text-xs text-brand-slate focus:outline-1 focus:-outline-offset-1 focus:outline-brand-slate"
                                 required
                               />
                             </div>

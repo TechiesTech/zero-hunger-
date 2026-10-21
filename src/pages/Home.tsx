@@ -82,13 +82,12 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
                 {FEATURED_PROJECT.stats.map((stat, idx) => (
                   <div key={stat.label}>
                     <div
-                      className={`font-display-sans text-2xl sm:text-3xl font-black ${
-                        idx === 0
+                      className={`font-display-sans text-2xl sm:text-3xl font-black ${idx === 0
                           ? 'text-brand-green'
                           : idx === 1
-                          ? 'text-brand-cyan'
-                          : 'text-brand-lime'
-                      }`}
+                            ? 'text-brand-cyan'
+                            : 'text-brand-lime'
+                        }`}
                     >
                       {stat.value}
                     </div>
@@ -115,47 +114,45 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
       </section>
 
       {/* SECTION 5 — OUR MISSION (CRISP ALABASTER / WHITE HIGH-CONTRAST BREAK) */}
-      <section className="bg-brand-alabaster text-brand-slate py-24 sm:py-32 border-t border-[#122023]/10">
-        <div className="max-w-280 mx-auto px-5 sm:px-8 lg:px-12 text-center">
-          <ScrollReveal>
-            <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-brand-emerald block mb-4">
-              OUR CONVICTION
-            </span>
-            <h2 className="font-display-sans uppercase text-4xl sm:text-6xl lg:text-7xl font-black tracking-[-0.04em] leading-[0.94] text-brand-slate">
-              FOOD IS MORE THAN
-              <br />
-              <span className="text-brand-emerald">NOURISHMENT.</span>
-            </h2>
-          </ScrollReveal>
+      <section className="bg-brand-alabaster text-brand-slate py-24 sm:py-32 border-t border-brand-slate/10">        <div className="max-w-280 mx-auto px-5 sm:px-8 lg:px-12 text-center">
+        <ScrollReveal>
+          <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-brand-emerald block mb-4">
+            OUR CONVICTION
+          </span>
+          <h2 className="font-display-sans uppercase text-4xl sm:text-6xl lg:text-7xl font-black tracking-[-0.04em] leading-[0.94] text-brand-slate">
+            FOOD IS MORE THAN
+            <br />
+            <span className="text-brand-emerald">NOURISHMENT.</span>
+          </h2>
+        </ScrollReveal>
 
-          <div className="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {MISSION_SUBLINES.map((line, index) => (
-              <ScrollReveal
-                key={line}
-                delay={0.08 + index * 0.1}
-                yOffset={16}
-              >
-                <div
-                  className={`rounded-[14px] py-6 px-5 font-display-sans uppercase text-2xl sm:text-3xl font-black tracking-tight ${
-                    index === 0
-                      ? 'bg-brand-green text-brand-slate'
-                      : index === 1
+        <div className="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {MISSION_SUBLINES.map((line, index) => (
+            <ScrollReveal
+              key={line}
+              delay={0.08 + index * 0.1}
+              yOffset={16}
+            >
+              <div
+                className={`rounded-[14px] py-6 px-5 font-display-sans uppercase text-2xl sm:text-3xl font-black tracking-tight ${index === 0
+                    ? 'bg-brand-green text-brand-slate'
+                    : index === 1
                       ? 'bg-brand-cyan text-brand-slate'
                       : 'bg-brand-lime text-brand-slate'
                   }`}
-                >
-                  {line}
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal delay={0.35} className="mt-10">
-            <p className="text-sm sm:text-base text-brand-slate/80 max-w-xl mx-auto leading-relaxed font-medium">
-              When a child sits down to a warm midday meal at school, or a family receives dry grain reserves before the monsoon floods, an entire trajectory shifts from survival toward human possibility.
-            </p>
-          </ScrollReveal>
+              >
+                {line}
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
+
+        <ScrollReveal delay={0.35} className="mt-10">
+          <p className="text-sm sm:text-base text-brand-slate/80 max-w-xl mx-auto leading-relaxed font-medium">
+            When a child sits down to a warm midday meal at school, or a family receives dry grain reserves before the monsoon floods, an entire trajectory shifts from survival toward human possibility.
+          </p>
+        </ScrollReveal>
+      </div>
       </section>
 
       {/* SECTION 5.5 — FIND THE PROGRAM BUILT FOR YOUR MISSION (BLACK BACKGROUND) */}

@@ -29,8 +29,8 @@ interface ProjectsAndImpactProps {
 
 const METRIC_CARD_THEMES = [
   { bg: 'bg-brand-green', text: 'text-brand-slate' },
-  { bg: 'bg-[#4EDBE2]', text: 'text-brand-slate' },
-  { bg: 'bg-[#B9FF2C]', text: 'text-brand-slate' },
+  { bg: 'bg-brand-cyan', text: 'text-brand-slate' },
+  { bg: 'bg-brand-lime', text: 'text-brand-slate' },
   { bg: 'bg-[#188D44]', text: 'text-white' },
   { bg: 'bg-brand-alabaster', text: 'text-brand-slate' },
 ];
@@ -163,7 +163,7 @@ export const Projects: React.FC<ProjectsAndImpactProps> = ({ onOpenSupport }) =>
                 <button
                   type="button"
                   onClick={() => scrollToSection('photographic-archive')}
-                  className="px-4 py-2.5 rounded-lg bg-brand-green hover:bg-[#B9FF2C] text-brand-black font-mono-tabular text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer inline-flex items-center gap-1.5"
+                  className="px-4 py-2.5 rounded-lg bg-brand-green hover:bg-brand-lime text-brand-black font-mono-tabular text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer inline-flex items-center gap-1.5"
                 >
                   <Camera className="w-3.5 h-3.5" />
                   <span>Field Gallery</span>
@@ -172,7 +172,7 @@ export const Projects: React.FC<ProjectsAndImpactProps> = ({ onOpenSupport }) =>
                 <button
                   type="button"
                   onClick={() => scrollToSection('audited-metrics')}
-                  className="px-4 py-2.5 rounded-lg bg-brand-slate hover:bg-[#1c3035] text-white border border-white/20 font-mono-tabular text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer inline-flex items-center gap-1.5"
+                  className="px-4 py-2.5 rounded-lg bg-brand-slate hover:bg-brand-slate/90 text-white border border-white/20 font-mono-tabular text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer inline-flex items-center gap-1.5"
                 >
                   <BarChart3 className="w-3.5 h-3.5 text-brand-cyan" />
                   <span>120K+ Verified Ledger</span>
@@ -181,7 +181,7 @@ export const Projects: React.FC<ProjectsAndImpactProps> = ({ onOpenSupport }) =>
                 <button
                   type="button"
                   onClick={() => scrollToSection('regional-ledger')}
-                  className="px-4 py-2.5 rounded-lg bg-brand-slate hover:bg-[#1c3035] text-white border border-white/20 font-mono-tabular text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer inline-flex items-center gap-1.5"
+                  className="px-4 py-2.5 rounded-lg bg-brand-slate hover:bg-brand-slate/90 text-white border border-white/20 font-mono-tabular text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer inline-flex items-center gap-1.5"
                 >
                   <MapPin className="w-3.5 h-3.5 text-brand-lime" />
                   <span>28 Communities</span>
@@ -217,7 +217,7 @@ export const Projects: React.FC<ProjectsAndImpactProps> = ({ onOpenSupport }) =>
                   />
 
                   <div
-                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent"
+                    className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/90 via-black/35 to-transparent"
                     aria-hidden="true"
                   />
 
@@ -275,7 +275,7 @@ export const Projects: React.FC<ProjectsAndImpactProps> = ({ onOpenSupport }) =>
                   <button
                     type="button"
                     onClick={() => setSelectedMetricId(metric.id)}
-                    className={`w-full h-full text-left p-6 sm:p-7 rounded-2xl border-2 transition-all duration-200 flex flex-col justify-between cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#49E619] ${
+                    className={`w-full h-full text-left p-6 sm:p-7 rounded-2xl border-2 transition-all duration-200 flex flex-col justify-between cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green ${
                       theme.bg
                     } ${theme.text} ${
                       isSelected
@@ -331,7 +331,7 @@ export const Projects: React.FC<ProjectsAndImpactProps> = ({ onOpenSupport }) =>
               <button
                 type="button"
                 onClick={() => onOpenSupport('donate')}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-[10px] bg-brand-green hover:bg-[#B9FF2C] text-brand-black text-xs font-mono-tabular font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-[10px] bg-brand-green hover:bg-brand-lime text-brand-black text-xs font-mono-tabular font-bold uppercase tracking-wider transition-colors cursor-pointer"
               >
                 <span>Support This Program</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -369,7 +369,7 @@ export const Projects: React.FC<ProjectsAndImpactProps> = ({ onOpenSupport }) =>
                   <th className="py-4 pl-6 text-right">Operational Cadence</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#122023]/10 text-sm">
+              <tbody className="divide-y divide-brand-black/10 text-sm">
                 {REGIONAL_LEDGER.map((row) => (
                   <tr
                     key={row.district}
@@ -414,8 +414,8 @@ export const Projects: React.FC<ProjectsAndImpactProps> = ({ onOpenSupport }) =>
             {FINANCIAL_STEWARDSHIP.map((item, idx) => {
               const cardColors = [
                 'bg-brand-green text-brand-slate',
-                'bg-[#4EDBE2] text-brand-slate',
-                'bg-[#B9FF2C] text-brand-slate',
+                'bg-brand-cyan text-brand-slate',
+                'bg-brand-lime text-brand-slate',
               ];
               return (
                 <ScrollReveal
@@ -546,11 +546,11 @@ export const Projects: React.FC<ProjectsAndImpactProps> = ({ onOpenSupport }) =>
                     if (error) setError('');
                   }}
                   placeholder="YOUR EMAIL ADDRESS"
-                  className="flex-1 rounded-[10px] bg-brand-slate border border-white/20 px-4 py-3.5 font-mono-tabular text-xs text-white placeholder:text-neutral-400 uppercase tracking-[0.14em] focus:outline-none focus:border-[#49E619]"
+                  className="flex-1 rounded-[10px] bg-brand-slate border border-white/20 px-4 py-3.5 font-mono-tabular text-xs placeholder:text-neutral-400 uppercase tracking-[0.14em] focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                 />
                 <button
                   type="submit"
-                  className="rounded-[10px] bg-brand-green hover:bg-[#B9FF2C] text-brand-black px-7 py-3.5 font-mono-tabular text-xs font-bold uppercase tracking-[0.16em] transition-colors duration-200 whitespace-nowrap cursor-pointer"
+                  className="rounded-[10px] bg-brand-green hover:bg-brand-lime text-brand-black px-7 py-3.5 font-mono-tabular text-xs font-bold uppercase tracking-[0.16em] transition-colors duration-200 whitespace-nowrap cursor-pointer"
                 >
                   SUBSCRIBE
                 </button>

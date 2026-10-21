@@ -106,19 +106,19 @@ export const CelebrateAndGive: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#080808] text-white min-h-screen">
+    <div className="bg-brand-black text-white min-h-screen">
       {/* =====================================================================
           HERO SECTION — CELEBRATE LIFE · CLOTHE WITH DIGNITY · RESCUE FOOD
       ====================================================================== */}
-      <section className="bg-[#080808] pt-28 sm:pt-36 pb-16 sm:pb-20 border-b border-white/10">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+      <section className="bg-brand-black pt-28 sm:pt-36 pb-16 sm:pb-20 border-b border-white/10">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12 text-center">
           <ScrollReveal>
-            <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-[#49E619] block mb-3">
+            <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-brand-green block mb-3">
               COMMUNITY CELEBRATIONS & ZERO-WASTE DRIVES
             </span>
 
             <h1 className="font-display-sans uppercase text-4xl sm:text-6xl lg:text-7xl font-black tracking-[-0.04em] leading-[0.92] text-white">
-              SHARE YOUR <span className="text-[#49E619]">JOY.</span>
+              SHARE YOUR <span className="text-brand-green">JOY.</span>
               <br />
               FEED & CLOTHE WITH DIGNITY.
             </h1>
@@ -128,13 +128,13 @@ export const CelebrateAndGive: React.FC = () => {
             </p>
 
             {/* 3 Main Drive Switcher Tabs */}
-            <div className="mt-10 inline-flex flex-wrap items-center justify-center p-1.5 rounded-[16px] bg-[#122023] border border-white/15 gap-1.5">
+            <div className="mt-10 inline-flex flex-wrap items-center justify-center p-1.5 rounded-2xl bg-brand-slate border border-white/15 gap-1.5">
               <button
                 type="button"
                 onClick={() => handleTabChange('OCCASION_FOOD')}
-                className={`flex items-center gap-2 px-5 py-3 rounded-[12px] font-mono-tabular text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                className={`flex items-center gap-2 px-5 py-3 rounded-xl font-mono-tabular text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                   activeTab === 'OCCASION_FOOD'
-                    ? 'bg-[#49E619] text-[#080808] shadow-lg'
+                    ? 'bg-brand-green text-brand-black shadow-lg'
                     : 'text-white/80 hover:text-white'
                 }`}
               >
@@ -145,9 +145,9 @@ export const CelebrateAndGive: React.FC = () => {
               <button
                 type="button"
                 onClick={() => handleTabChange('CLOTH_DONATION')}
-                className={`flex items-center gap-2 px-5 py-3 rounded-[12px] font-mono-tabular text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                className={`flex items-center gap-2 px-5 py-3 rounded-xl font-mono-tabular text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                   activeTab === 'CLOTH_DONATION'
-                    ? 'bg-[#4EDBE2] text-[#080808] shadow-lg'
+                    ? 'bg-brand-cyan text-brand-black shadow-lg'
                     : 'text-white/80 hover:text-white'
                 }`}
               >
@@ -158,9 +158,9 @@ export const CelebrateAndGive: React.FC = () => {
               <button
                 type="button"
                 onClick={() => handleTabChange('LEFTOVER_RESCUE')}
-                className={`flex items-center gap-2 px-5 py-3 rounded-[12px] font-mono-tabular text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                className={`flex items-center gap-2 px-5 py-3 rounded-xl font-mono-tabular text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                   activeTab === 'LEFTOVER_RESCUE'
-                    ? 'bg-[#B9FF2C] text-[#080808] shadow-lg'
+                    ? 'bg-brand-lime text-brand-black shadow-lg'
                     : 'text-white/80 hover:text-white'
                 }`}
               >
@@ -177,42 +177,42 @@ export const CelebrateAndGive: React.FC = () => {
       ====================================================================== */}
       {activeTab === 'OCCASION_FOOD' && (
         <section className="py-16 sm:py-24">
-          <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+          <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               {/* Left Column: Live Customizer Form */}
               <div className="lg:col-span-7">
                 <ScrollReveal>
-                  <div className="rounded-[20px] bg-[#122023] border border-white/15 p-6 sm:p-10 shadow-2xl">
+                  <div className="rounded-[20px] bg-brand-slate border border-white/15 p-6 sm:p-10 shadow-2xl">
                     <div className="pb-6 border-b border-white/12 flex items-center justify-between">
                       <div>
-                        <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-[#49E619]">
+                        <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-brand-green">
                           STEP 01 · PERSONALIZE CELEBRATION
                         </span>
                         <h2 className="font-display-sans uppercase text-2xl sm:text-3xl font-black text-white mt-1">
                           Sponsor Meals & Send Placards
                         </h2>
                       </div>
-                      <span className="px-3.5 py-1 rounded-[6px] bg-[#49E619] text-[#080808] font-mono-tabular text-xs font-bold uppercase">
+                      <span className="px-3.5 py-1 rounded-md bg-brand-green text-brand-black font-mono-tabular text-xs font-bold uppercase">
                         Placard Guaranteed
                       </span>
                     </div>
 
                     {isOccasionBooked ? (
                       <div className="py-10 text-center">
-                        <div className="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center bg-[#49E619] text-[#080808]">
+                        <div className="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center bg-brand-green text-brand-black">
                           <CheckCircle2 className="w-8 h-8" />
                         </div>
-                        <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-[#49E619]">
+                        <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-brand-green">
                           BOOKING CONFIRMED · CHARITY TOKEN GENERATED
                         </span>
                         <h3 className="font-display-sans uppercase text-3xl font-black text-white mt-2">
                           Thank You, {sponsorName}!
                         </h3>
-                        <div className="mt-4 inline-block px-4 py-2 rounded-[8px] bg-white/10 border border-[#49E619]/40 font-mono-tabular text-sm text-[#B9FF2C]">
+                        <div className="mt-4 inline-block px-4 py-2 rounded-lg bg-white/10 border border-brand-green/40 font-mono-tabular text-sm text-brand-lime">
                           Token: <strong>{bookingToken}</strong>
                         </div>
                         <p className="mt-4 text-sm sm:text-base text-white/80 max-w-lg mx-auto leading-relaxed">
-                          Your celebration meal drive for <strong className="text-white">{celebrantName}</strong> ({selectedPackage.mealsCount} Meals · ₹{selectedPackage.priceInr}) is scheduled for <strong className="text-[#49E619]">{celebrationDate}</strong> at <strong className="text-white">{selectedCenter.name}</strong>.
+                          Your celebration meal drive for <strong className="text-white">{celebrantName}</strong> ({selectedPackage.mealsCount} Meals · ₹{selectedPackage.priceInr}) is scheduled for <strong className="text-brand-green">{celebrationDate}</strong> at <strong className="text-white">{selectedCenter.name}</strong>.
                         </p>
                         <p className="mt-3 text-xs text-white/70 max-w-md mx-auto">
                           Our field culinary team will prepare the feast, print your custom placard, and record the children singing blessings and holding your message. Photo & video album will be sent to <strong>{sponsorEmail}</strong> and WhatsApp within 24 hours of meal service.
@@ -221,7 +221,7 @@ export const CelebrateAndGive: React.FC = () => {
                         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                           <Link
                             to={`/track-meal?token=${bookingToken}`}
-                            className="px-6 py-3.5 rounded-[10px] bg-[#49E619] hover:bg-[#B9FF2C] text-[#080808] font-mono-tabular text-xs font-bold uppercase tracking-widest transition-colors"
+                            className="px-6 py-3.5 rounded-[10px] bg-brand-green hover:bg-brand-lime text-brand-black font-mono-tabular text-xs font-bold uppercase tracking-widest transition-colors"
                           >
                             Track Meal & Proof Live →
                           </Link>
@@ -248,10 +248,10 @@ export const CelebrateAndGive: React.FC = () => {
                                   key={type}
                                   type="button"
                                   onClick={() => setOccasionType(type)}
-                                  className={`py-2.5 px-3 rounded-[8px] text-xs font-mono-tabular font-bold uppercase border transition-colors cursor-pointer text-center ${
+                                  className={`py-2.5 px-3 rounded-lg text-xs font-mono-tabular font-bold uppercase border transition-colors cursor-pointer text-center ${
                                     occasionType === type
-                                      ? 'bg-[#49E619] text-[#080808] border-[#49E619]'
-                                      : 'bg-[#080808] text-white/75 border-white/15 hover:border-white/40'
+                                      ? 'bg-brand-green text-brand-black border-brand-green'
+                                      : 'bg-brand-black text-white/75 border-white/15 hover:border-white/40'
                                   }`}
                                 >
                                   {type}
@@ -273,7 +273,7 @@ export const CelebrateAndGive: React.FC = () => {
                               value={celebrantName}
                               onChange={(e) => setCelebrantName(e.target.value)}
                               placeholder="e.g. Aarav, Ramesh & Sunita, Late Smt. Sharda Devi"
-                              className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#49E619]"
+                              className="w-full rounded-[10px] bg-brand-black border border-white/20 px-4 py-3 text-sm text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                             />
                           </div>
 
@@ -290,7 +290,7 @@ export const CelebrateAndGive: React.FC = () => {
                               value={celebrantAge}
                               onChange={(e) => setCelebrantAge(e.target.value)}
                               placeholder="e.g. 10, 25, 50"
-                              className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#49E619]"
+                              className="w-full rounded-[10px] bg-brand-black border border-white/20 px-4 py-3 text-sm text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                             />
                           </div>
                         </div>
@@ -306,7 +306,7 @@ export const CelebrateAndGive: React.FC = () => {
                             value={customMessage}
                             onChange={(e) => setCustomMessage(e.target.value)}
                             placeholder="e.g. Wishing you good health, wisdom, and sunshine always!"
-                            className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#49E619] resize-none"
+                            className="w-full rounded-[10px] bg-brand-black border border-white/20 px-4 py-3 text-sm text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green resize-none"
                           />
                         </div>
 
@@ -323,10 +323,10 @@ export const CelebrateAndGive: React.FC = () => {
                                   key={pkg.id}
                                   type="button"
                                   onClick={() => setSelectedPackage(pkg)}
-                                  className={`p-3.5 rounded-[12px] text-left border transition-all cursor-pointer ${
+                                  className={`p-3.5 rounded-xl text-left border transition-all cursor-pointer ${
                                     isSelected
-                                      ? 'bg-[#49E619] text-[#080808] border-[#49E619]'
-                                      : 'bg-[#080808] text-white border-white/15 hover:border-white/40'
+                                      ? 'bg-brand-green text-brand-black border-brand-green'
+                                      : 'bg-brand-black text-white border-white/15 hover:border-white/40'
                                   }`}
                                 >
                                   <div className="flex items-center justify-between">
@@ -358,7 +358,7 @@ export const CelebrateAndGive: React.FC = () => {
                             <select
                               value={selectedCenterId}
                               onChange={(e) => setSelectedCenterId(e.target.value)}
-                              className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-3.5 py-3 text-xs text-white focus:outline-none focus:border-[#49E619]"
+                              className="w-full rounded-[10px] bg-brand-black border border-white/20 px-3.5 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                             >
                               {DISTRIBUTION_CENTERS.map((c) => (
                                 <option key={c.id} value={c.id}>
@@ -377,14 +377,14 @@ export const CelebrateAndGive: React.FC = () => {
                               required
                               value={celebrationDate}
                               onChange={(e) => setCelebrationDate(e.target.value)}
-                              className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#49E619]"
+                              className="w-full rounded-[10px] bg-brand-black border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                             />
                           </div>
                         </div>
 
                         {/* Sponsor Contact Details */}
                         <div className="pt-4 border-t border-white/12 space-y-4">
-                          <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-[#B9FF2C] block">
+                          <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-brand-lime block">
                             YOUR CONTACT & 80G RECEIPT DETAILS
                           </span>
                           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -394,7 +394,7 @@ export const CelebrateAndGive: React.FC = () => {
                               value={sponsorName}
                               onChange={(e) => setSponsorName(e.target.value)}
                               placeholder="Your Full Name"
-                              className="rounded-[8px] bg-[#080808] border border-white/20 px-3 py-2 text-xs text-white focus:outline-none focus:border-[#49E619]"
+                              className="rounded-lg bg-brand-black border border-white/20 px-3 py-2 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                             />
                             <input
                               type="email"
@@ -402,7 +402,7 @@ export const CelebrateAndGive: React.FC = () => {
                               value={sponsorEmail}
                               onChange={(e) => setSponsorEmail(e.target.value)}
                               placeholder="Email for Video & Receipt"
-                              className="rounded-[8px] bg-[#080808] border border-white/20 px-3 py-2 text-xs text-white focus:outline-none focus:border-[#49E619]"
+                              className="rounded-lg bg-brand-black border border-white/20 px-3 py-2 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                             />
                             <input
                               type="tel"
@@ -410,16 +410,16 @@ export const CelebrateAndGive: React.FC = () => {
                               value={sponsorPhone}
                               onChange={(e) => setSponsorPhone(e.target.value)}
                               placeholder="WhatsApp for Live Photos"
-                              className="rounded-[8px] bg-[#080808] border border-white/20 px-3 py-2 text-xs text-white focus:outline-none focus:border-[#49E619]"
+                              className="rounded-lg bg-brand-black border border-white/20 px-3 py-2 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                             />
                           </div>
                         </div>
 
                         <button
                           type="submit"
-                          className="w-full py-4 px-6 rounded-[12px] bg-[#49E619] hover:bg-[#B9FF2C] text-[#080808] font-mono-tabular text-sm font-black uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                          className="w-full py-4 px-6 rounded-xl bg-brand-green hover:bg-brand-lime text-brand-black font-mono-tabular text-sm font-black uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
                         >
-                          <Sparkles className="w-4 h-4 text-[#080808]" />
+                          <Sparkles className="w-4 h-4 text-brand-black" />
                           <span>
                             SPONSOR {selectedPackage.mealsCount} CELEBRATION MEALS (₹{selectedPackage.priceInr})
                           </span>
@@ -433,11 +433,11 @@ export const CelebrateAndGive: React.FC = () => {
               {/* Right Column: Live Interactive Placard Preview */}
               <div className="lg:col-span-5 space-y-6">
                 <ScrollReveal delay={0.15}>
-                  <div className="rounded-[20px] bg-[#080808] border-2 border-[#49E619]/40 p-6 shadow-2xl relative overflow-hidden">
+                  <div className="rounded-[20px] bg-brand-black border-2 border-brand-green/40 p-6 shadow-2xl relative overflow-hidden">
                     <div className="flex items-center justify-between pb-3 border-b border-white/15">
                       <div className="flex items-center gap-2">
-                        <span className="w-2.5 h-2.5 rounded-full bg-[#49E619] animate-pulse" />
-                        <span className="font-mono-tabular text-xs font-bold uppercase tracking-widest text-[#49E619]">
+                        <span className="w-2.5 h-2.5 rounded-full bg-brand-green animate-pulse" />
+                        <span className="font-mono-tabular text-xs font-bold uppercase tracking-widest text-brand-green">
                           LIVE PLACARD PREVIEW
                         </span>
                       </div>
@@ -447,31 +447,30 @@ export const CelebrateAndGive: React.FC = () => {
                     </div>
 
                     {/* Simulated High-Visibility Physical Placard Card */}
-                    <div className="mt-5 p-6 rounded-[16px] bg-[#F2F4F3] text-[#080808] border-4 border-[#122023] shadow-xl relative">
-                      {/* Placard Hole Marks & Hanging String effect */}
+                      <div className="mt-5 p-6 rounded-2xl bg-brand-alabaster text-brand-black border-4 border-brand-slate shadow-xl relative">                      {/* Placard Hole Marks & Hanging String effect */}
                       <div className="flex justify-between items-center mb-3 px-2">
-                        <span className="w-3 h-3 rounded-full bg-[#122023] inline-block" />
-                        <span className="font-mono-tabular text-[10px] font-black uppercase tracking-widest text-[#188D44]">
+                        <span className="w-3 h-3 rounded-full bg-brand-slate inline-block" />
+                        <span className="font-mono-tabular text-[10px] font-black uppercase tracking-widest text-brand-emerald">
                           ZERO HUNGER INITIATIVE · HYDERABAD
                         </span>
-                        <span className="w-3 h-3 rounded-full bg-[#122023] inline-block" />
+                        <span className="w-3 h-3 rounded-full bg-brand-slate inline-block" />
                       </div>
 
-                      <div className="text-center py-4 border-y-2 border-dashed border-[#122023]/25">
-                        <div className="font-display-sans uppercase text-2xl sm:text-3xl font-black text-[#122023] tracking-tight leading-none">
+                      <div className="text-center py-4 border-y-2 border-dashed border-brand-slate/25">
+                        <div className="font-display-sans uppercase text-2xl sm:text-3xl font-black text-brand-slate tracking-tight leading-none">
                           {computedPlacardHeading}
                         </div>
 
-                        <p className="mt-3 font-serif-editorial italic text-sm sm:text-base text-[#122023]/90 leading-snug px-3">
+                        <p className="mt-3 font-serif-editorial italic text-sm sm:text-base text-brand-slate/90 leading-snug px-3">
                           “{customMessage}”
                         </p>
 
-                        <div className="mt-3 inline-block px-3 py-1 rounded-full bg-[#49E619] text-[#122023] font-mono-tabular text-[11px] font-black uppercase tracking-wider">
+                        <div className="mt-3 inline-block px-3 py-1 rounded-full bg-brand-green text-brand-slate font-mono-tabular text-[11px] font-black uppercase tracking-wider">
                           {selectedPackage.mealsCount} WARM MEALS DEDICATED
                         </div>
                       </div>
 
-                      <div className="mt-3 pt-2 flex items-center justify-between text-[10px] font-mono-tabular uppercase tracking-wider text-[#122023]/70">
+                      <div className="mt-3 pt-2 flex items-center justify-between text-[10px] font-mono-tabular uppercase tracking-wider text-brand-slate/70">
                         <span>Center: {selectedCenter.name.substring(0, 22)}...</span>
                         <span>Date: {celebrationDate}</span>
                       </div>
@@ -479,15 +478,15 @@ export const CelebrateAndGive: React.FC = () => {
 
                     <div className="mt-5 space-y-3 font-mono-tabular text-xs text-white/80">
                       <div className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#49E619] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-brand-green shrink-0 mt-0.5" />
                         <span>Children & beneficiaries will hold this exact printed placard in front of their hot lunch feast.</span>
                       </div>
                       <div className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#49E619] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-brand-green shrink-0 mt-0.5" />
                         <span>High-resolution video clip of beneficiaries saying thank you sent via WhatsApp on the afternoon of delivery.</span>
                       </div>
                       <div className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#49E619] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-brand-green shrink-0 mt-0.5" />
                         <span>Eligible for 50% Tax Exemption under Section 80G (Instant 80G receipt issued).</span>
                       </div>
                     </div>
@@ -496,21 +495,21 @@ export const CelebrateAndGive: React.FC = () => {
 
                 {/* Recent Celebrations Showcase */}
                 <ScrollReveal delay={0.25}>
-                  <div className="rounded-[18px] bg-[#122023] p-6 border border-white/12">
-                    <span className="font-mono-tabular text-xs font-bold uppercase tracking-widest text-[#4EDBE2] block mb-3">
+                  <div className="rounded-[18px] bg-brand-slate p-6 border border-white/12">
+                    <span className="font-mono-tabular text-xs font-bold uppercase tracking-widest text-brand-cyan block mb-3">
                       RECENT OCCASIONS CELEBRATED WITH US
                     </span>
                     <div className="space-y-4">
                       {RECENT_OCCASIONS.map((item) => (
-                        <div key={item.id} className="p-3.5 rounded-[12px] bg-[#080808] border border-white/10 flex items-start gap-3">
-                          <div className="w-16 h-16 rounded-[8px] overflow-hidden shrink-0 bg-white/10">
+                        <div key={item.id} className="p-3.5 rounded-xl bg-brand-black border border-white/10 flex items-start gap-3">
+                          <div className="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-white/10">
                             <EditorialImage src={item.image} alt={item.occasionType} className="w-full h-full" />
                           </div>
                           <div>
                             <div className="font-display-sans text-xs font-black text-white uppercase">
                               {item.occasionType}
                             </div>
-                            <div className="font-mono-tabular text-[10px] text-[#49E619]">
+                            <div className="font-mono-tabular text-[10px] text-brand-green">
                               By {item.sponsorName} · {item.mealsServed} Meals
                             </div>
                             <p className="mt-1 text-[11px] text-white/70 line-clamp-2 italic font-serif-editorial">
@@ -533,9 +532,9 @@ export const CelebrateAndGive: React.FC = () => {
       ====================================================================== */}
       {activeTab === 'CLOTH_DONATION' && (
         <section className="py-16 sm:py-24">
-          <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+          <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-[#4EDBE2] block mb-2">
+              <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-cyan block mb-2">
                 VASTRA DAAN · CLOTHES FOR DIGNITY
               </span>
               <h2 className="font-display-sans uppercase text-3xl sm:text-5xl font-black text-white">
@@ -546,13 +545,13 @@ export const CelebrateAndGive: React.FC = () => {
               </p>
 
               {/* Mode Toggle: Drop-off vs Doorstep Pickup */}
-              <div className="mt-8 inline-flex p-1.5 rounded-[14px] bg-[#122023] border border-white/15 gap-2">
+              <div className="mt-8 inline-flex p-1.5 rounded-[14px] bg-brand-slate border border-white/15 gap-2">
                 <button
                   type="button"
                   onClick={() => setClothMode('REQUEST_PICKUP')}
                   className={`px-5 py-2.5 rounded-[10px] font-mono-tabular text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer ${
                     clothMode === 'REQUEST_PICKUP'
-                      ? 'bg-[#4EDBE2] text-[#080808]'
+                      ? 'bg-brand-cyan text-brand-black'
                       : 'text-white/80 hover:text-white'
                   }`}
                 >
@@ -564,7 +563,7 @@ export const CelebrateAndGive: React.FC = () => {
                   onClick={() => setClothMode('DROP_OFF')}
                   className={`px-5 py-2.5 rounded-[10px] font-mono-tabular text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer ${
                     clothMode === 'DROP_OFF'
-                      ? 'bg-[#4EDBE2] text-[#080808]'
+                      ? 'bg-brand-cyan text-brand-black'
                       : 'text-white/80 hover:text-white'
                   }`}
                 >
@@ -577,19 +576,19 @@ export const CelebrateAndGive: React.FC = () => {
             {/* PICKUP REQUEST FORM */}
             {clothMode === 'REQUEST_PICKUP' ? (
               <div className="max-w-2xl mx-auto">
-                <div className="rounded-[20px] bg-[#122023] border border-white/15 p-6 sm:p-10 shadow-2xl">
+                <div className="rounded-[20px] bg-brand-slate border border-white/15 p-6 sm:p-10 shadow-2xl">
                   {isClothBooked ? (
                     <div className="py-8 text-center">
-                      <div className="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center bg-[#4EDBE2] text-[#080808]">
+                      <div className="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center bg-brand-cyan text-brand-black">
                         <CheckCircle2 className="w-8 h-8" />
                       </div>
-                      <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-[#4EDBE2]">
+                      <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-brand-cyan">
                         PICKUP CONFIRMED · VAN DISPATCH SCHEDULED
                       </span>
                       <h3 className="font-display-sans uppercase text-3xl font-black text-white mt-2">
                         Thank You, {clothContactName}!
                       </h3>
-                      <div className="mt-3 inline-block px-4 py-2 rounded-[8px] bg-white/10 font-mono-tabular text-sm text-[#4EDBE2] font-bold">
+                      <div className="mt-3 inline-block px-4 py-2 rounded-lg bg-white/10 font-mono-tabular text-sm text-brand-cyan font-bold">
                         Reference Code: {clothRefNumber}
                       </div>
                       <p className="mt-4 text-sm text-white/80 leading-relaxed max-w-md mx-auto">
@@ -598,7 +597,7 @@ export const CelebrateAndGive: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => setIsClothBooked(false)}
-                        className="mt-6 px-6 py-3 rounded-[10px] bg-[#4EDBE2] text-[#080808] font-mono-tabular text-xs font-bold uppercase tracking-wider cursor-pointer"
+                        className="mt-6 px-6 py-3 rounded-[10px] bg-brand-cyan text-brand-black font-mono-tabular text-xs font-bold uppercase tracking-wider cursor-pointer"
                       >
                         Raise Another Collection Request
                       </button>
@@ -606,7 +605,7 @@ export const CelebrateAndGive: React.FC = () => {
                   ) : (
                     <form onSubmit={handleClothPickupSubmit} className="space-y-5">
                       <div className="pb-4 border-b border-white/10">
-                        <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-[#4EDBE2]">
+                        <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-brand-cyan">
                           DOORSTEP COLLECTION SERVICE · HYDERABAD & CYBERABAD
                         </span>
                         <h3 className="font-display-sans uppercase text-2xl font-black text-white mt-1">
@@ -622,7 +621,7 @@ export const CelebrateAndGive: React.FC = () => {
                           <select
                             value={clothBagsCount}
                             onChange={(e) => setClothBagsCount(Number(e.target.value))}
-                            className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-3.5 py-3 text-xs text-white focus:outline-none focus:border-[#4EDBE2]"
+                            className="w-full rounded-[10px] bg-brand-black border border-white/20 px-3.5 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-cyan"
                           >
                             <option value={1}>1 Bag (Approx 10-15 garments)</option>
                             <option value={2}>2 Bags (Approx 25-35 garments)</option>
@@ -640,7 +639,7 @@ export const CelebrateAndGive: React.FC = () => {
                             required
                             value={clothPickupDate}
                             onChange={(e) => setClothPickupDate(e.target.value)}
-                            className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#4EDBE2]"
+                            className="w-full rounded-[10px] bg-brand-black border border-white/20 px-3.5 py-2.5 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-cyan"
                           />
                         </div>
                       </div>
@@ -655,7 +654,7 @@ export const CelebrateAndGive: React.FC = () => {
                           value={clothType}
                           onChange={(e) => setClothType(e.target.value)}
                           placeholder="e.g. Sarees, Men Shirts, Winter Blankets, Kids Shoes"
-                          className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-4 py-3 text-xs text-white focus:outline-none focus:border-[#4EDBE2]"
+                          className="w-full rounded-[10px] bg-brand-black border border-white/20 px-4 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-cyan"
                         />
                       </div>
 
@@ -669,7 +668,7 @@ export const CelebrateAndGive: React.FC = () => {
                           value={clothPickupAddress}
                           onChange={(e) => setClothPickupAddress(e.target.value)}
                           placeholder="Flat/House number, Apartment name, Street, Landmark, Pin code"
-                          className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-4 py-3 text-xs text-white focus:outline-none focus:border-[#4EDBE2] resize-none"
+                          className="w-full rounded-[10px] bg-brand-black border border-white/20 px-4 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-cyan resize-none"
                         />
                       </div>
 
@@ -683,7 +682,7 @@ export const CelebrateAndGive: React.FC = () => {
                             required
                             value={clothContactName}
                             onChange={(e) => setClothContactName(e.target.value)}
-                            className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-4 py-3 text-xs text-white focus:outline-none focus:border-[#4EDBE2]"
+                            className="w-full rounded-[10px] bg-brand-black border border-white/20 px-4 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-cyan"
                           />
                         </div>
                         <div>
@@ -695,14 +694,14 @@ export const CelebrateAndGive: React.FC = () => {
                             required
                             value={clothContactPhone}
                             onChange={(e) => setClothContactPhone(e.target.value)}
-                            className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-4 py-3 text-xs text-white focus:outline-none focus:border-[#4EDBE2]"
+                            className="w-full rounded-[10px] bg-brand-black border border-white/20 px-4 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-cyan"
                           />
                         </div>
                       </div>
 
                       <button
                         type="submit"
-                        className="w-full py-4 px-6 rounded-[12px] bg-[#4EDBE2] hover:bg-[#3bc4cb] text-[#080808] font-mono-tabular text-xs font-black uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                        className="w-full py-4 px-6 rounded-xl bg-brand-cyan hover:bg-brand-cyan/90 text-brand-black font-mono-tabular text-xs font-black uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
                       >
                         <Package className="w-4 h-4" />
                         <span>Schedule Free Van Pickup</span>
@@ -715,10 +714,10 @@ export const CelebrateAndGive: React.FC = () => {
               /* DROP-OFF HUBS DIRECTORY */
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 {CLOTH_DROP_HUBS.map((hub) => (
-                  <div key={hub.id} className="rounded-[18px] bg-[#122023] p-6 border border-white/12 flex flex-col justify-between">
+                  <div key={hub.id} className="rounded-[18px] bg-brand-slate p-6 border border-white/12 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                        <span className="font-mono-tabular text-xs font-bold text-[#4EDBE2] uppercase">
+                        <span className="font-mono-tabular text-xs font-bold text-brand-cyan uppercase">
                           DESIGNATED DROP BIN
                         </span>
                         <span className="font-mono-tabular text-[11px] text-white/60">
@@ -731,7 +730,7 @@ export const CelebrateAndGive: React.FC = () => {
                       <p className="text-xs text-white/80 mt-1 leading-relaxed">
                         {hub.address}
                       </p>
-                      <p className="text-xs font-mono-tabular text-[#B9FF2C] mt-1">
+                      <p className="text-xs font-mono-tabular text-brand-lime mt-1">
                         Landmark: {hub.landmark}
                       </p>
 
@@ -741,7 +740,7 @@ export const CelebrateAndGive: React.FC = () => {
                         </span>
                         <div className="flex flex-wrap gap-1.5">
                           {hub.accepts.map((item) => (
-                            <span key={item} className="px-2 py-0.5 rounded-[4px] bg-white/10 font-mono-tabular text-[10px] text-white">
+                            <span key={item} className="px-2 py-0.5 rounded-sm bg-white/10 font-mono-tabular text-[10px] text-white">
                               ✓ {item}
                             </span>
                           ))}
@@ -751,7 +750,7 @@ export const CelebrateAndGive: React.FC = () => {
 
                     <div className="mt-6 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono-tabular">
                       <span className="text-white/60">Helpline:</span>
-                      <a href={`tel:${hub.phone}`} className="text-[#4EDBE2] font-bold hover:underline">
+                      <a href={`tel:${hub.phone}`} className="text-brand-cyan font-bold hover:underline">
                         {hub.phone}
                       </a>
                     </div>
@@ -768,18 +767,18 @@ export const CelebrateAndGive: React.FC = () => {
       ====================================================================== */}
       {activeTab === 'LEFTOVER_RESCUE' && (
         <section className="py-16 sm:py-24">
-          <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+          <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
             {/* Urgent 24/7 Hotline Alert Banner */}
-            <div className="rounded-[20px] bg-[#B9FF2C] text-[#122023] p-8 sm:p-12 mb-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="rounded-[20px] bg-brand-lime text-brand-slate p-8 sm:p-12 mb-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-[6px] bg-[#122023] text-white font-mono-tabular text-xs font-bold uppercase tracking-wider mb-3">
-                  <PhoneCall className="w-3.5 h-3.5 text-[#B9FF2C]" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-brand-slate text-white font-mono-tabular text-xs font-bold uppercase tracking-wider mb-3">
+                  <PhoneCall className="w-3.5 h-3.5 text-brand-lime" />
                   24/7 RAPID FOOD RESCUE HELPLINE
                 </span>
-                <h2 className="font-display-sans uppercase text-3xl sm:text-5xl font-black text-[#122023] tracking-tight leading-none">
+                <h2 className="font-display-sans uppercase text-3xl sm:text-5xl font-black text-brand-slate tracking-tight leading-none">
                   Have Leftover Cooked Food? Call Us Immediately!
                 </h2>
-                <p className="mt-3 text-sm sm:text-base text-[#122023]/85 font-medium max-w-2xl leading-relaxed">
+                <p className="mt-3 text-sm sm:text-base text-brand-slate/85 font-medium max-w-2xl leading-relaxed">
                   Do not throw away good food. From weddings, banquets, tech parks, and birthday parties—our thermal-equipped vans collect freshly cooked food within 45 minutes and deliver it to night shelters & hospital courtyards.
                 </p>
               </div>
@@ -787,9 +786,9 @@ export const CelebrateAndGive: React.FC = () => {
               <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
                 <a
                   href="tel:+919848024190"
-                  className="w-full sm:w-auto px-8 py-4 rounded-[12px] bg-[#122023] hover:bg-[#080808] text-white font-mono-tabular text-sm font-black uppercase tracking-wider inline-flex items-center justify-center gap-2.5 transition-colors shadow-lg"
+                  className="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-slate hover:bg-brand-black text-white font-mono-tabular text-sm font-black uppercase tracking-wider inline-flex items-center justify-center gap-2.5 transition-colors shadow-lg"
                 >
-                  <PhoneCall className="w-4 h-4 text-[#B9FF2C]" />
+                  <PhoneCall className="w-4 h-4 text-brand-lime" />
                   <span>CALL +91 98480 24190</span>
                 </a>
               </div>
@@ -798,25 +797,25 @@ export const CelebrateAndGive: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               {/* Left Column: Raise Leftover Food Request Online */}
               <div className="lg:col-span-7">
-                <div className="rounded-[20px] bg-[#122023] border border-white/15 p-6 sm:p-10 shadow-2xl">
+                <div className="rounded-[20px] bg-brand-slate border border-white/15 p-6 sm:p-10 shadow-2xl">
                   {isRescueRaised ? (
                     <div className="py-8 text-center">
-                      <div className="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center bg-[#B9FF2C] text-[#080808]">
+                      <div className="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center bg-brand-lime text-brand-black">
                         <CheckCircle2 className="w-8 h-8" />
                       </div>
-                      <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-[#B9FF2C]">
+                      <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-brand-lime">
                         FOOD RESCUE REQUEST LOGGED · VEHICLE DISPATCHED
                       </span>
                       <h3 className="font-display-sans uppercase text-3xl font-black text-white mt-2">
                         Rescue Code: {rescueCode}
                       </h3>
                       <p className="mt-4 text-sm text-white/80 max-w-lg mx-auto leading-relaxed">
-                        Our nearest food rescue team at <strong className="text-white">Secunderabad / Cyberabad Dispatch Hub</strong> has been assigned to <strong className="text-[#B9FF2C]">{venueAddress}</strong>.
+                        Our nearest food rescue team at <strong className="text-white">Secunderabad / Cyberabad Dispatch Hub</strong> has been assigned to <strong className="text-brand-lime">{venueAddress}</strong>.
                       </p>
-                      <div className="mt-4 p-4 rounded-[12px] bg-[#080808] border border-white/15 text-left font-mono-tabular text-xs space-y-2 max-w-md mx-auto">
+                      <div className="mt-4 p-4 rounded-xl bg-brand-black border border-white/15 text-left font-mono-tabular text-xs space-y-2 max-w-md mx-auto">
                         <div className="flex justify-between">
                           <span className="text-white/60">Estimated Van Arrival:</span>
-                          <span className="text-[#49E619] font-bold">35 - 45 Minutes</span>
+                          <span className="text-brand-green font-bold">35 - 45 Minutes</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-white/60">Servings Claimed:</span>
@@ -831,7 +830,7 @@ export const CelebrateAndGive: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => setIsRescueRaised(false)}
-                        className="mt-6 px-6 py-3 rounded-[10px] bg-[#B9FF2C] text-[#080808] font-mono-tabular text-xs font-bold uppercase tracking-wider cursor-pointer"
+                        className="mt-6 px-6 py-3 rounded-[10px] bg-brand-lime text-brand-black font-mono-tabular text-xs font-bold uppercase tracking-wider cursor-pointer"
                       >
                         Raise Another Food Pickup
                       </button>
@@ -839,7 +838,7 @@ export const CelebrateAndGive: React.FC = () => {
                   ) : (
                     <form onSubmit={handleLeftoverSubmit} className="space-y-5">
                       <div className="pb-4 border-b border-white/10">
-                        <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-[#B9FF2C]">
+                        <span className="text-xs font-mono-tabular font-bold uppercase tracking-widest text-brand-lime">
                           ONLINE RESCUE DISPATCH FORM
                         </span>
                         <h3 className="font-display-sans uppercase text-2xl font-black text-white mt-1">
@@ -855,7 +854,7 @@ export const CelebrateAndGive: React.FC = () => {
                           <select
                             value={foodServings}
                             onChange={(e) => setFoodServings(e.target.value)}
-                            className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-3.5 py-3 text-xs text-white focus:outline-none focus:border-[#B9FF2C]"
+                            className="w-full rounded-[10px] bg-brand-black border border-white/20 px-3.5 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-lime"
                           >
                             <option value="25-50 People">25 – 50 Servings (Minimum)</option>
                             <option value="50-100 People">50 – 100 Servings</option>
@@ -871,7 +870,7 @@ export const CelebrateAndGive: React.FC = () => {
                           <select
                             value={eventType}
                             onChange={(e) => setEventType(e.target.value)}
-                            className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-3.5 py-3 text-xs text-white focus:outline-none focus:border-[#B9FF2C]"
+                            className="w-full rounded-[10px] bg-brand-black border border-white/20 px-3.5 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-lime"
                           >
                             <option value="Wedding Reception / Banquet">Wedding Reception / Banquet</option>
                             <option value="Birthday Party / Celebration">Birthday Party / Celebration</option>
@@ -889,7 +888,7 @@ export const CelebrateAndGive: React.FC = () => {
                         <select
                           value={cookedTimeAgo}
                           onChange={(e) => setCookedTimeAgo(e.target.value)}
-                          className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-3.5 py-3 text-xs text-white focus:outline-none focus:border-[#B9FF2C]"
+                          className="w-full rounded-[10px] bg-brand-black border border-white/20 px-3.5 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-lime"
                         >
                           <option value="Cooked 1-2 hours ago (Hot & Fresh)">Cooked 1 – 2 hours ago (Hot & Fresh)</option>
                           <option value="Cooked 2-4 hours ago (Stored in clean vessels)">Cooked 2 – 4 hours ago (Stored in clean vessels)</option>
@@ -907,7 +906,7 @@ export const CelebrateAndGive: React.FC = () => {
                           value={foodItems}
                           onChange={(e) => setFoodItems(e.target.value)}
                           placeholder="e.g. Biryani, Sambar Rice, Dal, Chapati, Paneer, Veg Korma"
-                          className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-4 py-3 text-xs text-white focus:outline-none focus:border-[#B9FF2C]"
+                          className="w-full rounded-[10px] bg-brand-black border border-white/20 px-4 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-lime"
                         />
                       </div>
 
@@ -921,7 +920,7 @@ export const CelebrateAndGive: React.FC = () => {
                           value={venueAddress}
                           onChange={(e) => setVenueAddress(e.target.value)}
                           placeholder="Function hall name, Gate number, Street, Landmark"
-                          className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-4 py-3 text-xs text-white focus:outline-none focus:border-[#B9FF2C] resize-none"
+                          className="w-full rounded-[10px] bg-brand-black border border-white/20 px-4 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-lime resize-none"
                         />
                       </div>
 
@@ -935,7 +934,7 @@ export const CelebrateAndGive: React.FC = () => {
                             required
                             value={rescueContactName}
                             onChange={(e) => setRescueContactName(e.target.value)}
-                            className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-4 py-3 text-xs text-white focus:outline-none focus:border-[#B9FF2C]"
+                            className="w-full rounded-[10px] bg-brand-black border border-white/20 px-4 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-lime"
                           />
                         </div>
                         <div>
@@ -947,16 +946,16 @@ export const CelebrateAndGive: React.FC = () => {
                             required
                             value={rescueContactPhone}
                             onChange={(e) => setRescueContactPhone(e.target.value)}
-                            className="w-full rounded-[10px] bg-[#080808] border border-white/20 px-4 py-3 text-xs text-white focus:outline-none focus:border-[#B9FF2C]"
+                            className="w-full rounded-[10px] bg-brand-black border border-white/20 px-4 py-3 text-xs text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-lime"
                           />
                         </div>
                       </div>
 
                       <button
                         type="submit"
-                        className="w-full py-4 px-6 rounded-[12px] bg-[#B9FF2C] hover:bg-[#aef425] text-[#080808] font-mono-tabular text-xs font-black uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                        className="w-full py-4 px-6 rounded-xl bg-brand-lime hover:bg-brand-lime/90 text-brand-black font-mono-tabular text-xs font-black uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
                       >
-                        <Truck className="w-4 h-4 text-[#080808]" />
+                        <Truck className="w-4 h-4 text-brand-black" />
                         <span>DISPATCH RESCUE VAN NOW</span>
                       </button>
                     </form>
@@ -966,37 +965,37 @@ export const CelebrateAndGive: React.FC = () => {
 
               {/* Right Column: Safety Protocol & Nearest Needy Centers */}
               <div className="lg:col-span-5 space-y-6">
-                <div className="rounded-[18px] bg-[#122023] p-6 border border-white/12">
-                  <span className="font-mono-tabular text-xs font-bold uppercase tracking-widest text-[#B9FF2C] block mb-3">
+                <div className="rounded-[18px] bg-brand-slate p-6 border border-white/12">
+                  <span className="font-mono-tabular text-xs font-bold uppercase tracking-widest text-brand-lime block mb-3">
                     FOOD HYGIENE & SAFETY PROTOCOL
                   </span>
                   <div className="space-y-3 text-xs text-white/80">
                     <div className="flex items-start gap-2.5">
-                      <ShieldCheck className="w-4 h-4 text-[#49E619] shrink-0 mt-0.5" />
+                      <ShieldCheck className="w-4 h-4 text-brand-green shrink-0 mt-0.5" />
                       <span><strong>Freshly Cooked Only:</strong> Food must be cooked on the same day within 6 hours.</span>
                     </div>
                     <div className="flex items-start gap-2.5">
-                      <ShieldCheck className="w-4 h-4 text-[#49E619] shrink-0 mt-0.5" />
+                      <ShieldCheck className="w-4 h-4 text-brand-green shrink-0 mt-0.5" />
                       <span><strong>Clean Vessels:</strong> Covered in clean, sanitary food-grade containers or buffet chafers.</span>
                     </div>
                     <div className="flex items-start gap-2.5">
-                      <ShieldCheck className="w-4 h-4 text-[#49E619] shrink-0 mt-0.5" />
+                      <ShieldCheck className="w-4 h-4 text-brand-green shrink-0 mt-0.5" />
                       <span><strong>Thermal Transit:</strong> Our vans carry insulated thermal boxes maintaining food warmth during rapid transfer.</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="rounded-[18px] bg-[#122023] p-6 border border-white/12">
-                  <span className="font-mono-tabular text-xs font-bold uppercase tracking-widest text-[#4EDBE2] block mb-4">
+                <div className="rounded-[18px] bg-brand-slate p-6 border border-white/12">
+                  <span className="font-mono-tabular text-xs font-bold uppercase tracking-widest text-brand-cyan block mb-4">
                     NEAREST DISTRIBUTION SHELTERS MAPPED
                   </span>
                   <div className="space-y-3.5">
                     {LEFTOVER_RESCUE_CENTERS.map((center) => (
-                      <div key={center.id} className="p-3.5 rounded-[12px] bg-[#080808] border border-white/10">
+                      <div key={center.id} className="p-3.5 rounded-xl bg-brand-black border border-white/10">
                         <div className="font-display-sans uppercase text-sm font-black text-white">
                           {center.name}
                         </div>
-                        <div className="font-mono-tabular text-[11px] text-[#49E619] mt-0.5">
+                        <div className="font-mono-tabular text-[11px] text-brand-green mt-0.5">
                           {center.distanceKm}
                         </div>
                         <div className="text-[11px] text-white/70 mt-1">
