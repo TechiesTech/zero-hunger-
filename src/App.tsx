@@ -36,7 +36,7 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#080808] selection:bg-[#D7262F] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-brand-black selection:bg-[#D7262F] selection:text-white">
       <Navbar onOpenSupport={(tab) => handleOpenSupport(tab, 'all')} />
 
       <div className="flex-1">

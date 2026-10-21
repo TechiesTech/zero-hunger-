@@ -61,9 +61,9 @@ const SOCIAL_LINKS = [
 ];
 
 const PHASE_CARD_STYLES = [
-  'bg-[#49E619] text-[#122023]',
-  'bg-[#4EDBE2] text-[#122023]',
-  'bg-[#B9FF2C] text-[#122023]',
+  'bg-brand-green text-brand-slate',
+  'bg-brand-cyan text-brand-slate',
+  'bg-[#B9FF2C] text-brand-slate',
   'bg-[#188D44] text-white',
 ];
 
@@ -82,13 +82,13 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
   };
 
   return (
-    <div className="bg-[#080808] text-white">
+    <div className="bg-brand-black text-white">
       {/* HERO */}
-      <section className="bg-[#080808] pt-32 sm:pt-40 pb-20 sm:pb-28 border-b border-white/10">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+      <section className="bg-brand-black pt-32 sm:pt-40 pb-20 sm:pb-28 border-b border-white/10">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
             <ScrollReveal className="lg:col-span-8">
-              <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-[#49E619] block mb-4">
+              <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-brand-green block mb-4">
                 ABOUT ZERO HUNGER INITIATIVE
               </span>
               <h1 className="font-display-sans uppercase text-5xl sm:text-6xl lg:text-7xl xl:text-[5.25rem] font-black tracking-[-0.04em] leading-[0.92] text-white">
@@ -96,7 +96,7 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
                 <br />
                 EVERY PLATE
                 <br />
-                <span className="text-[#49E619]">MATTERS.</span>
+                <span className="text-brand-green">MATTERS.</span>
               </h1>
             </ScrollReveal>
 
@@ -109,7 +109,7 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
 
           {/* Large Documentary Panorama */}
           <ScrollReveal delay={0.22} scale className="mt-14 sm:mt-20">
-            <div className="relative rounded-[18px] overflow-hidden border border-white/15 aspect-[16/9] sm:aspect-[21/9] shadow-2xl">
+            <div className="relative rounded-[18px] overflow-hidden border border-white/15 aspect-video sm:aspect-[21/9] shadow-2xl">
               <EditorialImage
                 src={IMAGES.communityKitchen}
                 alt="Inside the Zero Hunger flagship community kitchen in Secunderabad at dawn"
@@ -125,26 +125,26 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
       </section>
 
       {/* 1. OUR STORY & 2. WHY ZERO HUNGER */}
-      <section className="bg-white text-[#080808] py-24 sm:py-32">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+      <section className="bg-white text-brand-black py-24 sm:py-32">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Left Essay Column: Our Story */}
             <ScrollReveal className="lg:col-span-7">
-              <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-[#188D44] block mb-3">
+              <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-emerald block mb-3">
                 01 · OUR STORY
               </span>
-              <h2 className="font-display-sans uppercase text-3xl sm:text-4xl lg:text-5xl font-black text-[#080808] tracking-[-0.04em] leading-[0.95]">
+              <h2 className="font-display-sans uppercase text-3xl sm:text-4xl lg:text-5xl font-black text-brand-black tracking-[-0.04em] leading-[0.95]">
                 From a Single Courtyard Stove to 28 Communities.
               </h2>
 
-              <div className="mt-8 space-y-6 text-base sm:text-lg text-[#080808]/85 leading-relaxed max-w-2xl">
-                <p className="first-letter:text-5xl first-letter:font-display-sans first-letter:font-black first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-[#188D44]">
+              <div className="mt-8 space-y-6 text-base sm:text-lg text-brand-black/85 leading-relaxed max-w-2xl">
+                <p className="first-letter:text-5xl first-letter:font-display-sans first-letter:font-black first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-brand-emerald">
                   During the winter of 2022, Dr. Arjun Vardhan Reddy noticed a quiet crisis unfolding outside the wards of Osmania General Hospital in Hyderabad. Families who had traveled from rural Telangana districts to care for critically ill relatives were sleeping on pavements and skipping meals for days so they could afford diagnostic tests and prescriptions.
                 </p>
-                <p className="text-[#122023]/80">
+                <p className="text-brand-slate/80">
                   What began the following Sunday with three neighbors cooking fifty plates of warm sona masoori rice and tur dal in an Afzalgunj courtyard revealed a deeper truth: hunger in modern India is rarely a crisis of national food scarcity—it is a crisis of access, dignity, and last-mile infrastructure.
                 </p>
-                <p className="text-[#122023]/80">
+                <p className="text-brand-slate/80">
                   Today, Zero Hunger operates solar-assisted community kitchens, rural school breakfast and lunch programs, women-led homestead vegetable cooperatives, and 24-hour flood relief units across five districts in Telangana.
                 </p>
               </div>
@@ -152,8 +152,8 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
 
             {/* Right Column: Why Zero Hunger + Editorial Portrait */}
             <ScrollReveal delay={0.15} className="lg:col-span-5 flex flex-col justify-between">
-              <div className="p-8 sm:p-10 rounded-[18px] bg-[#122023] text-white border border-[#122023]">
-                <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-[#49E619] block mb-3">
+              <div className="p-8 sm:p-10 rounded-[18px] bg-brand-slate text-white border border-brand-slate">
+                <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-green block mb-3">
                   02 · WHY ZERO HUNGER
                 </span>
                 <h3 className="font-display-sans uppercase text-2xl sm:text-3xl font-black text-white leading-tight">
@@ -168,14 +168,14 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
               </div>
 
               <div className="mt-8">
-                <div className="aspect-[4/3] rounded-[18px] overflow-hidden border border-[#122023]/15">
+                <div className="aspect-4/3 rounded-[18px] overflow-hidden border border-brand-slate/15">
                   <EditorialImage
                     src={IMAGES.womenSupport}
                     alt="Rural women cooperative members in Sangareddy holding fresh green harvest"
                     className="w-full h-full"
                   />
                 </div>
-                <p className="mt-2.5 text-xs font-mono-tabular text-[#6F6F6F]">
+                <p className="mt-2.5 text-xs font-mono-tabular text-brand-gray">
                   Fig. 02 — Sangareddy Women’s Growers Collective supplying fresh leafy greens to our urban kitchens.
                 </p>
               </div>
@@ -185,29 +185,29 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
       </section>
 
       {/* 3. OUR MISSION & 4. OUR VISION */}
-      <section className="bg-[#F2F4F3] text-[#122023] py-20 sm:py-28 border-y border-[#122023]/10">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+      <section className="bg-brand-alabaster text-brand-slate py-20 sm:py-28 border-y border-brand-slate/10">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
-            <ScrollReveal className="rounded-[18px] bg-[#49E619] text-[#122023] p-8 sm:p-12 shadow-sm">
-              <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-[#122023]/80 block mb-4">
+            <ScrollReveal className="rounded-[18px] bg-brand-green text-brand-slate p-8 sm:p-12 shadow-sm">
+              <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-slate/80 block mb-4">
                 03 · OUR MISSION
               </span>
-              <h2 className="font-display-sans uppercase text-2xl sm:text-4xl font-black text-[#122023] leading-[0.96] tracking-[-0.03em]">
+              <h2 className="font-display-sans uppercase text-2xl sm:text-4xl font-black text-brand-slate leading-[0.96] tracking-[-0.03em]">
                 To guarantee daily, dignified access to freshly cooked, nutrient-dense food for every vulnerable child, caregiver, and elder we serve.
               </h2>
-              <p className="mt-5 text-sm sm:text-base text-[#122023]/85 font-medium leading-relaxed">
+              <p className="mt-5 text-sm sm:text-base text-brand-slate/85 font-medium leading-relaxed">
                 We mobilize community kitchens, school lunch partnerships, and rapid-response grain banks to eliminate acute hunger where it hurts most—outside public hospitals, inside rural classrooms, and across drought-prone villages.
               </p>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.15} className="rounded-[18px] bg-[#4EDBE2] text-[#122023] p-8 sm:p-12 shadow-sm">
-              <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-[#122023]/80 block mb-4">
+            <ScrollReveal delay={0.15} className="rounded-[18px] bg-brand-cyan text-brand-slate p-8 sm:p-12 shadow-sm">
+              <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-slate/80 block mb-4">
                 04 · OUR VISION
               </span>
-              <h2 className="font-display-sans uppercase text-2xl sm:text-4xl font-black text-[#122023] leading-[0.96] tracking-[-0.03em]">
+              <h2 className="font-display-sans uppercase text-2xl sm:text-4xl font-black text-brand-slate leading-[0.96] tracking-[-0.03em]">
                 A resilient, circular food ecosystem where every neighborhood grows, cooks, and shares nourishment without anyone sleeping hungry.
               </h2>
-              <p className="mt-5 text-sm sm:text-base text-[#122023]/85 font-medium leading-relaxed">
+              <p className="mt-5 text-sm sm:text-base text-brand-slate/85 font-medium leading-relaxed">
                 We envision a future where emergency relief evolves into community-owned food sovereignty—linking rural women’s homestead gardens directly to urban community tables.
               </p>
             </ScrollReveal>
@@ -222,8 +222,8 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
       <FivePrinciplesShowcase />
 
       {/* 6. HOW WE WORK */}
-      <section className="bg-[#122023] text-white py-24 sm:py-32 border-b border-white/10">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+      <section className="bg-brand-slate text-white py-24 sm:py-32 border-b border-white/10">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <SectionHeading
             light
             eyebrow="06 · HOW WE WORK"
@@ -239,12 +239,12 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
                 <ScrollReveal
                   key={item.step}
                   delay={idx * 0.1}
-                  className={`p-7 rounded-[16px] ${cardStyle} flex flex-col justify-between shadow-lg`}
+                  className={`p-7 rounded-2xl ${cardStyle} flex flex-col justify-between shadow-lg`}
                 >
                   <div>
                     <div
                       className={`flex items-center justify-between text-xs font-mono-tabular font-bold pb-4 border-b ${
-                        isDarkCard ? 'border-white/20 text-white/80' : 'border-[#122023]/15 text-[#122023]/80'
+                        isDarkCard ? 'border-white/20 text-white/80' : 'border-brand-slate/15 text-brand-slate/80'
                       }`}
                     >
                       <span>PHASE {item.step}</span>
@@ -255,7 +255,7 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
                     </h3>
                     <p
                       className={`mt-3 text-sm leading-relaxed font-medium ${
-                        isDarkCard ? 'text-white/85' : 'text-[#122023]/85'
+                        isDarkCard ? 'text-white/85' : 'text-brand-slate/85'
                       }`}
                     >
                       {item.description}
@@ -264,7 +264,7 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
 
                   <div
                     className={`mt-8 pt-4 border-t text-xs font-mono-tabular font-bold ${
-                      isDarkCard ? 'border-white/20 text-[#B9FF2C]' : 'border-[#122023]/15 text-[#122023]'
+                      isDarkCard ? 'border-white/20 text-brand-lime' : 'border-brand-slate/15 text-brand-slate'
                     }`}
                   >
                     {item.metric}
@@ -277,8 +277,8 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
       </section>
 
       {/* JOURNEY TIMELINE */}
-      <section className="bg-[#F2F4F3] text-[#080808] py-24 sm:py-32 border-b border-[#122023]/10">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+      <section className="bg-brand-alabaster text-brand-black py-24 sm:py-32 border-b border-brand-slate/10">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <SectionHeading
             eyebrow="CHRONICLE · 2022 — 2026"
             title="Our Journey Toward Zero Hunger."
@@ -290,31 +290,31 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
               <ScrollReveal
                 key={event.year}
                 delay={idx * 0.08}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-6 p-7 sm:p-9 rounded-[16px] bg-white border border-[#122023]/12 items-center shadow-xs"
+                className="grid grid-cols-1 lg:grid-cols-12 gap-6 p-7 sm:p-9 rounded-2xl bg-white border border-brand-slate/12 items-center shadow-xs"
               >
                 <div className="lg:col-span-3">
-                  <div className="font-display-sans text-4xl sm:text-5xl font-black text-[#080808]">
+                  <div className="font-display-sans text-4xl sm:text-5xl font-black text-brand-black">
                     {event.year}
                   </div>
-                  <div className="mt-1 text-xs font-mono-tabular font-bold uppercase tracking-wider text-[#188D44]">
+                  <div className="mt-1 text-xs font-mono-tabular font-bold uppercase tracking-wider text-brand-emerald">
                     {event.quarter}
                   </div>
                 </div>
 
                 <div className="lg:col-span-6">
-                  <h3 className="font-display-sans uppercase text-xl sm:text-2xl font-black text-[#080808]">
+                  <h3 className="font-display-sans uppercase text-xl sm:text-2xl font-black text-brand-black">
                     {event.title}
                   </h3>
-                  <p className="mt-2 text-sm sm:text-base text-[#122023]/75 leading-relaxed">
+                  <p className="mt-2 text-sm sm:text-base text-brand-slate/75 leading-relaxed">
                     {event.description}
                   </p>
                 </div>
 
-                <div className="lg:col-span-3 lg:text-right border-t lg:border-t-0 lg:border-l border-[#122023]/10 pt-4 lg:pt-0 lg:pl-6">
-                  <div className="font-mono-tabular text-xl font-bold text-[#188D44]">
+                <div className="lg:col-span-3 lg:text-right border-t lg:border-t-0 lg:border-l border-brand-slate/10 pt-4 lg:pt-0 lg:pl-6">
+                  <div className="font-mono-tabular text-xl font-bold text-brand-emerald">
                     {event.metric}
                   </div>
-                  <div className="text-xs text-[#6F6F6F] mt-1">
+                  <div className="text-xs text-brand-gray mt-1">
                     {event.location}
                   </div>
                 </div>
@@ -325,8 +325,8 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
       </section>
 
       {/* 7. OUR TEAM */}
-      <section className="bg-white text-[#080808] py-24 sm:py-32 border-b border-[#122023]/10">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+      <section className="bg-white text-brand-black py-24 sm:py-32 border-b border-brand-slate/10">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <SectionHeading
               eyebrow="07 · STEWARDSHIP & LEADERSHIP"
@@ -346,7 +346,7 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {TEAM_MEMBERS.map((member, idx) => (
               <ScrollReveal key={member.id} delay={idx * 0.1} className="group flex flex-col">
-                <div className="aspect-[4/3] rounded-[16px] overflow-hidden border border-[#122023]/12 mb-5 bg-[#080808]">
+                <div className="aspect-4/3 rounded-2xl overflow-hidden border border-brand-slate/12 mb-5 bg-brand-black">
                   <EditorialImage
                     src={member.image}
                     alt={`${member.name} — ${member.role}`}
@@ -354,18 +354,18 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
                     imgClassName="grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                   />
                 </div>
-                <div className="flex items-center gap-2 text-xs text-[#6F6F6F] uppercase tracking-wider font-mono-tabular">
+                <div className="flex items-center gap-2 text-xs text-brand-gray uppercase tracking-wider font-mono-tabular">
                   <span>{member.location}</span>
                   <span aria-hidden="true">·</span>
                   <span>{member.yearsWithOrg}</span>
                 </div>
-                <h3 className="mt-2 font-display-sans uppercase text-xl font-black text-[#080808]">
+                <h3 className="mt-2 font-display-sans uppercase text-xl font-black text-brand-black">
                   {member.name}
                 </h3>
-                <div className="text-xs font-mono-tabular font-bold text-[#188D44] uppercase tracking-wider mt-1">
+                <div className="text-xs font-mono-tabular font-bold text-brand-emerald uppercase tracking-wider mt-1">
                   {member.role}
                 </div>
-                <p className="mt-3 text-sm text-[#122023]/75 leading-relaxed">
+                <p className="mt-3 text-sm text-brand-slate/75 leading-relaxed">
                   {member.bio}
                 </p>
               </ScrollReveal>
@@ -494,7 +494,7 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
                         id="contact-subject"
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
-                        className="w-full h-[48px] rounded-[10px] px-4 bg-white border border-brand-slate/20 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-slate/40 transition-colors"
+                        className="w-full h-12 rounded-[10px] px-4 bg-white border border-brand-slate/20 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-slate/40 transition-colors"
                       >
                         <option value="Sponsor a Community Meal Drive">
                           Sponsor a Community Meal Drive

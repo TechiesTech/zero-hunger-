@@ -25,7 +25,7 @@ const MISSION_SUBLINES = [
 
 export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
   return (
-    <div className="bg-[#080808] text-white">
+    <div className="bg-brand-black text-white">
       {/* SECTION 1 — HERO (DARK #080808 + VIBRANT GREEN & LIME ACCENTS) */}
       <Hero onOpenSupport={onOpenSupport} />
 
@@ -40,7 +40,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
 
       {/* SECTION 4 — FEATURED PROJECT (DEEP SLATE #122023 SHOWCASE) */}
       <section className="bg-[#122023] text-white py-20 sm:py-28 border-t border-white/10">
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Left: Large Documentary Image */}
             <ScrollReveal scale className="lg:col-span-7">
@@ -50,7 +50,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
                   alt={FEATURED_PROJECT.title}
                   className="w-full h-full"
                 />
-                <div className="absolute bottom-4 left-4 bg-[#080808]/90 backdrop-blur-xs px-3.5 py-1.5 rounded-[8px] text-[11px] font-mono-tabular font-bold uppercase tracking-widest text-[#B9FF2C]">
+                <div className="absolute bottom-4 left-4 bg-brand-black/90 backdrop-blur-xs px-3.5 py-1.5 rounded-[8px] text-[11px] font-mono-tabular font-bold uppercase tracking-widest text-[#B9FF2C]">
                   SECUNDERABAD & OLD CITY · DAILY DAWN SERVICE
                 </div>
               </div>
