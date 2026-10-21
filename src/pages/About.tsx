@@ -109,7 +109,7 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
 
           {/* Large Documentary Panorama */}
           <ScrollReveal delay={0.22} scale className="mt-14 sm:mt-20">
-            <div className="relative rounded-[18px] overflow-hidden border border-white/15 aspect-video sm:aspect-[21/9] shadow-2xl">
+            <div className="relative rounded-[18px] overflow-hidden border border-white/15 aspect-video sm:aspect-21/9 shadow-2xl">
               <EditorialImage
                 src={IMAGES.communityKitchen}
                 alt="Inside the Zero Hunger flagship community kitchen in Secunderabad at dawn"

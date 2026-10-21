@@ -39,18 +39,18 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
       <ProjectGallery />
 
       {/* SECTION 4 — FEATURED PROJECT (DEEP SLATE #122023 SHOWCASE) */}
-      <section className="bg-[#122023] text-white py-20 sm:py-28 border-t border-white/10">
+      <section className="bg-brand-slate text-white py-20 sm:py-28 border-t border-white/10">
         <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Left: Large Documentary Image */}
             <ScrollReveal scale className="lg:col-span-7">
-              <div className="relative rounded-[18px] overflow-hidden border border-white/15 aspect-[16/10] shadow-2xl">
+              <div className="relative rounded-[18px] overflow-hidden border border-white/15 aspect-16/10 shadow-2xl">
                 <EditorialImage
                   src={FEATURED_PROJECT.image}
                   alt={FEATURED_PROJECT.title}
                   className="w-full h-full"
                 />
-                <div className="absolute bottom-4 left-4 bg-brand-black/90 backdrop-blur-xs px-3.5 py-1.5 rounded-[8px] text-[11px] font-mono-tabular font-bold uppercase tracking-widest text-[#B9FF2C]">
+                <div className="absolute bottom-4 left-4 bg-brand-black/90 backdrop-blur-xs px-3.5 py-1.5 rounded-lg text-[11px] font-mono-tabular font-bold uppercase tracking-widest text-brand-lime">
                   SECUNDERABAD & OLD CITY · DAILY DAWN SERVICE
                 </div>
               </div>
@@ -58,7 +58,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
 
             {/* Right: Editorial Story & Metrics */}
             <ScrollReveal delay={0.14} className="lg:col-span-5">
-              <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-[#49E619] block mb-3">
+              <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-brand-green block mb-3">
                 {FEATURED_PROJECT.eyebrow}
               </span>
 
@@ -66,7 +66,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
                 {FEATURED_PROJECT.headlineLines.map((line, idx) => (
                   <span
                     key={line}
-                    className={`block ${idx === 1 ? 'text-[#49E619]' : ''}`}
+                    className={`block ${idx === 1 ? 'text-brand-green' : ''}`}
                   >
                     {line}
                   </span>
@@ -84,10 +84,10 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
                     <div
                       className={`font-display-sans text-2xl sm:text-3xl font-black ${
                         idx === 0
-                          ? 'text-[#49E619]'
+                          ? 'text-brand-green'
                           : idx === 1
-                          ? 'text-[#4EDBE2]'
-                          : 'text-[#B9FF2C]'
+                          ? 'text-brand-cyan'
+                          : 'text-brand-lime'
                       }`}
                     >
                       {stat.value}
@@ -115,16 +115,16 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
       </section>
 
       {/* SECTION 5 — OUR MISSION (CRISP ALABASTER / WHITE HIGH-CONTRAST BREAK) */}
-      <section className="bg-[#F2F4F3] text-[#122023] py-24 sm:py-32 border-t border-[#122023]/10">
-        <div className="max-w-[1120px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+      <section className="bg-brand-alabaster text-brand-slate py-24 sm:py-32 border-t border-[#122023]/10">
+        <div className="max-w-280 mx-auto px-5 sm:px-8 lg:px-12 text-center">
           <ScrollReveal>
-            <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-[#188D44] block mb-4">
+            <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-brand-emerald block mb-4">
               OUR CONVICTION
             </span>
-            <h2 className="font-display-sans uppercase text-4xl sm:text-6xl lg:text-7xl font-black tracking-[-0.04em] leading-[0.94] text-[#122023]">
+            <h2 className="font-display-sans uppercase text-4xl sm:text-6xl lg:text-7xl font-black tracking-[-0.04em] leading-[0.94] text-brand-slate">
               FOOD IS MORE THAN
               <br />
-              <span className="text-[#188D44]">NOURISHMENT.</span>
+              <span className="text-brand-emerald">NOURISHMENT.</span>
             </h2>
           </ScrollReveal>
 
@@ -138,10 +138,10 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
                 <div
                   className={`rounded-[14px] py-6 px-5 font-display-sans uppercase text-2xl sm:text-3xl font-black tracking-tight ${
                     index === 0
-                      ? 'bg-[#49E619] text-[#122023]'
+                      ? 'bg-brand-green text-brand-slate'
                       : index === 1
-                      ? 'bg-[#4EDBE2] text-[#122023]'
-                      : 'bg-[#B9FF2C] text-[#122023]'
+                      ? 'bg-brand-cyan text-brand-slate'
+                      : 'bg-brand-lime text-brand-slate'
                   }`}
                 >
                   {line}
@@ -151,7 +151,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupport }) => {
           </div>
 
           <ScrollReveal delay={0.35} className="mt-10">
-            <p className="text-sm sm:text-base text-[#122023]/80 max-w-xl mx-auto leading-relaxed font-medium">
+            <p className="text-sm sm:text-base text-brand-slate/80 max-w-xl mx-auto leading-relaxed font-medium">
               When a child sits down to a warm midday meal at school, or a family receives dry grain reserves before the monsoon floods, an entire trajectory shifts from survival toward human possibility.
             </p>
           </ScrollReveal>
