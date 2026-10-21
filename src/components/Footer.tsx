@@ -19,8 +19,7 @@ const EXPLORE_LINKS = [
   { label: 'CSR & 80G Tax Benefits', path: '/csr-tax-benefits' },
   { label: 'Track Sponsored Meal', path: '/track-meal' },
   { label: 'Projects & Impact', path: '/projects' },
-  { label: 'About', path: '/about' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'About & Contact', path: '/about' },
 ];
 
 const SOCIAL_LINKS = [

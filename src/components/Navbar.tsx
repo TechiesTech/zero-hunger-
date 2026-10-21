@@ -21,8 +21,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Track Meal', path: '/track-meal' },
   { label: 'Projects & Impact', path: '/projects' },
   { label: 'CSR & Tax', path: '/csr-tax-benefits' },
-  { label: 'About', path: '/about' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'About & Contact', path: '/about' },
 ];
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenSupport }) => {

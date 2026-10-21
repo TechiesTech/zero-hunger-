@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Youtube, Clock, CheckCircle2 } from 'lucide-react';
 import { HOW_WE_WORK, TEAM_MEMBERS } from '../data/team';
 import { IMPACT_TIMELINE, HOME_IMPACT_METRICS } from '../data/impact';
 import { IMAGES } from '../data/projects';
@@ -17,6 +17,49 @@ interface AboutProps {
   onOpenSupport: (tab?: SupportTab) => void;
 }
 
+interface ContactHub {
+  id: string;
+  name: string;
+  address: string;
+  hours: string;
+  coordinates: string;
+  role: string;
+}
+
+const HUBS: ContactHub[] = [
+  {
+    id: 'secunderabad',
+    name: 'Secunderabad Flagship Community Kitchen',
+    address: 'Plot 14, Clock Tower Corridor, Secunderabad, Hyderabad 500003',
+    hours: 'Daily · 5:30 AM – 7:30 PM IST',
+    coordinates: '17.4399° N, 78.4983° E',
+    role: 'Central Culinary Operations & Volunteer Orientation',
+  },
+  {
+    id: 'afzalgunj',
+    name: 'Old City & Hospital Courtyard Hub',
+    address: 'Near Osmania General Hospital Gate 2, Afzalgunj, Hyderabad 500012',
+    hours: 'Daily · 11:30 AM – 2:30 PM IST',
+    coordinates: '17.3753° N, 78.4744° E',
+    role: 'Daily Midday Community Meal Distribution',
+  },
+  {
+    id: 'sangareddy',
+    name: 'Sangareddy Rural Grain Bank & Co-op Center',
+    address: 'Panchayat Road, Sangareddy Cluster, Telangana 502001',
+    hours: 'Mon–Sat · 8:00 AM – 5:00 PM IST',
+    coordinates: '17.6140° N, 78.0816° E',
+    role: 'Smallholder Procurement & Maternal Nutrition Baskets',
+  },
+];
+
+const SOCIAL_LINKS = [
+  { label: 'Instagram', href: 'https://instagram.com', icon: Instagram },
+  { label: 'Facebook', href: 'https://facebook.com', icon: Facebook },
+  { label: 'LinkedIn', href: 'https://linkedin.com', icon: Linkedin },
+  { label: 'YouTube', href: 'https://youtube.com', icon: Youtube },
+];
+
 const PHASE_CARD_STYLES = [
   'bg-[#49E619] text-[#122023]',
   'bg-[#4EDBE2] text-[#122023]',
@@ -25,6 +68,19 @@ const PHASE_CARD_STYLES = [
 ];
 
 export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [subject, setSubject] = useState('Sponsor a Community Meal Drive');
+  const [message, setMessage] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [selectedHub, setSelectedHub] = useState<ContactHub>(HUBS[0]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+  };
+
   return (
     <div className="bg-[#080808] text-white">
       {/* HERO */}
@@ -321,7 +377,269 @@ export const About: React.FC<AboutProps> = ({ onOpenSupport }) => {
       {/* 8. IMPACT STATISTICS */}
       <ImpactStats metrics={HOME_IMPACT_METRICS} compactFormat={false} />
 
-      {/* 9. CTA */}
+      {/* 9. CONTACT SECTION */}
+      <section className="bg-brand-black pt-32 sm:pt-40 pb-24 sm:pb-32 border-t border-white/10">
+        <div className="max-w-340 mx-auto px-5 sm:px-8 lg:px-12">
+          <ScrollReveal className="max-w-4xl mb-16 sm:mb-24">
+            <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-brand-green block mb-4">
+              GET IN TOUCH · HYDERABAD, INDIA
+            </span>
+            <h2 className="font-display-sans uppercase text-5xl sm:text-6xl lg:text-7xl xl:text-[5.25rem] font-black tracking-[-0.04em] leading-[0.92] text-white">
+              LET&apos;S CREATE
+              <br />
+              <span className="text-brand-green">CHANGE</span> TOGETHER.
+            </h2>
+            <p className="mt-6 text-base sm:text-lg text-white/80 max-w-xl leading-relaxed">
+              Whether you are looking to partner on a school nutrition drive, volunteer in our morning kitchen, or inquire about institutional grants, our team responds within 24 hours.
+            </p>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            {/* LEFT: CONTACT FORM */}
+            <ScrollReveal className="lg:col-span-7 rounded-[20px] bg-brand-alabaster text-brand-slate p-7 sm:p-10 lg:p-12 shadow-2xl">
+              {isSubmitted ? (
+                <div className="py-12 text-center">
+                  <div className="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center bg-brand-green text-brand-slate">
+                    <CheckCircle2 className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-emerald">
+                    MESSAGE RECEIVED
+                  </span>
+                  <h3 className="font-display-sans uppercase text-3xl font-black text-brand-slate mt-2">
+                    Thank you for reaching out, {name}.
+                  </h3>
+                  <p className="mt-3 text-sm sm:text-base text-brand-slate/80 max-w-md mx-auto leading-relaxed">
+                    We have logged your inquiry regarding <span className="text-brand-black font-bold">"{subject}"</span> and sent a confirmation copy to {email}. Our Hyderabad coordination desk will reply shortly.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setName('');
+                      setEmail('');
+                      setPhone('');
+                      setMessage('');
+                    }}
+                    className="mt-8 px-6 py-3.5 rounded-[10px] bg-brand-green text-brand-black text-xs font-mono-tabular font-bold uppercase tracking-wider hover:bg-brand-lime transition-colors cursor-pointer"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        htmlFor="contact-name"
+                        className="block text-xs font-mono-tabular font-bold uppercase tracking-wider text-brand-slate mb-2"
+                      >
+                        Name *
+                      </label>
+                      <input
+                        id="contact-name"
+                        type="text"
+                        required
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Siddharth Verma"
+                        className="w-full rounded-[10px] px-4 py-3.5 bg-white border border-brand-slate/20 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-slate/40 transition-colors"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="contact-email"
+                        className="block text-xs font-mono-tabular font-bold uppercase tracking-wider text-brand-slate mb-2"
+                      >
+                        Email *
+                      </label>
+                      <input
+                        id="contact-email"
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="siddharth@example.org"
+                        className="w-full rounded-[10px] px-4 py-3.5 bg-white border border-brand-slate/20 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-slate/40 transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        htmlFor="contact-phone"
+                        className="block text-xs font-mono-tabular font-bold uppercase tracking-wider text-brand-slate mb-2"
+                      >
+                        Phone
+                      </label>
+                      <input
+                        id="contact-phone"
+                        type="tel"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        placeholder="+91 98480 XXXXX"
+                        className="w-full rounded-[10px] px-4 py-3.5 bg-white border border-brand-slate/20 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-slate/40 transition-colors"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="contact-subject"
+                        className="block text-xs font-mono-tabular font-bold uppercase tracking-wider text-brand-slate mb-2"
+                      >
+                        Subject *
+                      </label>
+                      <select
+                        id="contact-subject"
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
+                        className="w-full h-[48px] rounded-[10px] px-4 bg-white border border-brand-slate/20 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-slate/40 transition-colors"
+                      >
+                        <option value="Sponsor a Community Meal Drive">
+                          Sponsor a Community Meal Drive
+                        </option>
+                        <option value="Volunteer With Field Operations">
+                          Volunteer With Field Operations
+                        </option>
+                        <option value="Corporate CSR & Institutional Partnership">
+                          Corporate CSR & Institutional Partnership
+                        </option>
+                        <option value="School Nutrition Program Inquiry">
+                          School Nutrition Program Inquiry
+                        </option>
+                        <option value="Press & Documentary Media">
+                          Press & Documentary Media
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="contact-message"
+                      className="block text-xs font-mono-tabular font-bold uppercase tracking-wider text-brand-slate mb-2"
+                    >
+                      Message *
+                    </label>
+                    <textarea
+                      id="contact-message"
+                      rows={5}
+                      required
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      placeholder="Tell us how you would like to collaborate or support our communities..."
+                      className="w-full rounded-[10px] p-4 bg-white border border-brand-slate/20 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-slate/40 transition-colors resize-y"
+                    />
+                  </div>
+
+                  <div className="pt-2">
+                    <button
+                      type="submit"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[10px] bg-brand-green hover:bg-brand-lime text-brand-black text-sm font-bold transition-colors cursor-pointer"
+                    >
+                      <span>Send Message</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                </form>
+              )}
+            </ScrollReveal>
+
+            {/* RIGHT: DIRECT CONTACT & SOCIAL CHANNELS */}
+            <ScrollReveal delay={0.14} className="lg:col-span-5 space-y-8">
+              <div className="rounded-[18px] bg-brand-slate p-7 border border-white/12">
+                <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-green block mb-5">
+                  DIRECT COORDINATION DESK
+                </span>
+                <div className="space-y-5">
+                  <a
+                    href="mailto:hello@zerohunger.org"
+                    className="flex items-start gap-3.5 group"
+                  >
+                    <Mail className="w-5 h-5 text-brand-green shrink-0 mt-0.5" />
+                    <div>
+                      <div className="text-xs font-mono-tabular uppercase tracking-wider text-white/60">
+                        Email
+                      </div>
+                      <div className="font-display-sans text-xl font-black text-white group-hover:text-brand-green transition-colors">
+                        hello@zerohunger.org
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="tel:+919848024190"
+                    className="flex items-start gap-3.5 group"
+                  >
+                    <Phone className="w-5 h-5 text-brand-cyan shrink-0 mt-0.5" />
+                    <div>
+                      <div className="text-xs font-mono-tabular uppercase tracking-wider text-white/60">
+                        Phone & Dispatch Helpline
+                      </div>
+                      <div className="font-mono-tabular text-lg font-bold text-white group-hover:text-brand-cyan transition-colors">
+                        +91 98480 24190
+                      </div>
+                    </div>
+                  </a>
+
+                  <div className="flex items-start gap-3.5">
+                    <MapPin className="w-5 h-5 text-brand-lime shrink-0 mt-0.5" />
+                    <div>
+                      <div className="text-xs font-mono-tabular uppercase tracking-wider text-white/60">
+                        Headquarters & Flagship Kitchen
+                      </div>
+                      <div className="text-base font-bold text-white">
+                        Hyderabad, Telangana, India
+                      </div>
+                      <p className="text-xs text-white/70 mt-0.5">
+                        Plot 14, Clock Tower Corridor, Secunderabad 500003
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Social Channels */}
+              <div className="rounded-[18px] bg-brand-slate p-7 border border-white/12">
+                <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.2em] text-brand-cyan block mb-4">
+                  FIELD DISPATCHES & SOCIAL MEDIA
+                </span>
+                <div className="grid grid-cols-2 gap-3">
+                  {SOCIAL_LINKS.map((social) => {
+                    const Icon = social.icon;
+                    return (
+                      <a
+                        key={social.label}
+                        href={social.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-2.5 p-3.5 rounded-[10px] bg-brand-black border border-white/12 hover:border-brand-green transition-colors text-sm font-bold text-white"
+                      >
+                        <Icon className="w-4 h-4 text-brand-green" />
+                        <span>{social.label}</span>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Morning Kitchen Visitor Note */}
+              <div className="p-6 rounded-[18px] bg-brand-lime text-brand-slate">
+                <div className="flex items-center gap-2 text-xs font-mono-tabular font-bold uppercase tracking-wider text-brand-slate">
+                  <Clock className="w-4 h-4" />
+                  <span>OPEN KITCHEN POLICY</span>
+                </div>
+                <p className="mt-2 text-sm text-brand-slate font-medium leading-relaxed">
+                  Donors, teachers, and citizens are welcome to visit our Secunderabad Community Kitchen any morning between 6:00 AM and 9:00 AM to witness meal preparation firsthand.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. CTA */}
       <CTASection onOpenSupport={onOpenSupport} />
     </div>
   );

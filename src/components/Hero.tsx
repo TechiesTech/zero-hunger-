@@ -77,15 +77,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSupport }) => {
                 </span>
               </span>
 
-              {/* Line 3: SLEEP with typing highlight wipe, HUNGRY. beside it in neon green */}
+              {/* Line 3: SLEEP with typing highlight wipe */}
               <span className="block overflow-hidden pb-0.5">
-                <span className="flex items-center flex-wrap gap-x-1.5 xs:gap-x-2 sm:gap-x-3">
-                  <span className="type-word-3 inline-block bg-[#D7262F] text-white px-2 py-0.5 xs:px-2.5 sm:px-3.5 md:px-4 sm:py-1">
-                    SLEEP
-                  </span>
-                  <span className="type-word-4 inline-block text-[#49E619]">
-                    HUNGRY.
-                  </span>
+                <span className="type-word-3 inline-block bg-[#D7262F] text-white px-2 py-0.5 xs:px-2.5 sm:px-3.5 md:px-4 sm:py-1">
+                  SLEEP
+                </span>
+              </span>
+
+              {/* Line 4: HUNGRY. in neon green */}
+              <span className="block overflow-hidden pb-0.5">
+                <span className="type-word-4 inline-block text-[#49E619]">
+                  HUNGRY.
                 </span>
               </span>
             </h1>
