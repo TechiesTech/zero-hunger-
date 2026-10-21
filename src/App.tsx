@@ -16,12 +16,10 @@ import { About } from './pages/About';
 import { Projects } from './pages/Projects';
 import { ProjectDetail } from './pages/ProjectDetail';
 import { Impact } from './pages/Impact';
-import { Contact } from './pages/Contact';
 import { MealBox } from './pages/MealBox';
 import { TrackMeal } from './pages/TrackMeal';
 import { CelebrateAndGive } from './pages/CelebrateAndGive';
 import { CSRTaxBenefits } from './pages/CSRTaxBenefits';
-import { PosterStudio } from './pages/PosterStudio';
 
 function AppContent() {
   const [supportModalOpen, setSupportModalOpen] = useState(false);
@@ -38,7 +36,7 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#080808] selection:bg-[#D7262F] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-brand-black selection:bg-[#D7262F] selection:text-white">
       <Navbar onOpenSupport={(tab) => handleOpenSupport(tab, 'all')} />
 
       <div className="flex-1">
@@ -48,8 +46,6 @@ function AppContent() {
               path="/"
               element={<Home onOpenSupport={handleOpenSupport} />}
             />
-            <Route path="/poster-studio" element={<PosterStudio />} />
-            <Route path="/poster" element={<PosterStudio />} />
             <Route path="/meal-box" element={<MealBox />} />
             <Route path="/track-meal" element={<TrackMeal />} />
             <Route path="/celebrate-and-give" element={<CelebrateAndGive />} />
@@ -57,6 +53,10 @@ function AppContent() {
             <Route
               path="/about"
               element={<About onOpenSupport={handleOpenSupport} />}
+            />
+            <Route
+              path="/contact"
+              element={<Navigate to="/about" replace />}
             />
             <Route
               path="/projects"
@@ -70,7 +70,6 @@ function AppContent() {
               path="/impact"
               element={<Impact onOpenSupport={handleOpenSupport} />}
             />
-            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </PageTransition>

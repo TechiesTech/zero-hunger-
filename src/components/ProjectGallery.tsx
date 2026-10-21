@@ -7,7 +7,7 @@ import { ScrollReveal } from './ScrollReveal';
 
 export const ProjectGallery: React.FC = () => {
   return (
-    <section className="bg-[#080808] text-white py-20 sm:py-28 lg:py-32 border-t border-white/10">
+    <section className="bg-[#080808] text-white pt-12 sm:pt-16 lg:pt-20 pb-20 sm:pb-28 lg:pb-32 border-t border-white/10">
       <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 sm:mb-18">
           <ScrollReveal className="flex flex-col text-left items-start">

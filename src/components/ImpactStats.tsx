@@ -21,7 +21,7 @@ export const ImpactStats: React.FC<ImpactStatsProps> = ({
   return (
     <section
       id="impact-section"
-      className="bg-[#122023] text-white pt-5 sm:pt-6 lg:pt-8 pb-16 sm:pb-20 lg:pb-24 border-b border-white/10"
+      className="bg-[#122023] text-white pt-5 sm:pt-6 lg:pt-8 pb-8 sm:pb-10 lg:pb-12 border-b border-white/10"
     >
       <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
         {/* Centered Editorial Heading */}

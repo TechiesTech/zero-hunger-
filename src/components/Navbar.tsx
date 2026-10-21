@@ -9,16 +9,19 @@ interface NavbarProps {
   onOpenSupport: (tab?: SupportTab) => void;
 }
 
-const NAV_ITEMS = [
-  { label: 'Home', path: '/', hideOnCompact: false },
-  { label: 'Poster Studio', path: '/poster-studio', hideOnCompact: false, highlight: true },
-  { label: 'Meal Box', path: '/meal-box', hideOnCompact: false },
-  { label: 'Celebrate & Give', path: '/celebrate-and-give', hideOnCompact: false },
-  { label: 'Track Meal', path: '/track-meal', hideOnCompact: false },
-  { label: 'Projects & Impact', path: '/projects', hideOnCompact: false },
-  { label: 'CSR & Tax', path: '/csr-tax-benefits', hideOnCompact: true },
-  { label: 'About', path: '/about', hideOnCompact: true },
-  { label: 'Contact', path: '/contact', hideOnCompact: true },
+interface NavItem {
+  label: string;
+  path: string;
+}
+
+const NAV_ITEMS: NavItem[] = [
+  { label: 'Home', path: '/' },
+  { label: 'Meal Box', path: '/meal-box' },
+  { label: 'Celebrate & Give', path: '/celebrate-and-give' },
+  { label: 'Track Meal', path: '/track-meal' },
+  { label: 'Projects & Impact', path: '/projects' },
+  { label: 'CSR & Tax', path: '/csr-tax-benefits' },
+  { label: 'About & Contact', path: '/about' },
 ];
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenSupport }) => {
@@ -44,23 +47,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSupport }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled || mobileMenuOpen
-          ? 'bg-[#080808]/95 backdrop-blur-md border-b border-white/10 py-3.5 shadow-lg'
-          : 'bg-[#080808]/85 backdrop-blur-xs border-b border-white/10 py-4'
+          ? 'bg-brand-black/95 backdrop-blur-md border-b border-white/10 py-3.5 shadow-lg'
+          : 'bg-brand-black/85 backdrop-blur-xs border-b border-white/10 py-4'
       }`}
     >
-      <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-between">
+      <div className="max-w-340 mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 flex items-center justify-between">
         {/* Zone 1: Brand Wordmark */}
         <Link
           to="/"
-          className="font-display-sans uppercase text-xl sm:text-2xl font-black tracking-[-0.04em] whitespace-nowrap text-white hover:text-[#49E619] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#49E619]"
+          className="font-display-sans uppercase text-xl sm:text-2xl font-black tracking-[-0.04em] whitespace-nowrap text-white hover:text-brand-green transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green"
         >
-          ZERO <span className="text-[#49E619]">HUNGER</span>
+          ZERO <span className="text-brand-green">HUNGER</span>
         </Link>
 
-        {/* Zone 2: Primary Navigation Links */}
+        {/* Zone 2: Primary Navigation Links - All 8 pages visible */}
         <nav
           aria-label="Primary Navigation"
-          className="hidden md:flex items-center gap-6 lg:gap-8"
+          className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8"
         >
           {NAV_ITEMS.map((item) => (
             <NavLink
@@ -68,12 +71,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSupport }) => {
               to={item.path}
               end={item.path === '/'}
               className={({ isActive }) =>
-                `${
-                  item.hideOnCompact ? 'hidden xl:inline-block' : ''
-                } relative py-1 text-sm font-medium tracking-tight whitespace-nowrap transition-colors duration-200 group ${
+                `relative py-1 text-[15px] xl:text-base font-semibold tracking-tight whitespace-nowrap transition-colors duration-200 group ${
                   isActive
-                    ? 'text-[#49E619]'
-                    : 'text-white/80 hover:text-white'
+                    ? 'text-brand-green'
+                    : 'text-white/85 hover:text-white'
                 }`
               }
             >
@@ -81,15 +82,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSupport }) => {
                 <>
                   <span className="flex items-center gap-1.5">
                     <span>{item.label}</span>
-                    {item.highlight && (
-                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#E21B23]" />
-                    )}
                   </span>
                   <span
-                    className={`absolute left-0 right-0 -bottom-0.5 h-[2px] transition-transform duration-200 origin-left ${
+                    className={`absolute left-0 right-0 -bottom-0.5 h-0.5 transition-transform duration-200 origin-left ${
                       isActive
-                        ? 'scale-x-100 bg-[#49E619]'
-                        : 'scale-x-0 group-hover:scale-x-100 bg-[#B9FF2C]'
+                        ? 'scale-x-100 bg-brand-green'
+                        : 'scale-x-0 group-hover:scale-x-100 bg-brand-lime'
                     }`}
                   />
                 </>
@@ -104,9 +102,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSupport }) => {
             <Link
               to="/meal-box"
               aria-label={`View Meal Box Cart with ${cartCount} items`}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[8px] text-xs font-mono-tabular font-bold border border-[#49E619]/40 bg-[#122023] text-white hover:border-[#49E619] hover:bg-[#49E619] hover:text-[#080808] transition-colors whitespace-nowrap group"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-mono-tabular font-bold border border-brand-green/40 bg-brand-slate text-white hover:border-brand-green hover:bg-brand-green hover:text-brand-black transition-colors whitespace-nowrap group"
             >
-              <ShoppingBag className="w-3.5 h-3.5 text-[#49E619] group-hover:text-[#080808]" />
+              <ShoppingBag className="w-4 h-4 text-brand-green group-hover:text-brand-black" />
               <span>{cartCount}</span>
             </Link>
           )}
@@ -114,7 +112,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSupport }) => {
           <button
             type="button"
             onClick={() => onOpenSupport('donate')}
-            className="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-[10px] text-xs sm:text-sm font-bold tracking-tight whitespace-nowrap bg-[#49E619] text-[#080808] hover:bg-[#B9FF2C] transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#49E619]"
+            className="hidden md:inline-flex items-center justify-center px-6 py-2.5 rounded-[10px] text-base font-black tracking-tight whitespace-nowrap bg-brand-green text-brand-black hover:bg-brand-lime transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green"
           >
             Support the Mission
           </button>
@@ -126,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSupport }) => {
             aria-label={
               mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'
             }
-            className="md:hidden w-11 h-11 flex items-center justify-center text-white hover:text-[#49E619] transition-colors cursor-pointer"
+            className="lg:hidden w-11 h-11 flex items-center justify-center text-white hover:text-brand-green transition-colors cursor-pointer"
           >
             {mobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -145,7 +143,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSupport }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="md:hidden bg-[#122023] border-b border-white/10 px-5 pt-4 pb-8 shadow-2xl"
+            className="lg:hidden bg-brand-slate border-b border-white/10 px-5 pt-4 pb-8 shadow-2xl"
           >
             <nav
               aria-label="Mobile Navigation"
@@ -159,12 +157,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSupport }) => {
                   onClick={() => setMobileMenuOpen(false)}
                   className={({ isActive }) =>
                     `py-3.5 text-lg font-display-sans uppercase font-black tracking-tight flex items-center justify-between ${
-                      isActive ? 'text-[#49E619]' : 'text-white'
+                      isActive ? 'text-brand-green' : 'text-white'
                     }`
                   }
                 >
                   <span>{item.label}</span>
-                  <span className="text-xs font-mono-tabular text-[#49E619]">
+                  <span className="text-xs font-mono-tabular text-brand-green">
                     →
                   </span>
                 </NavLink>
@@ -177,7 +175,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSupport }) => {
                   setMobileMenuOpen(false);
                   onOpenSupport('donate');
                 }}
-                className="w-full py-3.5 rounded-[10px] bg-[#49E619] text-[#080808] text-sm font-bold tracking-tight hover:bg-[#B9FF2C] transition-colors cursor-pointer"
+                className="w-full py-3.5 rounded-[10px] bg-brand-green text-brand-black text-base font-black tracking-tight hover:bg-brand-lime transition-colors cursor-pointer"
               >
                 Support the Mission
               </button>

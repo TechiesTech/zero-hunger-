@@ -96,7 +96,7 @@ export const TrackMeal: React.FC = () => {
       description: `Order ${activeToken?.orderId || 'ORD-2026-9012'} confirmed. ₹150 payment allocated to dual-meal program.`,
       completed: true,
       isHeart: false,
-      bgClass: 'bg-[#49E619] text-[#122023]',
+      bgClass: 'bg-brand-green text-brand-slate',
     },
     {
       id: 'prepared',
@@ -106,7 +106,7 @@ export const TrackMeal: React.FC = () => {
         'Freshly cooked in our Secunderabad Community Kitchen under pediatric nutrition standards.',
       completed: true,
       isHeart: false,
-      bgClass: 'bg-[#4EDBE2] text-[#122023]',
+      bgClass: 'bg-brand-cyan text-brand-slate',
     },
     {
       id: 'assigned',
@@ -120,7 +120,7 @@ export const TrackMeal: React.FC = () => {
         activeToken?.status === 'OUT_FOR_DELIVERY' ||
         activeToken?.status === 'DELIVERED',
       isHeart: false,
-      bgClass: 'bg-[#B9FF2C] text-[#122023]',
+      bgClass: 'bg-brand-lime text-brand-slate',
     },
     {
       id: 'delivered',
@@ -130,7 +130,7 @@ export const TrackMeal: React.FC = () => {
         'Insulated thermal containers arrived at community distribution hub and verified by field coordinator.',
       completed: isDelivered,
       isHeart: false,
-      bgClass: 'bg-[#F2F4F3] text-[#122023]',
+      bgClass: 'bg-brand-alabaster text-brand-slate',
     },
     {
       id: 'received',
@@ -140,27 +140,27 @@ export const TrackMeal: React.FC = () => {
         'Warm, balanced meal served with dignity. Safeguarding-verified proof uploaded.',
       completed: isDelivered,
       isHeart: true,
-      bgClass: 'bg-[#49E619] text-[#122023]',
+      bgClass: 'bg-brand-green text-brand-slate',
     },
   ];
 
   return (
-    <div className="bg-[#080808] text-white min-h-screen">
+    <div className="bg-brand-black text-white min-h-screen">
       {/* =====================================================================
           HERO SECTION — FOLLOW YOUR IMPACT
       ====================================================================== */}
-      <section className="bg-[#080808] pt-28 sm:pt-36 pb-16 sm:pb-20 border-b border-white/10">
-        <div className="max-w-[1160px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+      <section className="bg-brand-black pt-28 sm:pt-36 pb-16 sm:pb-20 border-b border-white/10">
+        <div className="max-w-290 mx-auto px-5 sm:px-8 lg:px-12 text-center">
           <ScrollReveal>
-            <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-[#49E619] block mb-3">
+            <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-brand-green block mb-3">
               VERIFIABLE HUMANITARIAN LEDGER
             </span>
 
             <h1 className="font-display-sans uppercase text-4xl sm:text-6xl lg:text-7xl font-black tracking-[-0.04em] leading-[0.92] text-white">
-              FOLLOW YOUR <span className="text-[#49E619]">IMPACT.</span>
+              FOLLOW YOUR <span className="text-brand-green">IMPACT.</span>
             </h1>
 
-            <p className="mt-4 font-display-sans uppercase text-lg sm:text-2xl text-[#B9FF2C] tracking-tight">
+            <p className="mt-4 font-display-sans uppercase text-lg sm:text-2xl text-brand-lime tracking-tight">
               “Your meal didn&apos;t end at checkout.”
             </p>
 
@@ -173,19 +173,19 @@ export const TrackMeal: React.FC = () => {
                 Enter your token
               </label>
               <div className="relative flex-1">
-                <Ticket className="w-4 h-4 text-[#49E619] absolute left-4 top-1/2 -translate-y-1/2" />
+                <Ticket className="w-4 h-4 text-brand-green absolute left-4 top-1/2 -translate-y-1/2" />
                 <input
                   id="charity-token-input"
                   type="text"
                   value={tokenInput}
                   onChange={(e) => setTokenInput(e.target.value)}
                   placeholder="ZH-2026-A8F42K"
-                  className="w-full rounded-[10px] bg-[#122023] border border-white/20 pl-11 pr-4 py-4 font-mono-tabular text-sm font-bold uppercase tracking-widest text-white focus:outline-none focus:border-[#49E619]"
+                  className="w-full rounded-[10px] bg-brand-slate border border-white/20 pl-11 pr-4 py-4 font-mono-tabular text-sm font-bold uppercase tracking-widest text-white focus:outline-1 focus:-outline-offset-1 focus:outline-brand-green"
                 />
               </div>
               <button
                 type="submit"
-                className="px-8 py-4 rounded-[10px] bg-[#49E619] hover:bg-[#B9FF2C] text-[#080808] font-mono-tabular text-xs font-bold uppercase tracking-widest transition-colors cursor-pointer whitespace-nowrap inline-flex items-center justify-center gap-2"
+                className="px-8 py-4 rounded-[10px] bg-brand-green hover:bg-brand-lime text-brand-black font-mono-tabular text-xs font-bold uppercase tracking-widest transition-colors cursor-pointer whitespace-nowrap inline-flex items-center justify-center gap-2"
               >
                 <Search className="w-4 h-4" />
                 <span>TRACK MEAL</span>
@@ -206,20 +206,20 @@ export const TrackMeal: React.FC = () => {
                     key={tok.id}
                     type="button"
                     onClick={() => handleSelectToken(tok.tokenNumber)}
-                    className={`px-3.5 py-1.5 rounded-[8px] font-mono-tabular text-xs font-bold border transition-colors cursor-pointer inline-flex items-center gap-1.5 ${
+                    className={`px-3.5 py-1.5 rounded-lg font-mono-tabular text-xs font-bold border transition-colors cursor-pointer inline-flex items-center gap-1.5 ${
                       isSelected
-                        ? 'bg-[#49E619] text-[#080808] border-[#49E619]'
-                        : 'bg-[#122023] text-white border-white/15 hover:border-[#49E619]'
+                        ? 'bg-brand-green text-brand-black border-brand-green'
+                        : 'bg-brand-slate text-white border-white/15 hover:border-brand-green'
                     }`}
                   >
                     <span>{tok.tokenNumber}</span>
                     <span
                       className={`text-[10px] uppercase ${
                         isSelected
-                          ? 'text-[#080808]'
+                          ? 'text-brand-black'
                           : tok.status === 'DELIVERED'
-                          ? 'text-[#49E619]'
-                          : 'text-[#B9FF2C]'
+                          ? 'text-brand-green'
+                          : 'text-brand-lime'
                       }`}
                     >
                       · {tok.status === 'DELIVERED' ? 'DELIVERED ✓' : 'READY'}
@@ -236,8 +236,8 @@ export const TrackMeal: React.FC = () => {
                 onClick={() => setViewMode('CUSTOMER_TRACKER')}
                 className={`px-5 py-2.5 rounded-[10px] font-mono-tabular text-xs font-bold uppercase tracking-widest transition-colors cursor-pointer ${
                   viewMode === 'CUSTOMER_TRACKER'
-                    ? 'bg-[#49E619] text-[#080808]'
-                    : 'bg-[#122023] text-white/80 hover:text-white border border-white/15'
+                    ? 'bg-brand-green text-brand-black'
+                    : 'bg-brand-slate text-white/80 hover:text-white border border-white/15'
                 }`}
               >
                 1. Customer Impact Tracker
@@ -247,8 +247,8 @@ export const TrackMeal: React.FC = () => {
                 onClick={() => setViewMode('ADMIN_DASHBOARD')}
                 className={`px-5 py-2.5 rounded-[10px] font-mono-tabular text-xs font-bold uppercase tracking-widest transition-colors cursor-pointer ${
                   viewMode === 'ADMIN_DASHBOARD'
-                    ? 'bg-[#B9FF2C] text-[#080808]'
-                    : 'bg-[#122023] text-white/80 hover:text-white border border-white/15'
+                    ? 'bg-brand-lime text-brand-black'
+                    : 'bg-brand-slate text-white/80 hover:text-white border border-white/15'
                 }`}
               >
                 2. NGO Admin Delivery Confirmation ({isDelivered ? 'Delivered ✓' : 'Action Ready'})
@@ -261,10 +261,10 @@ export const TrackMeal: React.FC = () => {
       {/* =====================================================================
           MAIN CONTENT AREA
       ====================================================================== */}
-      <section className="bg-[#122023] py-16 sm:py-24">
-        <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12">
+      <section className="bg-brand-slate py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           {!activeToken ? (
-            <div className="rounded-[18px] bg-[#080808] border border-white/15 p-12 text-center max-w-lg mx-auto">
+            <div className="rounded-[18px] bg-brand-black border border-white/15 p-12 text-center max-w-lg mx-auto">
               <p className="font-display-sans uppercase text-2xl font-black text-white">
                 Token not found
               </p>
@@ -281,20 +281,20 @@ export const TrackMeal: React.FC = () => {
               {/* Dual-Stream Distinction Banner: Customer's Purchased Meal vs Sponsored Child Meal */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {/* Box 1: Customer's Own Meal */}
-                <div className="rounded-[16px] bg-[#F2F4F3] text-[#122023] p-6 flex items-start justify-between gap-4">
+                <div className="rounded-2xl bg-brand-alabaster text-brand-slate p-6 flex items-start justify-between gap-4">
                   <div>
-                    <span className="font-mono-tabular text-[10px] font-bold uppercase tracking-widest text-[#188D44] block">
+                    <span className="font-mono-tabular text-[10px] font-bold uppercase tracking-widest text-brand-emerald block">
                       ORDER {activeToken.orderId} · YOUR PURCHASED MEAL
                     </span>
-                    <h2 className="font-display-sans uppercase text-2xl font-black text-[#122023] mt-1">
+                    <h2 className="font-display-sans uppercase text-2xl font-black text-brand-slate mt-1">
                       {activeToken.productName} (For {activeToken.customerName})
                     </h2>
-                    <p className="text-xs text-[#122023]/75 mt-1">
+                    <p className="text-xs text-brand-slate/75 mt-1">
                       Paid: ₹{activeToken.amountPaidInr} · Prepared fresh for
                       your personal meal order.
                     </p>
                   </div>
-                  <span className="px-3 py-1 rounded-[6px] bg-[#122023] text-[#4EDBE2] font-mono-tabular text-[11px] font-bold uppercase shrink-0">
+                  <span className="px-3 py-1 rounded-md bg-brand-slate text-brand-cyan font-mono-tabular text-[11px] font-bold uppercase shrink-0">
                     {activeToken.customerMealStatus === 'DELIVERED_TO_CUSTOMER'
                       ? 'Delivered ✓'
                       : 'Kitchen Preparing'}
@@ -302,50 +302,50 @@ export const TrackMeal: React.FC = () => {
                 </div>
 
                 {/* Box 2: Linked Sponsored Child Meal */}
-                <div className="rounded-[16px] bg-[#49E619] text-[#122023] p-6 flex items-start justify-between gap-4">
+                <div className="rounded-2xl bg-brand-green text-brand-slate p-6 flex items-start justify-between gap-4">
                   <div>
-                    <span className="font-mono-tabular text-[10px] font-bold uppercase tracking-widest text-[#122023]/80 block">
+                    <span className="font-mono-tabular text-[10px] font-bold uppercase tracking-widest text-brand-slate/80 block">
                       TOKEN {activeToken.tokenNumber} · SPONSORED CHILD MEAL
                     </span>
-                    <h2 className="font-display-sans uppercase text-2xl font-black text-[#122023] mt-1">
+                    <h2 className="font-display-sans uppercase text-2xl font-black text-brand-slate mt-1">
                       1 Nutritious Child Meal
                     </h2>
-                    <p className="text-xs text-[#122023]/85 font-medium mt-1">
+                    <p className="text-xs text-brand-slate/85 font-medium mt-1">
                       Funded by your ₹150 purchase · Recipient Beneficiary ID:{' '}
-                      <strong className="font-mono-tabular text-[#122023]">
+                      <strong className="font-mono-tabular text-brand-slate">
                         {activeToken.beneficiaryId}
                       </strong>
                     </p>
                   </div>
-                  <span className="px-3 py-1 rounded-[6px] bg-[#122023] text-[#B9FF2C] font-mono-tabular text-[11px] font-bold uppercase shrink-0">
+                  <span className="px-3 py-1 rounded-md bg-brand-slate text-brand-lime font-mono-tabular text-[11px] font-bold uppercase shrink-0">
                     {isDelivered ? 'CHILD RECEIVED ❤️' : activeToken.status}
                   </span>
                 </div>
               </div>
 
               {/* LIVE KITCHEN DISPATCH & PACKAGING SHOWCASE */}
-              <div className="rounded-[20px] bg-[#080808] border border-white/15 overflow-hidden shadow-2xl">
+              <div className="rounded-[20px] bg-brand-black border border-white/15 overflow-hidden shadow-2xl">
                 <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
-                  <div className="lg:col-span-7 relative min-h-[280px] sm:min-h-[360px] lg:min-h-[400px] bg-[#122023]">
+                  <div className="lg:col-span-7 relative min-h-70 sm:min-h-90 lg:min-h-100 bg-brand-slate">
                     <img
                       src="/src/assets/images/track_meal_delivery_1791400616620.jpg"
                       alt="Zero Hunger live kitchen counter dispatch with delivery volunteer picking up fresh meal boxes"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover object-center"
                     />
-                    <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#080808]/85 backdrop-blur-md border border-white/20 text-xs font-mono-tabular font-bold text-[#49E619]">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#49E619] animate-pulse" />
+                    <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-black/85 backdrop-blur-md border border-white/20 text-xs font-mono-tabular font-bold text-brand-green">
+                      <span className="w-2.5 h-2.5 rounded-full bg-brand-green animate-pulse" />
                       <span>LIVE DISPATCH · MEAL READY</span>
                     </div>
-                    <div className="absolute bottom-3 left-3 right-3 rounded-[10px] bg-[#080808]/90 backdrop-blur-md border border-white/10 px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs font-mono-tabular text-white/90">
+                    <div className="absolute bottom-3 left-3 right-3 rounded-[10px] bg-brand-black/90 backdrop-blur-md border border-white/10 px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs font-mono-tabular text-white/90">
                       <span>ZERO HUNGER CORPS · SECUNDERABAD HUB</span>
-                      <span className="text-[#49E619] font-bold">100% FRESHLY PREPARED</span>
+                      <span className="text-brand-green font-bold">100% FRESHLY PREPARED</span>
                     </div>
                   </div>
 
-                  <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col justify-between bg-gradient-to-br from-[#0c1618] to-[#080808]">
+                  <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col justify-between bg-linear-to-br from-[#0c1618] to-brand-black">
                     <div>
-                      <span className="font-mono-tabular text-xs font-bold uppercase tracking-[0.22em] text-[#49E619] block mb-2">
+                      <span className="font-mono-tabular text-xs font-bold uppercase tracking-[0.22em] text-brand-green block mb-2">
                         LIVE KITCHEN OPERATIONS
                       </span>
                       <h3 className="font-display-sans uppercase text-2xl sm:text-3xl font-black text-white leading-tight">
@@ -363,11 +363,11 @@ export const TrackMeal: React.FC = () => {
                       </div>
                       <div className="flex items-center justify-between text-xs font-mono-tabular">
                         <span className="text-white/60">DESTINATION HUB</span>
-                        <span className="text-[#49E619] font-bold truncate max-w-[200px] text-right">{activeToken.deliveryLocation}</span>
+                        <span className="text-brand-green font-bold truncate max-w-50 text-right">{activeToken.deliveryLocation}</span>
                       </div>
                       <div className="flex items-center justify-between text-xs font-mono-tabular">
                         <span className="text-white/60">THERMAL PACKAGING</span>
-                        <span className="text-[#B9FF2C] font-bold">INSULATED & ECO-SAFE</span>
+                        <span className="text-brand-lime font-bold">INSULATED & ECO-SAFE</span>
                       </div>
                     </div>
                   </div>
@@ -380,12 +380,12 @@ export const TrackMeal: React.FC = () => {
               {/* Main Two-Column Grid: Vertical Step-by-Step Timeline Left + Impact & Delivery Photo Right */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 {/* LEFT 5 COLUMNS: Vertical Timeline */}
-                <div className="lg:col-span-5 rounded-[18px] bg-[#080808] border border-white/12 p-6 sm:p-8 shadow-xl">
+                <div className="lg:col-span-5 rounded-[18px] bg-brand-black border border-white/12 p-6 sm:p-8 shadow-xl">
                   <div className="pb-4 mb-6 border-b border-white/10 flex items-center justify-between">
                     <span className="font-mono-tabular text-xs font-bold uppercase tracking-widest text-white">
                       SPONSORED MEAL TIMELINE
                     </span>
-                    <span className="font-mono-tabular text-xs font-bold text-[#49E619]">
+                    <span className="font-mono-tabular text-xs font-bold text-brand-green">
                       {activeToken.tokenNumber}
                     </span>
                   </div>
@@ -394,7 +394,7 @@ export const TrackMeal: React.FC = () => {
                     {timelineSteps.map((step, index) => (
                       <React.Fragment key={step.id}>
                         <div
-                          className={`rounded-[12px] p-4 transition-colors ${
+                          className={`rounded-xl p-4 transition-colors ${
                             step.completed
                               ? step.bgClass
                               : 'bg-white/5 border border-white/10 text-white/50'
@@ -403,8 +403,8 @@ export const TrackMeal: React.FC = () => {
                           <div className="flex items-center justify-between gap-2">
                             <div className="flex items-center gap-2.5">
                               {step.completed ? (
-                                <span className="w-6 h-6 rounded-full bg-[#122023] text-white flex items-center justify-center text-xs shrink-0">
-                                  {step.isHeart ? '❤️' : <Check className="w-3.5 h-3.5 text-[#49E619]" />}
+                                <span className="w-6 h-6 rounded-full bg-brand-slate text-white flex items-center justify-center text-xs shrink-0">
+                                  {step.isHeart ? '❤️' : <Check className="w-3.5 h-3.5 text-brand-green" />}
                                 </span>
                               ) : (
                                 <span className="w-6 h-6 rounded-full border border-white/30 text-white/60 flex items-center justify-center shrink-0">
@@ -429,7 +429,7 @@ export const TrackMeal: React.FC = () => {
 
                         {index < timelineSteps.length - 1 && (
                           <div
-                            className="flex justify-center py-0.5 text-[#49E619]"
+                            className="flex justify-center py-0.5 text-brand-green"
                             aria-hidden="true"
                           >
                             <ArrowDown className="w-4 h-4" />
@@ -443,25 +443,25 @@ export const TrackMeal: React.FC = () => {
                 {/* RIGHT 7 COLUMNS: YOUR IMPACT + DELIVERY PHOTO + PRIVACY PROTECTION */}
                 <div className="lg:col-span-7 space-y-6">
                   {isDelivered ? (
-                    <div className="rounded-[18px] bg-[#080808] border border-white/15 p-6 sm:p-9 shadow-2xl">
+                    <div className="rounded-[18px] bg-brand-black border border-white/15 p-6 sm:p-9 shadow-2xl">
                       <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/12">
                         <div>
-                          <span className="font-mono-tabular text-xs font-bold uppercase tracking-[0.2em] text-[#49E619] block">
+                          <span className="font-mono-tabular text-xs font-bold uppercase tracking-[0.2em] text-brand-green block">
                             YOUR IMPACT
                           </span>
                           <h3 className="font-display-sans uppercase text-3xl sm:text-4xl font-black text-white mt-1">
                             Meal delivered successfully ❤️
                           </h3>
                         </div>
-                        <span className="px-3.5 py-1.5 rounded-[8px] bg-[#49E619] text-[#080808] font-mono-tabular text-xs font-bold uppercase tracking-widest">
+                        <span className="px-3.5 py-1.5 rounded-lg bg-brand-green text-brand-black font-mono-tabular text-xs font-bold uppercase tracking-widest">
                           VERIFIED DELIVERY ✓
                         </span>
                       </div>
 
                       {/* Recipient & Location Metadata Grid */}
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-6 border-b border-white/12">
-                        <div className="rounded-[10px] bg-[#122023] p-3.5">
-                          <span className="font-mono-tabular text-[10px] uppercase tracking-widest text-[#49E619] block">
+                        <div className="rounded-[10px] bg-brand-slate p-3.5">
+                          <span className="font-mono-tabular text-[10px] uppercase tracking-widest text-brand-green block">
                             RECIPIENT (ANONYMIZED)
                           </span>
                           <span className="font-mono-tabular text-sm font-bold text-white mt-1 block">
@@ -469,8 +469,8 @@ export const TrackMeal: React.FC = () => {
                           </span>
                         </div>
 
-                        <div className="rounded-[10px] bg-[#122023] p-3.5">
-                          <span className="font-mono-tabular text-[10px] uppercase tracking-widest text-[#4EDBE2] block">
+                        <div className="rounded-[10px] bg-brand-slate p-3.5">
+                          <span className="font-mono-tabular text-[10px] uppercase tracking-widest text-brand-cyan block">
                             LOCATION
                           </span>
                           <span className="text-sm font-bold text-white mt-1 block">
@@ -478,8 +478,8 @@ export const TrackMeal: React.FC = () => {
                           </span>
                         </div>
 
-                        <div className="rounded-[10px] bg-[#122023] p-3.5">
-                          <span className="font-mono-tabular text-[10px] uppercase tracking-widest text-[#B9FF2C] block">
+                        <div className="rounded-[10px] bg-brand-slate p-3.5">
+                          <span className="font-mono-tabular text-[10px] uppercase tracking-widest text-brand-lime block">
                             DELIVERED
                           </span>
                           <span className="font-mono-tabular text-sm font-bold text-white mt-1 block">
@@ -492,15 +492,15 @@ export const TrackMeal: React.FC = () => {
                       <div className="mt-6">
                         <div className="flex items-center justify-between mb-3">
                           <span className="font-mono-tabular text-xs font-bold uppercase tracking-widest text-white inline-flex items-center gap-2">
-                            <Camera className="w-4 h-4 text-[#49E619]" />
+                            <Camera className="w-4 h-4 text-brand-green" />
                             <span>PHOTO OF MEAL DELIVERY</span>
                           </span>
-                          <span className="font-mono-tabular text-[11px] text-[#49E619] font-bold">
+                          <span className="font-mono-tabular text-[11px] text-brand-green font-bold">
                             Safeguarding Consent Verified ✓
                           </span>
                         </div>
 
-                        <div className="relative rounded-[14px] aspect-[16/10] overflow-hidden border border-white/15 bg-[#122023]">
+                        <div className="relative rounded-[14px] aspect-16/10 overflow-hidden border border-white/15 bg-brand-slate">
                           <EditorialImage
                             src={
                               activeToken.deliveryPhoto ||
@@ -509,12 +509,12 @@ export const TrackMeal: React.FC = () => {
                             alt={`Verified meal delivery for token ${activeToken.tokenNumber} at ${activeToken.deliveryLocation}`}
                             className="w-full h-full"
                           />
-                          <div className="absolute bottom-3 left-3 right-3 rounded-[8px] bg-[#080808]/90 backdrop-blur-xs text-white px-3.5 py-2 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono-tabular">
+                          <div className="absolute bottom-3 left-3 right-3 rounded-lg bg-brand-black/90 backdrop-blur-xs text-white px-3.5 py-2 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono-tabular">
                             <span>
                               TOKEN: {activeToken.tokenNumber} · BENEFICIARY:{' '}
                               {activeToken.beneficiaryId}
                             </span>
-                            <span className="text-[#49E619] font-bold">
+                            <span className="text-brand-green font-bold">
                               {activeToken.deliveryLocation.toUpperCase()}
                             </span>
                           </div>
@@ -522,17 +522,17 @@ export const TrackMeal: React.FC = () => {
                       </div>
 
                       {/* Customer Notification Receipt Card */}
-                      <div className="mt-6 rounded-[14px] bg-[#B9FF2C] text-[#122023] p-5">
-                        <span className="font-mono-tabular text-[10px] font-bold uppercase tracking-widest text-[#122023]/80 block">
+                      <div className="mt-6 rounded-[14px] bg-brand-lime text-brand-slate p-5">
+                        <span className="font-mono-tabular text-[10px] font-bold uppercase tracking-widest text-brand-slate/80 block">
                           CUSTOMER DISPATCH MESSAGE
                         </span>
-                        <p className="font-display-sans uppercase text-xl font-black text-[#122023] mt-1">
+                        <p className="font-display-sans uppercase text-xl font-black text-brand-slate mt-1">
                           Your meal has reached a child in need ❤️
                         </p>
-                        <p className="font-mono-tabular text-xs text-[#122023] mt-1">
+                        <p className="font-mono-tabular text-xs text-brand-slate mt-1">
                           Token: <strong>{activeToken.tokenNumber}</strong>
                         </p>
-                        <p className="text-xs text-[#122023]/80 font-medium mt-1">
+                        <p className="text-xs text-brand-slate/80 font-medium mt-1">
                           Thank you for helping provide a nutritious meal through
                           our community distribution program.
                         </p>
@@ -540,8 +540,8 @@ export const TrackMeal: React.FC = () => {
                     </div>
                   ) : (
                     /* Pending Delivery Card with shortcut to Admin Confirmation */
-                    <div className="rounded-[18px] bg-[#080808] border border-white/15 p-8 shadow-xl">
-                      <span className="px-3 py-1 rounded-[6px] bg-[#B9FF2C] font-mono-tabular text-xs font-bold uppercase tracking-wider text-[#122023]">
+                    <div className="rounded-[18px] bg-brand-black border border-white/15 p-8 shadow-xl">
+                      <span className="px-3 py-1 rounded-md bg-brand-lime font-mono-tabular text-xs font-bold uppercase tracking-wider text-brand-slate">
                         STATUS: READY FOR FIELD DELIVERY
                       </span>
                       <h3 className="font-display-sans uppercase text-3xl font-black text-white mt-4">
@@ -550,11 +550,11 @@ export const TrackMeal: React.FC = () => {
                       </h3>
                       <p className="mt-3 text-sm text-white/75 leading-relaxed">
                         Token{' '}
-                        <strong className="font-mono-tabular text-[#49E619]">
+                        <strong className="font-mono-tabular text-brand-green">
                           {activeToken.tokenNumber}
                         </strong>{' '}
                         has been linked to Beneficiary ID{' '}
-                        <strong className="font-mono-tabular text-[#4EDBE2]">
+                        <strong className="font-mono-tabular text-brand-cyan">
                           {activeToken.beneficiaryId}
                         </strong>{' '}
                         at{' '}
@@ -565,14 +565,14 @@ export const TrackMeal: React.FC = () => {
                         delivery photo, your impact proof will appear here.
                       </p>
 
-                      <div className="mt-5 rounded-[12px] overflow-hidden border border-white/15 aspect-[16/9] relative">
+                      <div className="mt-5 rounded-xl overflow-hidden border border-white/15 aspect-video relative">
                         <img
                           src="/src/assets/images/track_meal_delivery_1791400616620.jpg"
                           alt="Meal ready at kitchen counter for field courier dispatch"
                           referrerPolicy="no-referrer"
                           className="w-full h-full object-cover"
                         />
-                        <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#080808]/85 text-xs font-mono-tabular font-bold text-[#49E619] border border-white/15 backdrop-blur-xs">
+                        <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-brand-black/85 text-xs font-mono-tabular font-bold text-brand-green border border-white/15 backdrop-blur-xs">
                           KITCHEN COUNTER · READY FOR DISPATCH
                         </div>
                       </div>
@@ -581,7 +581,7 @@ export const TrackMeal: React.FC = () => {
                         <button
                           type="button"
                           onClick={() => setViewMode('ADMIN_DASHBOARD')}
-                          className="px-6 py-3.5 rounded-[10px] bg-[#49E619] hover:bg-[#B9FF2C] text-[#080808] font-mono-tabular text-xs font-bold uppercase tracking-widest transition-colors cursor-pointer"
+                          className="px-6 py-3.5 rounded-[10px] bg-brand-green hover:bg-brand-lime text-brand-black font-mono-tabular text-xs font-bold uppercase tracking-widest transition-colors cursor-pointer"
                         >
                           OPEN ADMIN DASHBOARD TO CONFIRM DELIVERY →
                         </button>
@@ -590,10 +590,10 @@ export const TrackMeal: React.FC = () => {
                   )}
 
                   {/* Strict Child Privacy & Safeguarding Policy Box */}
-                  <div className="rounded-[18px] bg-[#080808] text-white p-6 sm:p-7 border border-[#49E619]/30">
+                  <div className="rounded-[18px] bg-brand-black text-white p-6 sm:p-7 border border-brand-green/30">
                     <div className="flex items-center gap-2.5 mb-3">
-                      <Lock className="w-4 h-4 text-[#49E619]" />
-                      <h4 className="font-mono-tabular text-xs font-bold uppercase tracking-[0.18em] text-[#49E619]">
+                      <Lock className="w-4 h-4 text-brand-green" />
+                      <h4 className="font-mono-tabular text-xs font-bold uppercase tracking-[0.18em] text-brand-green">
                         CHILD PRIVACY & SAFEGUARDING PROTECTION
                       </h4>
                     </div>
@@ -605,7 +605,7 @@ export const TrackMeal: React.FC = () => {
                         personally identifying information
                       </strong>
                       . All impact records use an anonymized{' '}
-                      <span className="font-mono-tabular text-[#B9FF2C]">
+                      <span className="font-mono-tabular text-brand-lime">
                         Beneficiary ID ({activeToken.beneficiaryId})
                       </span>{' '}
                       and community-level photography published only when
@@ -621,10 +621,10 @@ export const TrackMeal: React.FC = () => {
                 VIEW 2: NGO ADMIN DELIVERY CONFIRMATION DASHBOARD
             ================================================================ */
             <div className="max-w-4xl mx-auto space-y-8">
-              <div className="rounded-[20px] bg-[#080808] border border-white/20 shadow-2xl p-6 sm:p-10">
+              <div className="rounded-[20px] bg-brand-black border border-white/20 shadow-2xl p-6 sm:p-10">
                 <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/12">
                   <div>
-                    <span className="font-mono-tabular text-xs font-bold uppercase tracking-[0.2em] text-[#49E619] block">
+                    <span className="font-mono-tabular text-xs font-bold uppercase tracking-[0.2em] text-brand-green block">
                       NGO FIELD OPERATIONS
                     </span>
                     <h2 className="font-display-sans uppercase text-3xl sm:text-4xl font-black text-white mt-1">
@@ -633,10 +633,10 @@ export const TrackMeal: React.FC = () => {
                   </div>
 
                   <span
-                    className={`px-4 py-1.5 rounded-[8px] font-mono-tabular text-xs font-bold uppercase tracking-widest ${
+                    className={`px-4 py-1.5 rounded-lg font-mono-tabular text-xs font-bold uppercase tracking-widest ${
                       isDelivered
-                        ? 'bg-[#49E619] text-[#080808]'
-                        : 'bg-[#B9FF2C] text-[#122023]'
+                        ? 'bg-brand-green text-brand-black'
+                        : 'bg-brand-lime text-brand-slate'
                     }`}
                   >
                     {isDelivered ? 'DELIVERED ✓' : 'READY FOR DELIVERY'}
@@ -649,7 +649,7 @@ export const TrackMeal: React.FC = () => {
                     <dt className="font-mono-tabular text-[11px] uppercase tracking-widest text-white/60">
                       Token:
                     </dt>
-                    <dd className="font-mono-tabular text-lg font-bold text-[#49E619] mt-1">
+                    <dd className="font-mono-tabular text-lg font-bold text-brand-green mt-1">
                       {activeToken.tokenNumber}
                     </dd>
                   </div>
@@ -676,7 +676,7 @@ export const TrackMeal: React.FC = () => {
                     <dt className="font-mono-tabular text-[11px] uppercase tracking-widest text-white/60">
                       Amount:
                     </dt>
-                    <dd className="font-mono-tabular text-lg font-bold text-[#B9FF2C] mt-1">
+                    <dd className="font-mono-tabular text-lg font-bold text-brand-lime mt-1">
                       ₹{activeToken.amountPaidInr}
                     </dd>
                   </div>
@@ -685,7 +685,7 @@ export const TrackMeal: React.FC = () => {
                     <dt className="font-mono-tabular text-[11px] uppercase tracking-widest text-white/60">
                       Sponsored Meal:
                     </dt>
-                    <dd className="font-mono-tabular text-lg font-bold text-[#49E619] mt-1">
+                    <dd className="font-mono-tabular text-lg font-bold text-brand-green mt-1">
                       YES
                     </dd>
                   </div>
@@ -716,7 +716,7 @@ export const TrackMeal: React.FC = () => {
                             setSelectedLocation(found.communityCenter);
                           }
                         }}
-                        className="w-full rounded-[8px] border border-white/20 bg-[#122023] px-3 py-2.5 font-mono-tabular text-xs font-bold text-white"
+                        className="w-full rounded-lg border border-white/20 bg-brand-slate px-3 py-2.5 font-mono-tabular text-xs font-bold text-white"
                       >
                         {BENEFICIARIES.map((b) => (
                           <option key={b.id} value={b.beneficiaryCode}>
@@ -736,7 +736,7 @@ export const TrackMeal: React.FC = () => {
                         type="text"
                         value={selectedLocation}
                         onChange={(e) => setSelectedLocation(e.target.value)}
-                        className="w-full rounded-[8px] border border-white/20 bg-[#122023] px-3 py-2.5 text-xs font-semibold text-white"
+                        className="w-full rounded-lg border border-white/20 bg-brand-slate px-3 py-2.5 text-xs font-semibold text-white"
                       />
                     </dd>
                   </div>
@@ -747,8 +747,8 @@ export const TrackMeal: React.FC = () => {
                   <div
                     className={`p-3.5 rounded-[10px] font-mono-tabular text-xs font-bold flex items-center justify-between ${
                       isDelivered
-                        ? 'bg-[#49E619] text-[#080808]'
-                        : 'bg-[#122023] text-white/60'
+                        ? 'bg-brand-green text-brand-black'
+                        : 'bg-brand-slate text-white/60'
                     }`}
                   >
                     <span>DELIVERED</span>
@@ -758,8 +758,8 @@ export const TrackMeal: React.FC = () => {
                   <div
                     className={`p-3.5 rounded-[10px] font-mono-tabular text-xs font-bold flex items-center justify-between ${
                       activeToken.photoUploaded
-                        ? 'bg-[#4EDBE2] text-[#080808]'
-                        : 'bg-[#122023] text-white/60'
+                        ? 'bg-brand-cyan text-brand-black'
+                        : 'bg-brand-slate text-white/60'
                     }`}
                   >
                     <span>Photo uploaded</span>
@@ -769,8 +769,8 @@ export const TrackMeal: React.FC = () => {
                   <div
                     className={`p-3.5 rounded-[10px] font-mono-tabular text-xs font-bold flex items-center justify-between ${
                       activeToken.notificationSent
-                        ? 'bg-[#B9FF2C] text-[#080808]'
-                        : 'bg-[#122023] text-white/60'
+                        ? 'bg-brand-lime text-brand-black'
+                        : 'bg-brand-slate text-white/60'
                     }`}
                   >
                     <span>Notification sent</span>
@@ -780,8 +780,8 @@ export const TrackMeal: React.FC = () => {
 
                 {/* Consented Photo Picker Drawer */}
                 {showPhotoSelector && (
-                  <div className="my-5 p-4 rounded-[12px] bg-[#122023] border border-white/15">
-                    <span className="font-mono-tabular text-[11px] font-bold uppercase tracking-wider text-[#49E619] block mb-3">
+                  <div className="my-5 p-4 rounded-xl bg-brand-slate border border-white/15">
+                    <span className="font-mono-tabular text-[11px] font-bold uppercase tracking-wider text-brand-green block mb-3">
                       Select Safeguarding-Cleared Community Delivery Photo:
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -799,11 +799,11 @@ export const TrackMeal: React.FC = () => {
                           }}
                           className={`rounded-[10px] text-left border p-2 transition-all cursor-pointer ${
                             selectedPhotoUrl === photo.url
-                              ? 'border-[#49E619] bg-[#080808]'
-                              : 'border-white/15 bg-[#080808]/60 hover:bg-[#080808]'
+                              ? 'border-brand-green bg-brand-black'
+                              : 'border-white/15 bg-brand-black/60 hover:bg-brand-black'
                           }`}
                         >
-                          <div className="aspect-[4/3] rounded-[6px] overflow-hidden mb-2">
+                          <div className="aspect-4/3 rounded-md overflow-hidden mb-2">
                             <EditorialImage
                               src={photo.url}
                               alt={photo.label}
@@ -830,7 +830,7 @@ export const TrackMeal: React.FC = () => {
                         selectedLocation
                       )
                     }
-                    className="py-4 px-4 rounded-[10px] bg-[#49E619] hover:bg-[#B9FF2C] text-[#080808] font-mono-tabular text-xs font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                    className="py-4 px-4 rounded-[10px] bg-brand-green hover:bg-brand-lime text-brand-black font-mono-tabular text-xs font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
                   >
                     <CheckCircle2 className="w-4 h-4" />
                     <span>MARK AS DELIVERED</span>
@@ -845,9 +845,9 @@ export const TrackMeal: React.FC = () => {
                       );
                       setShowPhotoSelector((prev) => !prev);
                     }}
-                    className="py-4 px-4 rounded-[10px] bg-white hover:bg-[#4EDBE2] text-[#080808] font-mono-tabular text-xs font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                    className="py-4 px-4 rounded-[10px] bg-white hover:bg-brand-cyan text-brand-black font-mono-tabular text-xs font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
                   >
-                    <Upload className="w-4 h-4 text-[#188D44]" />
+                    <Upload className="w-4 h-4 text-brand-emerald" />
                     <span>UPLOAD PHOTO</span>
                   </button>
 
@@ -861,7 +861,7 @@ export const TrackMeal: React.FC = () => {
                       );
                       sendCustomerNotification(activeToken.tokenNumber);
                     }}
-                    className="py-4 px-4 rounded-[10px] bg-[#B9FF2C] hover:bg-[#49E619] text-[#080808] font-mono-tabular text-xs font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                    className="py-4 px-4 rounded-[10px] bg-brand-lime hover:bg-brand-green text-brand-black font-mono-tabular text-xs font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
                   >
                     <Send className="w-4 h-4" />
                     <span>SEND CUSTOMER NOTIFICATION</span>
@@ -870,14 +870,14 @@ export const TrackMeal: React.FC = () => {
 
                 {/* Preview of Dispatched Customer Message */}
                 {activeToken.notificationSent && (
-                  <div className="mt-6 rounded-[14px] bg-[#122023] text-white p-5 border-l-4 border-l-[#49E619]">
-                    <span className="font-mono-tabular text-[10px] uppercase tracking-widest text-[#49E619] font-bold block">
+                  <div className="mt-6 rounded-[14px] bg-brand-slate text-white p-5 border-l-4 border-l-brand-green">
+                    <span className="font-mono-tabular text-[10px] uppercase tracking-widest text-brand-green font-bold block">
                       DISPATCHED TO CUSTOMER (WEB + EMAIL + SMS/WHATSAPP)
                     </span>
                     <p className="font-display-sans uppercase text-lg font-black mt-1">
                       Your meal has reached a child in need ❤️
                     </p>
-                    <p className="font-mono-tabular text-xs text-[#B9FF2C] mt-1">
+                    <p className="font-mono-tabular text-xs text-brand-lime mt-1">
                       Token: {activeToken.tokenNumber}
                     </p>
                     <p className="text-xs text-white/75 mt-1">
@@ -886,7 +886,7 @@ export const TrackMeal: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setViewMode('CUSTOMER_TRACKER')}
-                      className="mt-4 px-4 py-2 rounded-[8px] bg-[#49E619] text-[#080808] font-mono-tabular text-[11px] font-bold uppercase tracking-widest cursor-pointer"
+                      className="mt-4 px-4 py-2 rounded-lg bg-brand-green text-brand-black font-mono-tabular text-[11px] font-bold uppercase tracking-widest cursor-pointer"
                     >
                       VIEW CUSTOMER IMPACT SCREEN →
                     </button>

@@ -94,11 +94,11 @@ const STEPS: Step[] = [
 
 export const PlateToHandsSteps: React.FC = () => {
   return (
-    <div className="w-full">
-      {/* Header */}
+    <div className="w-full -mt-6 sm:-mt-8 lg:-mt-10">
+      {/* Centered Header */}
       <ScrollReveal>
-        <div className="max-w-3xl mb-12">
-          <div className="flex items-center gap-2 mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14 flex flex-col items-center">
+          <div className="inline-flex items-center justify-center gap-2 mb-3">
             <span className="w-2 h-2 rounded-full bg-[#49E619] animate-pulse" />
             <span className="text-xs font-mono-tabular font-bold uppercase tracking-[0.22em] text-[#49E619]">
               HOW YOUR MEAL CREATES IMPACT · 6-STAGE TOKEN TRAIL
@@ -110,9 +110,8 @@ export const PlateToHandsSteps: React.FC = () => {
             <span className="text-[#49E619]">A CHILD'S HANDS</span>
           </h2>
 
-          <p className="mt-4 text-sm sm:text-base text-white/75 leading-relaxed max-w-2xl">
-            Follow your meal’s journey from checkout to a child’s hands. Every step
-            is connected, geotagged, and backed by a 100% verifiable impact token trail.
+          <p className="mt-4 text-xs sm:text-sm md:text-base text-white/75 leading-relaxed mx-auto text-center whitespace-normal">
+            Follow your meal’s journey from checkout to a child’s hands. Every step is connected, geotagged, and backed by a 100% verifiable impact token trail.
           </p>
         </div>
       </ScrollReveal>
