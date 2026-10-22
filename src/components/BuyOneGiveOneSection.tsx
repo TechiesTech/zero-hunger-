@@ -58,7 +58,7 @@ export const BuyOneGiveOneSection: React.FC = () => {
           </ScrollReveal>
 
           {/* Right Column: Visual Equation Card (₹150 = 1 Meal for You + 1 Meal for a Child) */}
-          <ScrollReveal delay={0.14} className="lg:col-span-6 flex justify-center lg:justify-end w-full">
+          <ScrollReveal delay={0.14} className="lg:col-span-6 flex justify-center lg:justify-end w-full -mt-6 lg:-mt-10">
             <div className="w-full max-w-[530px] bg-[#122023] border border-white/12 rounded-[18px] px-5 py-4 sm:px-6 sm:py-5 shadow-2xl">
               <div className="flex items-center justify-between pb-3 border-b border-white/12">
                 <div>
